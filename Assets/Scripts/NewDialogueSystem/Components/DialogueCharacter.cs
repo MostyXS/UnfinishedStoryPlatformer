@@ -1,9 +1,11 @@
+using Game.Interfaces;
 using Game.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game.Dialogues.Components
 {
+    [CreateAssetMenu(fileName = "New Character", menuName = "Game/Dialogues/New Character")]
     public class DialogueCharacter : ScriptableObject, IInsertable
     {
         
@@ -12,7 +14,7 @@ namespace Game.Dialogues.Components
         public void InsertInInterface(Transform i)
         {
             var textField = i.Find(UILabels.NAME).GetComponentInChildren<Text>();
-            var avatarImage = i.Find(UILabels.AVATAR).GetComponentInChildren<Image>();
+            var avatarImage = i.Find(UILabels.AVATAR).GetComponent<Image>();
             textField.text = cName;
             avatarImage.sprite = avatar;
         }

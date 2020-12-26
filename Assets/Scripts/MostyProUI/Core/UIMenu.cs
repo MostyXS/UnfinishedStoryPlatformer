@@ -16,6 +16,7 @@ namespace MostyProUI
         [SerializeField] GameObject pauseMenuPrefab = null;
         [SerializeField] GameObject deathMenuPrefab = null;
 
+
         static GameObject tempPauseMenu;
         static GameObject tempDeathMenu;
         public static bool CanInteractWithGame { get; set; } = true; //Becomes false when player dead and used for prevent sceneLoading after player death 
@@ -37,9 +38,9 @@ namespace MostyProUI
             if (MainCanvas.Transform == null)
                 Debug.LogError("No main canvas on scene");
             tempPauseMenu = Instantiate(pauseMenuPrefab, MainCanvas.Transform);
-            //tempDeathMenu = Instantiate(deathMenuPrefab, MainCanvas.Transform);
+            tempDeathMenu = Instantiate(deathMenuPrefab, MainCanvas.Transform);
             tempPauseMenu.SetActive(false);
-            //tempDeathMenu.SetActive(false);
+            tempDeathMenu.SetActive(false);
         }
         void Update()
         {
@@ -90,7 +91,7 @@ namespace MostyProUI
         {
             if (onPlayerDeath != null)
                 onPlayerDeath();
-            Pause(false);
+            Pause(true);
 
             CanInteractWithGame = false;
             tempPauseMenu.SetActive(false);

@@ -9,16 +9,16 @@ namespace MostyProUI
     //Add to default scene Canvas(Defines menu and dead menu)
     public class MainCanvas : MonoBehaviour
     {
-
+        public static Transform Transform
+        {
+            get; private set;
+        }
         private void Awake()
         {
             Transform = transform;
         }
         
-        public static Transform Transform
-        {
-            get; private set;
-        }
+        
 
 
     }

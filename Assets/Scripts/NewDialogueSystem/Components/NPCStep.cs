@@ -1,4 +1,5 @@
-﻿using Game.Utils;
+﻿using Assets.Scripts.Extensions;
+using Game.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,15 +9,27 @@ namespace Game.Dialogues.Components
 {
     public class NPCStep : DialogueStep
     {
+        public NPCStep(DialogueStepData data) : base(data)
+        {
+
+        }
         public override void InsertInInterface(Transform i)
         {
-            var contentTransform = i.Find(UILabels.CONTENT);
-            var contentField = Object.Instantiate(TextPrefab, contentTransform).GetComponent<Text>();
+            base.InsertInInterface(i);
+            var content = i.Find(UILabels.CONTENT);
+            content.Clear();
+            var contentField = Object.Instantiate(TextPrefab, content).GetComponent<Text>();
             contentField.text = ChosenReplica.GetContent();
+            CanSkipThroughAnyClick = true;
         }
 
         public override void SetCurrentReplica(int[] replicaNumbers)
         {
+            if(replicaNumbers.Length == 0)
+            {
+                ChosenReplica = replicas[0];
+                return;
+            }
             int[] distinctIntArray = replicaNumbers.Distinct().ToArray(); // defense against same numbers
             List<DialogueReplica> currentReplicas = CreateNewReplicasArray(distinctIntArray);
             ChosenReplica = CalculatePriotirizedReplica(currentReplicas);
@@ -39,6 +52,7 @@ namespace Game.Dialogues.Components
         }
         private DialogueReplica CalculatePriotirizedReplica(List<DialogueReplica> replicas)
         {
+            
             DialogueReplica mvReplica = null;
             foreach (var r in replicas)
             {

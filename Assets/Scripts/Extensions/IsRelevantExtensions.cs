@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class IsRelevantExtensions 
+namespace Game.Extensions
 {
-    
-    public static bool IsRelevant(this Decision decision)
+    public static class IsRelevantExtensions
     {
-        return decision != null && GameManager.Instance.GetAllDecisions().Contains(decision);
+
+        public static bool IsRelevant(this Decision decision)
+        {
+            return decision != null && GameManager.Instance.GetAllDecisions().Contains(decision);
+        }
     }
-
-
 }

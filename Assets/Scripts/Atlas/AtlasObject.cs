@@ -1,8 +1,6 @@
-﻿using Game.Utils;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Game.Interfaces;
+using Game.Utils;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Game.Atlas

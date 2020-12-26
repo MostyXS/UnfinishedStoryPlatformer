@@ -1,4 +1,6 @@
-﻿using Game.Utils;
+﻿using Assets.Scripts.Extensions;
+using Game.Extensions;
+using Game.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,16 +10,21 @@ namespace Game.Dialogues.Components
 {
     public class PlayerStep : DialogueStep
     {
+
         List<DialogueReplica> currentReplicas = new List<DialogueReplica>();
-        public bool IsSoloReplica { get; private set; }
+
+        public PlayerStep(DialogueStepData data) : base(data)
+        {
+        }
         public static GameObject ButtonPrefab { private get; set; }
 
         public override void InsertInInterface(Transform i)
         {
-            
+            base.InsertInInterface(i);
             var content = i.Find(UILabels.CONTENT);
-            IsSoloReplica = currentReplicas.Count == 1;
-            if (IsSoloReplica)
+            content.Clear();
+            CanSkipThroughAnyClick = currentReplicas.Count == 1;
+            if (CanSkipThroughAnyClick)
             {
                 var text = Object.Instantiate(TextPrefab, content).GetComponent<Text>();
                 text.text = currentReplicas[0].GetContent();
@@ -25,22 +32,28 @@ namespace Game.Dialogues.Components
             }
             else
             {
-                foreach (var replica in currentReplicas)
+                foreach (var r in currentReplicas)
                 {
                     var playerButton = Object.Instantiate(ButtonPrefab, content);
-                    FillButton(replica, playerButton);
+                    playerButton.GetComponentInChildren<Text>().text = r.GetContent();
+                    playerButton.GetComponent<Button>().onClick.AddListener(delegate { AssignChosenReplica(r, i); });
                 }
             }
         }
-
-        private void FillButton(DialogueReplica replica, GameObject playerButton)
+        public void AssignChosenReplica(DialogueReplica replica, Transform i)
         {
-            playerButton.GetComponentInChildren<Text>().text = replica.GetContent();
-            playerButton.GetComponent<Button>().onClick.AddListener(() => { ChosenReplica = replica; });
-            
+            currentReplicas.Clear();
+            currentReplicas.Add(replica);
+            ChosenReplica = replica;
+            InsertInInterface(i);
         }
         public override void SetCurrentReplica(int[] replicaNumbers)
         {
+            if(replicaNumbers.Length == 0)
+            {
+                currentReplicas.Add(replicas[0]);
+                return;
+            }
             int[] distinctIntArray = replicaNumbers.Distinct().ToArray();
             foreach (var i in distinctIntArray)
             {

@@ -1,27 +1,22 @@
 using Game.Dialogues.Components;
 using Game.Dialogues.Core;
+using MostyProUI;
 using UnityEngine;
 
 namespace Game.Dialogues.UI
 {
     public class DialogueHUD : MonoBehaviour
     {
+        [SerializeField] GameObject hudPrefab;
         [SerializeField] GameObject textPrefab;
         [SerializeField] GameObject playerButtonPrefab;
-
-        private void Awake()
+        private void Start()
         {
             DialogueStep.TextPrefab = textPrefab;
             PlayerStep.ButtonPrefab = playerButtonPrefab;
-            DialoguePlayer.dHUD = transform;
-            gameObject.SetActive(false);
+            var tempHud = Instantiate(hudPrefab, MainCanvas.Transform);
+            DialoguePlayer.dHUD = tempHud.transform;
+            tempHud.SetActive(false);
         }
-        private void Update()
-        {
-            if (DialoguePlayer.CanSkipThroughAnyClick && Input.GetButtonDown("Skip"))
-                DialogueNextStepActivator.TriggerNextStep();
-        }
-
     }
-
 }

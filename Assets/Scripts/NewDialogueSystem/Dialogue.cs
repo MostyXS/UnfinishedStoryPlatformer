@@ -1,15 +1,15 @@
 using Game.Dialogues.Components;
 using UnityEngine;
 
-namespace Game.Dialogues
+namespace Game.Dialogues.Core
 {
 
-    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Game/New Dialogue")]
+    [CreateAssetMenu(fileName = "New Dialogue", menuName = "Game/Dialogues/New Dialogue")]
     public class Dialogue : ScriptableObject
     {
-        [SerializeField] DialogueStep[] steps;
+        [SerializeField] DialogueStepData[] steps;
 
-        public DialogueStep[] GetSteps()
+        public DialogueStepData[] GetSteps()
         {
             return steps;
         } 
