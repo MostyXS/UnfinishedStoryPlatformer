@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AtlasActivator : MonoBehaviour
+namespace Game.Atlas.Main
 {
-    [SerializeField] GameObject atlas;
+    public class AtlasActivator : MonoBehaviour
+    {
 
-    
+
+    }
 }

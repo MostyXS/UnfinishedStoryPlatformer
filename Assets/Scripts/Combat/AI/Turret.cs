@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,32 +11,38 @@ namespace Game.Combat.AI
         [SerializeField] GameObject projectilePrefab;
         [SerializeField] float shootDelay = 2.5f;
         [SerializeField] float bulletForce = 3f;
+        [SerializeField] int burstQuantity = 3;
+        [Tooltip("Delay between shooting while burst is active")]
+        [SerializeField] float burstDelay = .1f;
 
-
-        Transform target;
         private bool canShoot = true;
 
-        private void Start()
-        {
-            target = FindObjectOfType<Player>().transform;
-        }
         private void Update()
         {
-            if (InAttackRange())
+            if (IsPlayerInLineOfSight())
             {
-                Vector3 dir = target.transform.position - transform.position;
-                float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 if (canShoot)
                 {
-                    var bullet = Instantiate(projectilePrefab, gunMouth.position, Quaternion.identity);
-                    
-                    bullet.GetComponent<Rigidbody2D>().AddForce(dir * bulletForce, ForceMode2D.Impulse);
+                    StartCoroutine(BurstShoot());
                     StartCoroutine(ShootDelay());
                 }
             }
         }
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawRay(gunMouth.position, new Vector2(transform.localScale.x, 0) * shootRange);
+        }
+        private IEnumerator BurstShoot()
+        {
+            for(int i =0; i < burstQuantity; i++)
+            {
+                var bullet = Instantiate(projectilePrefab, gunMouth.position, Quaternion.identity);
+                bullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.localScale.x,0) * bulletForce, ForceMode2D.Impulse);
+                yield return new WaitForSeconds(burstDelay);
+            }
 
+
+        }
 
         private IEnumerator ShootDelay()
         {
@@ -45,9 +52,10 @@ namespace Game.Combat.AI
 
         }
 
-        private bool InAttackRange()
+        private bool IsPlayerInLineOfSight()
         {
-            return Vector2.Distance(target.position, transform.position) <= shootRange;
+            var player = Physics2D.Raycast(gunMouth.position, new Vector2(transform.localScale.x, 0), shootRange).collider?.GetComponent<Player>();
+            return player != null;
         }
     }
 }

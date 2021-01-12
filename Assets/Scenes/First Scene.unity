@@ -535,7 +535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 436967596}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.29774, y: -1.2700508, z: -12.6953125}
+  m_LocalPosition: {x: -17.29774, y: -1.270055, z: -12.6953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   - component: {fileID: 1304930339}
   - component: {fileID: 1304930338}
   - component: {fileID: 1304930337}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DialogueTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2565,6 +2565,26 @@ PrefabInstance:
       propertyPath: pCam
       value: 
       objectReference: {fileID: 1396721411}
+    - target: {fileID: 3578627899932296272, guid: 76bf56b260813854c98b6fb56353875c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.519
+      objectReference: {fileID: 0}
+    - target: {fileID: 3578627899932296272, guid: 76bf56b260813854c98b6fb56353875c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.263
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361941636591757287, guid: 76bf56b260813854c98b6fb56353875c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.513
+      objectReference: {fileID: 0}
+    - target: {fileID: 7361941636591757287, guid: 76bf56b260813854c98b6fb56353875c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8819598546214940850, guid: 76bf56b260813854c98b6fb56353875c, type: 3}
+      propertyPath: distanceToGround
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8819598546214940851, guid: 76bf56b260813854c98b6fb56353875c, type: 3}
       propertyPath: m_RootOrder
       value: 0

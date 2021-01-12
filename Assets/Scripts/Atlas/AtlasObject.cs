@@ -3,7 +3,7 @@ using Game.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game.Atlas
+namespace Game.Atlas.Data
 {
     [System.Serializable]
     abstract public class AtlasObject : ScriptableObject, IInsertable

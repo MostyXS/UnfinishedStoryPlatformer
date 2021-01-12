@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] float jumpPower = 10f;
+    [SerializeField] Transform foot1;
+    [SerializeField] Transform foot2;
     [SerializeField] float distanceToGround;
     [SerializeField] LayerMask groundMask;
 
@@ -80,9 +82,22 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnDrawGizmos()
+    {
+        if (foot1 != null)
+            Gizmos.DrawRay(foot1.position, Vector2.down * distanceToGround);
+        if (foot2 != null)
+            Gizmos.DrawRay(foot2.position, Vector2.down * distanceToGround);
+    }
+
     private bool CanJump()
     {
-        return Physics2D.Raycast(transform.position, Vector2.down, distanceToGround,groundMask).collider != null;
+        return IsOnGround(foot1) || IsOnGround(foot2);
+    }
+
+    private bool IsOnGround(Transform foot)
+    {
+        return Physics2D.Raycast(foot.position, Vector2.down, distanceToGround, groundMask).collider != null;
     }
 
     private void Move()

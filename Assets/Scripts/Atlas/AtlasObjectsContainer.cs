@@ -1,23 +1,23 @@
-using Game.Atlas;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public class AtlasObjectsContainer : MonoBehaviour
+namespace Game.Atlas.Data
 {
-    [SerializeField] AtlasCategory category;
-    [SerializeField] AtlasObject[] aObjects;
-
-    public AtlasCategory GetCategory()
+    [Serializable]
+    public class AtlasObjectsContainer : MonoBehaviour
     {
-        return category;
-    }
+        [SerializeField] AtlasCategory category;
+        [SerializeField] AtlasObject[] aObjects;
 
-    public AtlasObject[] GetArray()
-    {
-        return aObjects;
-    }
+        public AtlasCategory GetCategory()
+        {
+            return category;
+        }
 
+        public AtlasObject[] GetArray()
+        {
+            return aObjects;
+        }
+
+    }
 }

@@ -174,7 +174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3097674195789826794}
   - component: {fileID: 1302400020165439645}
-  - component: {fileID: 2691241822175354042}
   m_Layer: 6
   m_Name: Origin
   m_TagString: Untagged
@@ -248,23 +247,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2691241822175354042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2395021395905507082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fc04ff8200e5e438efeb74ea1d496c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gunMouth: {fileID: 8355427221288013554}
-  shootRange: 5
-  projectilePrefab: {fileID: 75150276026845619, guid: ccb23b21d249d2344913cfb8b257502e, type: 3}
-  shootDelay: 2.5
-  bulletForce: 5
 --- !u!1 &3817171772396825409
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +422,7 @@ GameObject:
   - component: {fileID: 8086784852042619946}
   - component: {fileID: 7686416320656819818}
   - component: {fileID: 7686416320656819817}
+  - component: {fileID: 903378820469969031}
   m_Layer: 6
   m_Name: Turrel
   m_TagString: Untagged
@@ -456,7 +439,7 @@ Transform:
   m_GameObject: {fileID: 5540559064845263025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 20.53, y: -2.88, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 6416200447430547592}
   - {fileID: 6632554868061092121}
@@ -514,6 +497,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+--- !u!114 &903378820469969031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540559064845263025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6fc04ff8200e5e438efeb74ea1d496c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunMouth: {fileID: 8355427221288013554}
+  shootRange: 26.5
+  projectilePrefab: {fileID: 75150276026845619, guid: ccb23b21d249d2344913cfb8b257502e, type: 3}
+  shootDelay: 2.5
+  bulletForce: 5
+  burstQuantity: 3
+  burstDelay: 0.1
 --- !u!1 &6711133081332293959
 GameObject:
   m_ObjectHideFlags: 0
