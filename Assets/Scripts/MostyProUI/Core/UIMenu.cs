@@ -1,5 +1,4 @@
-﻿using MostyProUI.DialgoueSystem;
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -70,7 +69,6 @@ namespace MostyProUI
         public void Resume()
         {
             Time.timeScale = 1f;
-            if (DialogueSystemPlayer.IsActive) return;
             Paused = false;
             if (onResume != null)
                 onResume();
