@@ -1,5 +1,7 @@
 ﻿using Game.Interfaces;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Dialogues.Components
 {
@@ -23,11 +25,6 @@ namespace Game.Dialogues.Components
         {
             character.InsertIntoInterface(i);
         }
-        
-       
-
-        
-
 
     }
 }

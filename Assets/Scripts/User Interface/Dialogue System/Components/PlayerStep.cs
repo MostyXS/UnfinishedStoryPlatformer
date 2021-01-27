@@ -27,7 +27,6 @@ namespace Game.Dialogues.Components
             {
                 var text = Object.Instantiate(TextPrefab, content).GetComponent<Text>();
                 text.text = currentReplicas[0].GetContent();
-
             }
             else
             {
@@ -49,15 +48,14 @@ namespace Game.Dialogues.Components
         }
         public override void SetCurrentReplica(int[] replicaNumbers)
         {
-            if(replicaNumbers.Length == 0)
+            if (replicaNumbers.Length < 2) //case if linear replica
             {
                 currentReplicas.Add(replicas[0]);
                 return;
             }
-            int[] distinctIntArray = replicaNumbers.Distinct().ToArray();
-            foreach (var i in distinctIntArray)
+            foreach (var number in replicaNumbers)
             {
-                var r = replicas[i];
+                var r = replicas[number];
                 TryAddReplica(r);
             }
         }

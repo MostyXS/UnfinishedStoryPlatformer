@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Game.Dialogues.UI
 {
-    public class DialogueHUD : MonoBehaviour
+    public class DialogueUICore : MonoBehaviour
     {
         [SerializeField] GameObject hudPrefab;
         [SerializeField] GameObject textPrefab;

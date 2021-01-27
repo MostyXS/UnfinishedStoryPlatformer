@@ -30,21 +30,20 @@ namespace Game.Dialogues.Components
         }
         public override void SetCurrentReplica(int[] replicaNumbers)
         {
-            if(replicaNumbers.Length == 0)
+            if(replicaNumbers.Length < 2)
             {
                 ChosenReplica = replicas[0];
                 return;
             }
-            int[] distinctIntArray = replicaNumbers.Distinct().ToArray(); // defense against same numbers
-            List<DialogueReplica> currentReplicas = GetNewReplicas(distinctIntArray);
+            List<DialogueReplica> currentReplicas = GetNewReplicas(replicaNumbers);
             ChosenReplica = CalculatePriotirizedReplica(currentReplicas);
         }
         #endregion
         #region Private Methods
-        private List<DialogueReplica> GetNewReplicas(int[] distinctIntArray)
+        private List<DialogueReplica> GetNewReplicas(int[] replicaNumbers)
         {
             List<DialogueReplica> currentReplicas = new List<DialogueReplica>();
-            foreach (var i in distinctIntArray)
+            foreach (var i in replicaNumbers)
             {
                 currentReplicas.Add(replicas[i]);
             }

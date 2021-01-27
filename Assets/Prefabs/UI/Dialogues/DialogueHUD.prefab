@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 8187707363275443116}
   - component: {fileID: 8187707363275443118}
   - component: {fileID: 8187707363275443117}
-  - component: {fileID: 5587182335617373662}
+  - component: {fileID: 5799854292022945930}
   m_Layer: 5
   m_Name: DialogueHUD
   m_TagString: Untagged
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5587182335617373662
+--- !u!114 &5799854292022945930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,6 +493,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8187707363275443115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51c23c5183100ce41974bdfd797c58f7, type: 3}
+  m_Script: {fileID: 11500000, guid: b3d5fef1f523cc149bf8184a188a42f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  writeDelay: 0.3

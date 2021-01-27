@@ -278,17 +278,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8387368308069182109}
-        m_TargetAssemblyTypeName: Atlas, Assembly-CSharp
-        m_MethodName: OpenAtlas
-        m_Mode: 1
+      - m_Target: {fileID: 1448789218499728208}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &7147581007477819592
 GameObject:
@@ -318,7 +318,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 611003588786016858}
-  - {fileID: 2198859222397234446}
+  - {fileID: 5402594197304002822}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -345,6 +345,14 @@ PrefabInstance:
     - target: {fileID: 2387978394822282914, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3151118398699811068, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8456064304964233898, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9205693404565165300, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_Pivot.x
@@ -432,19 +440,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
---- !u!224 &2198859222397234446 stripped
+--- !u!1 &1448789218499728208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8456064304964233898, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
+  m_PrefabInstance: {fileID: 7008405521859836410}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &5402594197304002822 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 9205693404565165300, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3151118398699811068, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
   m_PrefabInstance: {fileID: 7008405521859836410}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8387368308069182109 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1524240570527142759, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
-  m_PrefabInstance: {fileID: 7008405521859836410}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc7a6e2697ad9146995349931939523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

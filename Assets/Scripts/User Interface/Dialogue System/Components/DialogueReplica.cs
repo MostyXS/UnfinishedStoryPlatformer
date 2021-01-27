@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Game.Dialogues.Components
@@ -8,7 +10,7 @@ namespace Game.Dialogues.Components
         [TextArea(4, 10)] [SerializeField] string content;
         [SerializeField] Decision decisionDependency;
         [SerializeField] Decision decisionToActivate;
-        [Tooltip("From zero")] [SerializeField] int[] nextSteps;
+        [Tooltip("From zero, input next replica numbers with comma, or leave empty if only it is linear")] [SerializeField] string nextSteps;
 
         #region Getters
         public Decision GetDecisionDependency()
@@ -24,10 +26,23 @@ namespace Game.Dialogues.Components
         {
             return decisionToActivate;
         }
-
+        /// <summary>
+        /// returns distinct number array of assigned replicas
+        /// </summary>
+        /// <returns></returns>
         public int[] GetNextStepReplicas()
         {
-            return nextSteps;
+            var stringInts = nextSteps.Split(',');
+            List<int> nextReplicas = new List<int>();
+            foreach(var sI in stringInts)
+            {
+                int repNumber;
+                if(int.TryParse(sI, out repNumber))
+                {
+                    nextReplicas.Add(repNumber);
+                }
+            }
+            return nextReplicas.Distinct().ToArray();
         }
         #endregion
         public bool HasMorePriorityThan(DialogueReplica comparableReplica)

@@ -28,7 +28,6 @@ namespace MostyProUI
         }
         private void Start()
         { 
-            
            InstantiateMenus();
         }
         private void InstantiateMenus()

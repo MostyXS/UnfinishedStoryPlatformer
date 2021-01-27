@@ -1,12 +1,15 @@
 using Game.Dialogues.Components;
 using Game.Dialogues.Core;
+using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Game.Dialogues.UI
 {
-    public class DialogueHUDNextStepTrigger : MonoBehaviour
+    public class DialogueHUDSkipper : MonoBehaviour
     {
-        void Update()
+        private void Update()
         {
             if (DialogueStep.CanSkipThroughAnyClick && Input.GetButtonDown("Skip"))
             {
@@ -14,5 +17,6 @@ namespace Game.Dialogues.UI
             }
 
         }
+       
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2903638484350662078}
   - component: {fileID: 1655506796053273104}
-  - component: {fileID: 2529388453689907855}
+  - component: {fileID: 3466861513984268643}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuPrefab: {fileID: 7147581007477819592, guid: 2aee375a8bddd7f44929d1e591791994, type: 3}
   deathMenuPrefab: {fileID: 6319714059019756679, guid: 24ec070e42df1c44dbdfdbdb7a3b21b5, type: 3}
---- !u!114 &2529388453689907855
+--- !u!114 &3466861513984268643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,7 +55,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3761534394789428220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e3393b3c1fa9d343ba4d1c02c2fbc1f, type: 3}
+  m_Script: {fileID: 11500000, guid: cc57dec77dff7fe4b9451088521c11a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hudPrefab: {fileID: 8187707363275443115, guid: 4d024e26139c5034a899e178bda4695c, type: 3}

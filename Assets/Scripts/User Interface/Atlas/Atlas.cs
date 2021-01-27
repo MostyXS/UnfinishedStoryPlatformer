@@ -9,15 +9,15 @@ namespace Game.Atlas.Main
     public class Atlas : MonoBehaviour
     {
         //Need remake cause changing interface
-        [SerializeField] GameObject categories;
 
         [Header("Objects List")]
         [SerializeField] GameObject atlasContainers;
-        [SerializeField] GameObject objectsList;
-        [SerializeField] Transform objectsListContent;
         [Tooltip("Requires Button")] [SerializeField] GameObject atlasListButtonPrefab;
+        [SerializeField] Transform objectsListContent;
+        [SerializeField] Transform objectInterface;
 
-        [Header("Object HUD")]
+        [Header("UI")]
+        [SerializeField] GameObject categories;
         [SerializeField] GameObject objectHUD;
 
         Dictionary<AtlasCategory, AtlasObject[]> atlasObjects = new Dictionary<AtlasCategory, AtlasObject[]>();
@@ -31,6 +31,10 @@ namespace Game.Atlas.Main
         }
         #endregion
         #region Unity Methods
+        private void Awake()
+        {
+            OpenAtlas();
+        }
         private void Start()
         {
             FillAtlas();
@@ -45,7 +49,6 @@ namespace Game.Atlas.Main
                 return;
             }*/
             categories.SetActive(true);
-            objectsList.gameObject.SetActive(false);
             objectHUD.SetActive(false);
 
 
@@ -55,8 +58,13 @@ namespace Game.Atlas.Main
             var category = (AtlasCategory)c;
 
             categories.SetActive(false);
-            objectsList.SetActive(true);
+            objectHUD.SetActive(true);
             ClearChildren();
+            AtlasObject lastOpenedObject;
+            if(lastOpenedObjects.TryGetValue(category, out lastOpenedObject))
+            {
+                lastOpenedObject.InsertIntoInterface(objectInterface);
+            }
             foreach (var o in atlasObjects[category])
             {
                 var tempListObj = Instantiate(atlasListButtonPrefab, objectsListContent);
@@ -64,8 +72,7 @@ namespace Game.Atlas.Main
                 tempListObj.GetComponentInChildren<Text>().text = t;
                 if (o != null)
                 {
-                    tempListObj.GetComponent<Button>().onClick.AddListener(delegate { InsertInObjectHUD(o); });
-
+                    tempListObj.GetComponent<Button>().onClick.AddListener(delegate { InsertObjIntoInterface(o); });
                 }
             }
         }
@@ -100,11 +107,10 @@ namespace Game.Atlas.Main
         {
             objectsListContent.Clear();
         }
-        private void InsertInObjectHUD(AtlasObject o)
+        private void InsertObjIntoInterface(AtlasObject o)
         {
             lastOpenedObjects[o.Category] = o;
-            objectHUD.SetActive(true);
-            o.InsertIntoInterface(objectHUD.transform);
+            o.InsertIntoInterface(objectInterface);
         }
         
 
