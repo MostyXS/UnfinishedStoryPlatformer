@@ -50,7 +50,11 @@ namespace MostyProUI.PrefsControl
             
             Slider[] sliders = GetComponentsInChildren<Slider>();
             WasteCheck(sliders);
-            
+            foreach(var s in optionSliders)
+            {
+                s.slider.transform.parent.GetComponentInChildren<Text>().text = s.name;
+                
+            }
             if (optionSliders.Count >= sliders.Length) return;
             CreateSliderLists(sliders);
         }

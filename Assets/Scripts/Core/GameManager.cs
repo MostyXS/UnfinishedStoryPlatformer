@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour, ISaveable
 {
     public static GameManager Instance { get; private set; }
 
+
     List<Decision> decisions = new List<Decision>();
+
     private void Awake()
     {
         Instance = this;
@@ -24,11 +26,10 @@ public class GameManager : MonoBehaviour, ISaveable
 
     public object CaptureState()
     {
-        throw new System.NotImplementedException();
+        return null;
     }
 
     public void RestoreState(object state)
     {
-        throw new System.NotImplementedException();
     }
 }

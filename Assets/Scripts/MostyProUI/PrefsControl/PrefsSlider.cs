@@ -7,6 +7,7 @@ namespace MostyProUI.PrefsControl
     [System.Serializable]
     public class PrefsSlider 
     {
+        public string name;
         public PrefKey prefKey; 
         public Slider slider;
         [Range(0,1f)] public float defaultValue = .5f;

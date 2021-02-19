@@ -21,7 +21,7 @@ public class PlayerHealthDisplay : MonoBehaviour
     private void Start()
     {
         playerHealth.onHealthChange += ChangeFillAmount;
-        bar = Instantiate(healthDisplayPrefab, MainCanvas.Transform).GetComponent<Image>();
+        bar = Instantiate(healthDisplayPrefab, MainCanvas.Instance).GetComponent<Image>();
         bar.fillAmount = 1f;
         ChangeFillAmount();
         

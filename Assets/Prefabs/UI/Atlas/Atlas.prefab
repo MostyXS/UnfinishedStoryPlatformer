@@ -654,7 +654,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4709925893281298287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Atlas, Assembly-CSharp
         m_MethodName: OpenCategory
         m_Mode: 3
@@ -787,7 +787,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4709925893281298287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Atlas, Assembly-CSharp
         m_MethodName: OpenCategory
         m_Mode: 3
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4709925893281298287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Atlas, Assembly-CSharp
         m_MethodName: OpenCategory
         m_Mode: 3
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4709925893281298287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Atlas, Assembly-CSharp
         m_MethodName: OpenCategory
         m_Mode: 3
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4709925893281298287}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Atlas, Assembly-CSharp
         m_MethodName: OpenCategory
         m_Mode: 3
@@ -2021,7 +2021,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3151118398699811068}
-  - component: {fileID: 4709925893281298287}
   m_Layer: 5
   m_Name: Atlas
   m_TagString: Untagged
@@ -2050,24 +2049,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &4709925893281298287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8456064304964233898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc7a6e2697ad9146995349931939523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  atlasContainers: {fileID: 2480347114649861301, guid: 019d0d138c8986c4bb6943c2f3cccd05, type: 3}
-  atlasListButtonPrefab: {fileID: 5244507723437565149, guid: 3722f587d43898b49a9cbaaa61df894e, type: 3}
-  objectsListContent: {fileID: 2985111573413563760}
-  objectInterface: {fileID: 4685905401717200088}
-  categories: {fileID: 4346392626029201991}
-  objectHUD: {fileID: 8757447754455791643}
 --- !u!1 &8676230387818311566
 GameObject:
   m_ObjectHideFlags: 0

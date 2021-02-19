@@ -14,7 +14,7 @@ namespace Game.Dialogues.UI
         {
             DialogueStep.TextPrefab = textPrefab;
             PlayerStep.ButtonPrefab = playerButtonPrefab;
-            var tempHud = Instantiate(hudPrefab, MainCanvas.Transform);
+            var tempHud = Instantiate(hudPrefab, MainCanvas.Instance);
             DialoguePlayer.DHUD = tempHud.transform;
             tempHud.SetActive(false);
         }

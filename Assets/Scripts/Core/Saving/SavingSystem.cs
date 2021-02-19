@@ -1,5 +1,4 @@
 using MostyProUI;
-using MostyProUI.LevelController;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -21,7 +20,6 @@ namespace Game.Saving
             }
             yield return SceneManager.LoadSceneAsync(buildIndex);
             RestoreState(state);
-            UIMenu.Instance.Resume();
         }
 
         public void Save(string saveFile)
@@ -41,7 +39,6 @@ namespace Game.Saving
 
         public static void Delete(string saveFile)
         {
-            LastLevelKeeper.ResetPlayedChapters();
             File.Delete(GetPathFromSaveFile(saveFile));
         }
 

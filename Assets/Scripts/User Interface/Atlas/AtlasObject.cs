@@ -13,8 +13,6 @@ namespace Game.Atlas.Data
         [SerializeField] protected Sprite photo;
         [HideInInspector] abstract public AtlasCategory Category { get; }
         protected bool isOpened = false;
-        
-
         public void Open()
         {
             isOpened = true;

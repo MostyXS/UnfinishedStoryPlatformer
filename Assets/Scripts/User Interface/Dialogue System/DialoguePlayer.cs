@@ -50,7 +50,7 @@ namespace Game.Dialogues.Core
         public void StartDialogue()
         {
             DHUD.gameObject.SetActive(true);
-            UIMenu.Instance.Pause(false);
+            //InGameMenuManager.Instance.Pause(false);
             PlayDialogue();
         }
         public void PlayDialogue() // Executes when the dialogue hud is active in update method(Script is on dialogue hud itself
@@ -107,7 +107,7 @@ namespace Game.Dialogues.Core
         public void FinishDialogue()
         {
             OnTriggerNextStep -= PlayDialogue;
-            UIMenu.Instance.Resume();
+            //InGameMenuManager.Instance.Resume();
             DHUD.gameObject.SetActive(false);
         }
         #endregion

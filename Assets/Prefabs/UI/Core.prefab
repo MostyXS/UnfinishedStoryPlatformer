@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2903638484350662078}
   - component: {fileID: 1655506796053273104}
   - component: {fileID: 3466861513984268643}
+  - component: {fileID: 761356626}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -61,3 +62,15 @@ MonoBehaviour:
   hudPrefab: {fileID: 8187707363275443115, guid: 4d024e26139c5034a899e178bda4695c, type: 3}
   textPrefab: {fileID: 6966056706489058665, guid: cc6fffdeab0533347b48e606b4d0db52, type: 3}
   playerButtonPrefab: {fileID: 5599446217384598067, guid: 9792fa4d2c66a7f43b2727dd01bc70a2, type: 3}
+--- !u!114 &761356626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3761534394789428220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5430c240d40312459eaa8f58f74203c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -19,38 +20,48 @@ public class Player : MonoBehaviour
     [SerializeField] float distanceToGround;
     [SerializeField] LayerMask groundMask;
 
+    public static BasePlayerControls.PlayerActions Inputs { get; private set; }
+
     float defaultXScale;
     float xAxis;
     int dir;
     float currentVelMultiplier = 0;
 
-    Health myHealth;
-    Animator anim;
-    Rigidbody2D rb;
+    private Health myHealth;
+    private Animator anim;
+    private Rigidbody2D rb;
 
     #region Unity Methods
     private void Awake()
     {
+        Inputs = new BasePlayerControls().Player;
         myHealth = GetComponent<Health>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         defaultXScale = transform.localScale.x;
+
+        Inputs.Attack.performed += Attack;
+        
+        Inputs.Jump.performed += Jump;
+    }
+    private void OnEnable()
+    {
+        Inputs.Enable();
+    }
+    private void OnDisable()
+    {
+        Inputs.Disable();   
     }
     private void Start()
     {
-        
         myHealth.onDeath += PerformDeath;
-        UIMenu.Instance.onPause += Pause;
-        UIMenu.Instance.onResume += () => { enabled = true; };
-
     }
+
     private void LateUpdate()
     {
-        Attack();
-        Move();
-        Jump();
-
+        ProcessMovement();
     }
+
     private void OnDrawGizmos()
     {
         if (foot1 != null)
@@ -61,23 +72,21 @@ public class Player : MonoBehaviour
 
     #endregion
     #region Control Methods
-    private void Attack()
+    private void Attack(InputAction.CallbackContext ctx)
     {
-        if (Input.GetButtonDown(AnimNames.ATTACK))
-        {
-            anim.SetTrigger(AnimNames.ATTACK);
-        }
+        anim.SetTrigger(AnimNames.ATTACK);
+        
     }
-    private void Jump()
+    private void Jump(InputAction.CallbackContext ctx)
     {
-        if (CanJump() && Input.GetButtonDown("Jump"))
+        if (CanJump())
         {
             rb.velocity += new Vector2(0, jumpPower);
         }
     }
-    private void Move()
+    private void ProcessMovement()
     {
-        xAxis = Input.GetAxisRaw("Horizontal");
+        xAxis = Inputs.Move.ReadValue<float>();
         if (IsBraking())
         {
             currentVelMultiplier = Mathf.Clamp(currentVelMultiplier - deccelerationSpeed * Time.deltaTime, 0, 1);
@@ -98,13 +107,7 @@ public class Player : MonoBehaviour
     #region Delegated Methods
     public void PerformDeath()
     {
-        UIMenu.Instance.ActivateDeathMenu();
-    }
-
-    public void Pause()
-    {
-        enabled = false;
-        rb.velocity = new Vector2(0, 0);
+        InGameMenuManager.Instance.ActivateDeathMenu();
     }
     #endregion
     #region Bool Methods

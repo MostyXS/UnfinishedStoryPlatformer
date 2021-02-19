@@ -35,7 +35,7 @@ namespace Game.Triggers
         private void OnTriggerStay2D(Collider2D collision)
         {
             if (!collision.CompareTag("Player")) return;
-            if (UIMenu.Paused)
+            if (InGameMenuManager.Instance.Paused)
             {
                 DeactivateObjects();
                 return;

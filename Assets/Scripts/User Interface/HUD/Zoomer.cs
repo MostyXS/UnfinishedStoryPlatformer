@@ -2,27 +2,35 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class Zoomer : MonoBehaviour
 {
     [SerializeField] CinemachineVirtualCamera pCam;
     [SerializeField] Transform mousePoint;
     [SerializeField] float zoomRadius = 10f;
+    [SerializeField] float speed = 5;
+
     
-    Camera mCamera;
+    BasePlayerControls.PlayerActions inputs;
 
     private void Start()
     {
-        mCamera = Camera.main;
+        inputs = Player.Inputs;
     }
-    
-    private void LateUpdate()
+    private void Update()
     {
-        if (Input.GetButton("Zoom"))
+        Zoom();
+    }
+    private void Zoom()
+    {
+        var bControl = inputs.ActivateZoom.activeControl;
+        if (bControl != null && bControl.IsPressed())
         {
+            var axis = inputs.ControlZoom.ReadValue<Vector2>();
             pCam.Follow = mousePoint;
-
-            var newLocation = mCamera.ScreenToWorldPoint(Input.mousePosition);
+            var newLocation = mousePoint.position + (Vector3)axis * Time.deltaTime * speed;
             float distanceBetweenCenterAndMouse = Vector2.Distance(mousePoint.position, transform.position);
             if (distanceBetweenCenterAndMouse > zoomRadius)
             {
@@ -37,7 +45,7 @@ public class Zoomer : MonoBehaviour
         {
             pCam.Follow = transform;
         }
-    }
 
+    }
 
 }
