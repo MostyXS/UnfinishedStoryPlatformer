@@ -61,6 +61,9 @@ MonoBehaviour:
         parametrs:
         - Privet
         negate: 0
+      - predicate: 0
+        parametrs: []
+        negate: 0
     - or:
       - predicate: 0
         parametrs: []
@@ -288,6 +291,9 @@ MonoBehaviour:
       - predicate: 0
         parametrs:
         - Privet
+        negate: 0
+      - predicate: 0
+        parametrs: []
         negate: 0
       - predicate: 0
         parametrs: []

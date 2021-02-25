@@ -71,6 +71,7 @@ namespace Game.Dialogues
         public Condition GetCondition()
         {
             Undo.RecordObject(this, "Condition Update");
+            EditorUtility.SetDirty(this);
             return condition;
         }
         public void SetCondition(Condition newCondition)
