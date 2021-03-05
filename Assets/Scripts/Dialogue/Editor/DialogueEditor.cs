@@ -1,21 +1,20 @@
 using Game.Core;
 using Game.Utils.Editor;
-using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Callbacks;
-using UnityEditor.Graphs;
 using UnityEngine;
 
 namespace Game.Dialogues.Editor
 {
     public class DialogueEditor : EditorWindow
     {
+        [NonSerialized]
         private static Dialogue selectedDialogue;
 
-        #region Styles
+        #region Styles Data
         [NonSerialized]
         private GUIStyle labelStyle;
         [NonSerialized]
@@ -51,9 +50,10 @@ namespace Game.Dialogues.Editor
         private DialogueNode conditionCopyNode = null;
         [NonSerialized]
         private bool draggingCanvas = false;
+        [NonSerialized]
         private Condition.Disjunction disjToRemove;
+        [NonSerialized]
         private Condition.Predicate conjToRemove;
-
         #endregion
 
         #region Const Data
@@ -75,7 +75,6 @@ namespace Game.Dialogues.Editor
         private const float Y_CONDITION_OFFSET = -200;
         #endregion
         
-
         #region Zoom data
         [NonSerialized]
         private Vector2 zoomCoordsOrigin = Vector2.zero;
@@ -86,8 +85,6 @@ namespace Game.Dialogues.Editor
         [NonSerialized]
         private Vector2 textureOffset = Vector2.zero;
         #endregion
-
-
         #region Unity Callbacks
         [MenuItem("Window/DialogueEditor")]
         public static void ShowEditorWindow()
@@ -157,135 +154,6 @@ namespace Game.Dialogues.Editor
 
         #endregion
 
-        
-        #region Interaction Events
-        private void HandleEvents()
-        {
-            if (Event.current.control && (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.D))
-            {
-                HandleNodeCreate();
-            }
-            if (Event.current.type == EventType.KeyDown && (Event.current.control && 
-                ( Event.current.keyCode == KeyCode.X) || Event.current.keyCode == KeyCode.Delete ))
-            {
-                HandleNodeRemove();
-            }
-            if (Event.current.isScrollWheel)
-            {
-                HandleZoom();
-                Event.current.Use();
-            }
-
-            if (Event.current.type == EventType.MouseDown)
-            {
-                HandleMouseDown();
-            }
-            else if (Event.current.type == EventType.MouseDrag)
-            {
-                HandleDragging();
-            }
-            else if (Event.current.type == EventType.MouseUp)
-            {
-                draggingNode = null;
-                draggingCanvas = false;
-            }
-
-        }
-        private void HandleNodeCreate()
-        {
-            var selectedNode = Selection.activeObject as DialogueNode;
-            if (selectedNode != null)
-            {
-                selectedDialogue.CreateNode(selectedNode);
-            }
-            Repaint();
-        }
-        private void HandleNodeRemove()
-        {
-            var selectedNode = Selection.activeObject as DialogueNode;
-            if (selectedNode != null)
-            {
-                selectedDialogue.RemoveNode(selectedNode);
-            }
-            Repaint();
-        }
-
-      
-        private void TryCreateNode()
-        {
-            if (creatingNode != null)
-            {
-                selectedDialogue.CreateNode(creatingNode);
-                creatingNode = null;
-            }
-        }
-        private void TryRemoveNode()
-        {
-            if (removingNode != null)
-            {
-                selectedDialogue.RemoveNode(removingNode);
-                removingNode = null;
-            }
-        }
-        private void HandleDragging()
-        {
-            if (draggingCanvas)
-            {
-                HandleCanvasDrag();
-            }
-            else if (draggingNode != null)
-            {
-                HandleNodeDrag();
-            }
-        }
-
-        private void HandleMouseDown()
-        {
-            draggingNode = GetNodeAtPoint(ConvertScreenCoordsToZoomCoords(Event.current.mousePosition));
-
-            if (draggingNode != null)
-            {
-                Selection.activeObject = draggingNode;
-            }
-            else
-            {
-                Selection.activeObject = selectedDialogue;
-                draggingCanvas = true; //true when no node selected
-            }
-        }
-
-        private void HandleCanvasDrag()
-        {
-            Vector2 delta = Event.current.delta;
-            var zoomedDelta = delta / currentZoom;
-
-            zoomCoordsOrigin -= zoomedDelta;
-            AddTextureOffset(zoomedDelta);
-            GUI.changed = true;
-        }
-
-        private void HandleNodeDrag()
-        {
-            Vector2 newNodePosition = draggingNode.GetRect().position + Event.current.delta / currentZoom;
-            draggingNode.SetPosition(newNodePosition);
-            GUI.changed = true;
-        }
-
-        private void HandleZoom()
-        {
-            Vector2 delta = Event.current.delta;
-            Vector2 zoomCoordsMousePos = ConvertScreenCoordsToZoomCoords(Event.current.mousePosition);
-            float zoomDelta = -delta.y * ZOOM_SPEED;
-            float oldZoom = currentZoom;
-            currentZoom += zoomDelta;
-            currentZoom = Mathf.Clamp(currentZoom, MIN_ZOOM, MAX_ZOOM);
-            var previousZoomCoordsOrigin = zoomCoordsOrigin;
-            zoomCoordsOrigin += (zoomCoordsMousePos - zoomCoordsOrigin) - (oldZoom / currentZoom) * (zoomCoordsMousePos - zoomCoordsOrigin);
-            var coordsDelta = previousZoomCoordsOrigin - zoomCoordsOrigin;
-
-            AddTextureOffset(coordsDelta);
-        }
-        #endregion
         #region GUI Drawers
         private void ProcessEditorDraw()
         {
@@ -499,7 +367,7 @@ namespace Game.Dialogues.Editor
                     }
                 }
             }
-            if (GUILayout.Button("Add Disjunction"))
+            if (GUILayout.Button("Add New AND"))
             {
                 node.GetCondition().GetDisjunctions().Add(new Condition.Disjunction());
             }
@@ -575,13 +443,13 @@ namespace Game.Dialogues.Editor
         }
         private void DrawDisjunction(Condition.Disjunction disjunction)
         {
-            GUILayout.Label("Disjunction", new GUIStyle(textStyle) { alignment = TextAnchor.UpperCenter, fontSize = 20 });
+            GUILayout.Label("AND", new GUIStyle(textStyle) { alignment = TextAnchor.UpperCenter, fontSize = 20 });
 
-            if (GUILayout.Button("Remove Disjunction"))
+            if (GUILayout.Button("Remove"))
             {
                 disjToRemove = disjunction;
             }
-            if (GUILayout.Button("Add New Conjunction"))
+            if (GUILayout.Button("Add New OR"))
             {
                 disjunction.GetConjunctions().Add(new Condition.Predicate());
             }
@@ -604,9 +472,9 @@ namespace Game.Dialogues.Editor
         {
             var conjStyle = conjunction.GetNegation() ? negatedPredicateNodeStyle : conjunctionNodeStyle;
             GUILayout.BeginVertical(conjStyle);
-            GUILayout.Label("Conjunction", labelStyle);
+            GUILayout.Label("OR", labelStyle);
             EditorGUILayout.BeginHorizontal();
-            GUILayout.Label("Negate conjunction", textStyle);
+            GUILayout.Label("Negate", textStyle);
             EditorGUI.BeginChangeCheck();
             bool newNegation = EditorGUILayout.Toggle(conjunction.GetNegation());
             if (EditorGUI.EndChangeCheck())
@@ -614,7 +482,7 @@ namespace Game.Dialogues.Editor
                 conjunction.SetNegation(newNegation);
             }
             EditorGUILayout.EndHorizontal();
-            if (GUILayout.Button("Remove Conjunction"))
+            if (GUILayout.Button("Remove"))
             {
                 conjToRemove = conjunction;
             }
@@ -697,6 +565,134 @@ namespace Game.Dialogues.Editor
         #endregion
 
         #endregion
+        #endregion
+        #region Interaction Events
+        private void HandleEvents()
+        {
+            if (Event.current.control && (Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.D))
+            {
+                HandleNodeCreate();
+            }
+            if (Event.current.type == EventType.KeyDown && (Event.current.control && 
+                ( Event.current.keyCode == KeyCode.X) || Event.current.keyCode == KeyCode.Delete ))
+            {
+                HandleNodeRemove();
+            }
+            if (Event.current.isScrollWheel)
+            {
+                HandleZoom();
+                Event.current.Use();
+            }
+
+            if (Event.current.type == EventType.MouseDown)
+            {
+                HandleMouseDown();
+            }
+            else if (Event.current.type == EventType.MouseDrag)
+            {
+                HandleDragging();
+            }
+            else if (Event.current.type == EventType.MouseUp)
+            {
+                draggingNode = null;
+                draggingCanvas = false;
+            }
+
+        }
+        private void HandleNodeCreate()
+        {
+            var selectedNode = Selection.activeObject as DialogueNode;
+            if (selectedNode != null)
+            {
+                selectedDialogue.CreateNode(selectedNode);
+            }
+            Repaint();
+        }
+        private void HandleNodeRemove()
+        {
+            var selectedNode = Selection.activeObject as DialogueNode;
+            if (selectedNode != null)
+            {
+                selectedDialogue.RemoveNode(selectedNode);
+            }
+            Repaint();
+        }
+
+      
+        private void TryCreateNode()
+        {
+            if (creatingNode != null)
+            {
+                selectedDialogue.CreateNode(creatingNode);
+                creatingNode = null;
+            }
+        }
+        private void TryRemoveNode()
+        {
+            if (removingNode != null)
+            {
+                selectedDialogue.RemoveNode(removingNode);
+                removingNode = null;
+            }
+        }
+        private void HandleDragging()
+        {
+            if (draggingCanvas)
+            {
+                HandleCanvasDrag();
+            }
+            else if (draggingNode != null)
+            {
+                HandleNodeDrag();
+            }
+        }
+
+        private void HandleMouseDown()
+        {
+            draggingNode = GetNodeAtPoint(ConvertScreenCoordsToZoomCoords(Event.current.mousePosition));
+
+            if (draggingNode != null)
+            {
+                Selection.activeObject = draggingNode;
+            }
+            else
+            {
+                Selection.activeObject = selectedDialogue;
+                draggingCanvas = true; //true when no node selected
+            }
+        }
+
+        private void HandleCanvasDrag()
+        {
+            Vector2 delta = Event.current.delta;
+            var zoomedDelta = delta / currentZoom;
+
+            zoomCoordsOrigin -= zoomedDelta;
+            AddTextureOffset(zoomedDelta);
+            GUI.changed = true;
+        }
+
+        private void HandleNodeDrag()
+        {
+            Vector2 newNodePosition = draggingNode.GetRect().position + Event.current.delta / currentZoom;
+            draggingNode.SetPosition(newNodePosition);
+            GUI.changed = true;
+        }
+
+        private void HandleZoom()
+        {
+            Vector2 delta = Event.current.delta;
+            Vector2 zoomCoordsMousePos = ConvertScreenCoordsToZoomCoords(Event.current.mousePosition);
+            float zoomDelta = -delta.y * ZOOM_SPEED;
+            float oldZoom = currentZoom;
+            currentZoom += zoomDelta;
+            currentZoom = Mathf.Clamp(currentZoom, MIN_ZOOM, MAX_ZOOM);
+            var previousZoomCoordsOrigin = zoomCoordsOrigin;
+            zoomCoordsOrigin += (zoomCoordsMousePos - zoomCoordsOrigin) - (oldZoom / currentZoom) * (zoomCoordsMousePos - zoomCoordsOrigin);
+            var coordsDelta = previousZoomCoordsOrigin - zoomCoordsOrigin;
+
+            AddTextureOffset(coordsDelta);
+        }
         #endregion
         #region Utility Methods
         private Vector2 ConvertScreenCoordsToZoomCoords(Vector2 screenCoords)

@@ -7,6 +7,5 @@ namespace Game.Core
     public interface IPredicateEvaluator 
     {
         bool? Evaluate(PredicateEnum predicate, List<string> parametrs);
-        
     }
 }

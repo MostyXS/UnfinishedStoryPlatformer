@@ -1,9 +1,5 @@
-﻿using Assets.Scripts.ConstantData;
-using Game.Combat.Common;
-using MostyProUI;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using Game.Combat.Common;
+using Game.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -107,7 +103,6 @@ public class Player : MonoBehaviour
     #region Delegated Methods
     public void PerformDeath()
     {
-        InGameMenuManager.Instance.ActivateDeathMenu();
     }
     #endregion
     #region Bool Methods

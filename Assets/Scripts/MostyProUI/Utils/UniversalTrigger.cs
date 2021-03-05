@@ -35,11 +35,11 @@ namespace Game.Triggers
         private void OnTriggerStay2D(Collider2D collision)
         {
             if (!collision.CompareTag("Player")) return;
-            if (InGameMenuManager.Instance.Paused)
-            {
-                DeactivateObjects();
-                return;
-            }
+            // if (UIManager.Instance.Paused)
+            // {
+            //     DeactivateObjects();
+            //     return;
+            // }
             
             ActivateObjects();
         }

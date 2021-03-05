@@ -60,9 +60,7 @@ MonoBehaviour:
       - predicate: 0
         parametrs:
         - Privet
-        negate: 0
-      - predicate: 0
-        parametrs: []
+        - ' Poka'
         negate: 0
     - or:
       - predicate: 0
@@ -71,8 +69,8 @@ MonoBehaviour:
     negate: 0
   rect:
     serializedVersion: 2
-    x: 243.76216
-    y: -11.580528
+    x: 75.59059
+    y: -949.2763
     width: 300
     height: 400
 --- !u!114 &-1138644880910052951
@@ -98,21 +96,19 @@ MonoBehaviour:
     and:
     - or:
       - predicate: 0
-        parametrs: []
-        negate: 0
-      - predicate: 1
-        parametrs: []
+        parametrs:
+        - 
         negate: 0
     - or:
       - predicate: 0
         parametrs:
-        - Privet
+        - Privedt
         negate: 0
     negate: 1
   rect:
     serializedVersion: 2
-    x: -431.75388
-    y: 1162.1195
+    x: -163.52795
+    y: 1200.083
     width: 300
     height: 400
 --- !u!114 &-551263398866565231
@@ -189,8 +185,8 @@ MonoBehaviour:
     negate: 0
   rect:
     serializedVersion: 2
-    x: 1514.5396
-    y: -446.34647
+    x: 1444.5396
+    y: -356.34644
     width: 300
     height: 400
 --- !u!114 &3832455596846915362
@@ -206,20 +202,19 @@ MonoBehaviour:
   m_Name: 66560d54-b1a8-4286-986e-60d9ce3fa37c
   m_EditorClassIdentifier: 
   nameOverride: 
-  isPlayerSpeaking: 0
+  isPlayerSpeaking: 1
   shortDescription: 
   text: 
   children: []
   onEnterAction: 
   onExitAction: 
   condition:
-    and:
-    - or: []
+    and: []
     negate: 0
   rect:
     serializedVersion: 2
-    x: -357.4346
-    y: -543.637
+    x: -148.7461
+    y: 134.73203
     width: 300
     height: 400
 --- !u!114 &6993250423346748037
@@ -255,11 +250,11 @@ MonoBehaviour:
       - predicate: 0
         parametrs: []
         negate: 0
-    negate: 0
+    negate: 1
   rect:
     serializedVersion: 2
-    x: 1064.5396
-    y: -446.34647
+    x: 769.8664
+    y: -1028.8845
     width: 300
     height: 400
 --- !u!114 &7618816760959805853
@@ -275,14 +270,14 @@ MonoBehaviour:
   m_Name: 454155be-8ac3-42a6-a1a0-16bf6db2043d
   m_EditorClassIdentifier: 
   nameOverride: 
-  isPlayerSpeaking: 1
+  isPlayerSpeaking: 0
   shortDescription: 
   text: Hi kak tebya zovut
   children:
   - 8ecf1e33-3066-4ae9-aee5-3a22ea5751d6
   - 248335cf-1d0d-4491-a301-495704de6361
-  - 66560d54-b1a8-4286-986e-60d9ce3fa37c
   - ef8df040-0bdf-4698-a48b-d7c19de7d39a
+  - 66560d54-b1a8-4286-986e-60d9ce3fa37c
   onEnterAction: 
   onExitAction: 
   condition:
@@ -296,12 +291,14 @@ MonoBehaviour:
         parametrs: []
         negate: 0
       - predicate: 0
-        parametrs: []
+        parametrs:
+        - 
+        - 
         negate: 0
     negate: 1
   rect:
     serializedVersion: 2
-    x: -1514.333
-    y: 274.57693
+    x: -1041.3661
+    y: -289.59863
     width: 300
     height: 400

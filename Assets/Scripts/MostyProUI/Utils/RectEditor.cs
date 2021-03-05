@@ -21,16 +21,16 @@ namespace MostyProUI.Utils
         }
         public static void SetMinAnchor(this RectTransform rect, float xMin, float yMin)
         {
-            rect.anchorMin = new Vector2(xMin.Anchored(), yMin.Anchored());
+            rect.anchorMin = new Vector2(xMin.ToAnchor(), yMin.ToAnchor());
         }
         public static void SetMaxAnchor(this RectTransform rect, float xMax, float yMax)
         {
-            rect.anchorMax = new Vector2(xMax.Anchored(), yMax.Anchored());
+            rect.anchorMax = new Vector2(xMax.ToAnchor(), yMax.ToAnchor());
         }
         public static void SetAnchor(this RectTransform rect, Vector2 anchorMin, Vector2 anchorMax)
         {
-            rect.anchorMin = anchorMin.Anchored();
-            rect.anchorMax = anchorMax.Anchored();
+            rect.anchorMin = anchorMin.ToAnchor();
+            rect.anchorMax = anchorMax.ToAnchor();
         }
         public static void SetAnchor(this RectTransform rect, Vector2 anchorBoth)
         {
@@ -50,13 +50,13 @@ namespace MostyProUI.Utils
             rect.anchorMin = new Vector2(0, 0);
             rect.anchorMax = new Vector2(0, 0);
         }
-        public static float Anchored(this float value)
+        public static float ToAnchor(this float value)
         {
             return Mathf.Clamp(value, 0, 1f);
         }
-        public static Vector2 Anchored(this Vector2 vector)
+        public static Vector2 ToAnchor(this Vector2 vector)
         {
-            return new Vector2(vector.x.Anchored(), vector.y.Anchored());
+            return new Vector2(vector.x.ToAnchor(), vector.y.ToAnchor());
         }
 
     }

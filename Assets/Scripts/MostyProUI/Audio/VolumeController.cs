@@ -45,7 +45,7 @@ namespace MostyProUI.PrefsControl
                 audioSources[i].volume = PrefsController.GetVolumeByKey(prefkey);
             }
         }
-        public void ChangeVolumeEvent(float volume) // defaults event;
+        public void OnVolumeChanged(float volume) // defaults event;
         {
             UpdateVolume();
         }

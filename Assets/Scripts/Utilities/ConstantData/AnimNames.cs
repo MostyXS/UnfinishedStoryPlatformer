@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.ConstantData
+namespace Game.Utils
 {
-    public class AnimNames
+    public struct AnimNames
     {
         public const string ATTACK = "Attack";
 

@@ -9,7 +9,7 @@ public class InGameMenuButtons : MonoBehaviour
 
     public void Continue()
     {
-        InGameMenuManager.Instance.Unpause();
+        // UIManager.Instance.Unpause();
     }
     public void Restart()//???
     {

@@ -27,10 +27,10 @@ namespace Game.Dialogues
         private string onExitAction;
         [SerializeField]
         private Condition condition;
-
+#if UNITY_EDITOR
         [SerializeField]
         private Rect rect = new Rect(0, 0, 300, 400);
-
+#endif
 
 
         public string GetText()
@@ -67,7 +67,6 @@ namespace Game.Dialogues
             return nameOverride;
         }
 #if UNITY_EDITOR
-        #region Condition Editor
         public Condition GetCondition()
         {
             Undo.RecordObject(this, "Condition Update");
@@ -82,7 +81,6 @@ namespace Game.Dialogues
 
         }
         
-        #endregion
         public void SetPosition(Vector2 newPosition)
         {
             Undo.RecordObject(this, "Update Node Position");
@@ -160,10 +158,6 @@ namespace Game.Dialogues
         {
             return shortDescription;
         }
-
-        
-        
-
 
 #endif
     }

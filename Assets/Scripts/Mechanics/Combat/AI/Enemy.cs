@@ -1,7 +1,7 @@
-using Assets.Scripts.ConstantData;
-using Game.Combat.Common;
 using System.Collections;
-using System.Collections.Generic;
+
+using Game.Combat.Common;
+using Game.Utils;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour

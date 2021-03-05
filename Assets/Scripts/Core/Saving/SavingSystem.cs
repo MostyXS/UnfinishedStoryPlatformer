@@ -59,7 +59,6 @@ namespace Game.Saving
         private void SaveFile(string saveFile, object state)
         {
             string path = GetPathFromSaveFile(saveFile);
-            print("Saving to " + path);
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
@@ -104,6 +103,12 @@ namespace Game.Saving
         private static string GetPathFromSaveFile(string saveFile)
         {
             return Path.Combine(Application.persistentDataPath, saveFile + ".sav");
+        }
+
+
+        public static void SetSaveFile(int slotNumber)
+        {
+            PlayerPrefs.SetInt(PrefKey.CurrentSaveSlot.ToString(), slotNumber);
         }
     }
 }
