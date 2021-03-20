@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-3234629730638575434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: 55c30b11-8a5b-4769-91c1-19fffe40dc8c
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 21300000, guid: 45f095d3364125749985cb8d768f883f, type: 3}
+  description: Description
+  categoryType: 1
+--- !u!114 &-1992176753007586288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: fa285cb3-5299-436c-8538-5fd11eb39771
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 0}
+  description: Description
+  categoryType: 1
+--- !u!114 &-899293861799118282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: 3715368e-90e9-4769-814f-066572a5e8ff
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 0}
+  description: Description
+  categoryType: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bf796abcc8fc498b866fb27207311, type: 3}
+  m_Name: Boss Atlas Category
+  m_EditorClassIdentifier: 
+  categoryType: 1
+  atlasObjects:
+  - {fileID: -1992176753007586288}
+  - {fileID: -3234629730638575434}
+  - {fileID: -899293861799118282}
+  - {fileID: 5528640246597544065}
+--- !u!114 &5528640246597544065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: 1466fa05-6993-4309-a748-ae975a5e639c
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 0}
+  description: Description
+  categoryType: 1
