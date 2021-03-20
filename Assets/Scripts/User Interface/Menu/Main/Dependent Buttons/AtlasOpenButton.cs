@@ -1,7 +1,7 @@
 using Game.Collectioning;
 using UnityEngine;
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     public class AtlasOpenButton : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 using UnityEngine;
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     public class RebindContent : MonoBehaviour
     {

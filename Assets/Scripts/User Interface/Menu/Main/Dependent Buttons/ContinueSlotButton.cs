@@ -3,7 +3,7 @@ using Game.Core.Saving;
 using TMPro;
 using UnityEngine.UI;
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     public class ContinueSlotButton : SlotButton
     {

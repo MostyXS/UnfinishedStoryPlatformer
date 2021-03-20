@@ -9,7 +9,7 @@ using UnityEngine.InputSystem;
 
 ////TODO: deal with composites that have parts bound in different control schemes
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     /// <summary>
     /// A reusable component with a self-contained UI for rebinding a single action.

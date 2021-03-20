@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 ////TODO: support multi-object editing
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     /// <summary>
     /// A custom inspector for <see cref="RebindActionUi"/> which provides a more convenient way for

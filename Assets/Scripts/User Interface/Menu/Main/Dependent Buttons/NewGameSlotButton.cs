@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     public class NewGameSlotButton : SlotButton
     {

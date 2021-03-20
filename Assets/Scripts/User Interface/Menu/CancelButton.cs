@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.UI;
 using UnityEngine.UI;
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     public class CancelButton : MonoBehaviour
     {

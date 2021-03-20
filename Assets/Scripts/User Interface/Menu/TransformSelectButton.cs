@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Game.Menu.UI
+namespace Game.UI.Menu
 {
     [RequireComponent(typeof(Button))]
     public class TransformSelectButton : MonoBehaviour
