@@ -1,16 +1,15 @@
-using Game.Saving;
 using JetBrains.Annotations;
 using UnityEngine;
 
 
-public class Checkpoint : MonoBehaviour
+namespace Game.Core.Saving
 {
-    
-    [UsedImplicitly]
-    public void Save()
+    public class Checkpoint : MonoBehaviour
     {
-        GameManager.Instance.Saver.Save();
+        [UsedImplicitly]
+        public void Save()
+        {
+            GameManager.Instance.Saver.Save();
+        }
     }
-
-
 }

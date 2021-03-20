@@ -1,28 +1,29 @@
-using Game.Combat.Common;
-using System;
 using System.Collections;
-using System.Collections.Generic;
+using Game.Attributes;
 using UnityEngine;
 
-namespace Game.Combat.Weapons
+namespace Game.Combat
 {
     public class MeleeWeapon : MonoBehaviour
     {
         [SerializeField] float damage = 20f;
         [SerializeField] float attackDelay = 1f;
 
-        bool canAttack = true;
+        private bool _canAttack = true;
 
         #region Unity Methods
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (!canAttack) return;
+            if (!_canAttack) return;
             var healthComponent = collision.GetComponent<Health>();
             TryDamageHealth(healthComponent);
-
         }
+
         #endregion
+
         #region Attack Methods
+
         private void TryDamageHealth(Health health)
         {
             if (health)
@@ -34,10 +35,11 @@ namespace Game.Combat.Weapons
 
         private IEnumerator AttackDelay()
         {
-            canAttack = false;
+            _canAttack = false;
             yield return new WaitForSeconds(attackDelay);
-            canAttack = true;
+            _canAttack = true;
         }
+
         #endregion
     }
 }

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
 
@@ -8,6 +7,7 @@ public class PanelSelector : EditorWindow
     private Transform _activePanelsList;
     private Transform _currentActivePanel;
 
+    [UsedImplicitly]
     [MenuItem("Game/Tools/Panel Selector")]
     public static void ShowWindow()
     {

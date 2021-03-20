@@ -1,6 +1,5 @@
-using Game.Extensions;
+using Game.Utils.Extensions;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Game.Collectioning.UI

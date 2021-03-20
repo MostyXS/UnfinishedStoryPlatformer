@@ -1,56 +1,55 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Game.Saving;
+using Game.Core.Saving;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class UnityActionTrigger : MonoBehaviour, ISaveable
+namespace Game.Core
 {
-    private bool _isUsed;
-
-    [SerializeField] private UnityEvent triggerEnterActions;
-
-    [SerializeField] private UnityEvent triggerStayActions;
-
-    [SerializeField] private UnityEvent triggerExitActions;
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public class UnityActionTrigger : MonoBehaviour, ISaveable
     {
-        if (other.CompareTag("Player"))
+        private bool _isUsed;
+
+        [SerializeField] private UnityEvent triggerEnterActions;
+
+
+        [SerializeField] private UnityEvent triggerExitActions;
+
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            triggerEnterActions?.Invoke();
+            if (other.CompareTag("Player"))
+            {
+                triggerEnterActions?.Invoke();
+            }
         }
-    }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+
+        private void OnTriggerExit2D(Collider2D other)
         {
-            triggerStayActions?.Invoke();
+            if (other.CompareTag("Player"))
+            {
+                triggerExitActions?.Invoke();
+            }
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        [UsedImplicitly]
+        public void SetUsed()
         {
-            triggerExitActions?.Invoke();
+            _isUsed = true;
         }
-    }
 
-    public object CaptureState()
-    {
-        return GetComponent<Collider2D>().enabled;
-    }
+        public object CaptureState()
+        {
+            return GetComponent<Collider2D>().enabled;
+        }
 
-    public void RestoreState(object state)
-    {
-        GetComponent<Collider2D>().enabled = (bool) state;
-    }
+        public void RestoreState(object state)
+        {
+            GetComponent<Collider2D>().enabled = (bool) state;
+        }
 
-    public bool ShouldBeSaved()
-    {
-        return !_isUsed;
+        public bool ShouldBeSaved()
+        {
+            return !_isUsed;
+        }
     }
 }

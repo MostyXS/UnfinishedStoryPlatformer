@@ -1,7 +1,8 @@
-using Game.Combat.Common;
+using Game.Attributes;
 using UnityEngine;
 
-namespace Game.Combat.Weapons
+
+namespace Game.Combat
 {
     public class Projectile : MonoBehaviour
     {
@@ -14,9 +15,8 @@ namespace Game.Combat.Weapons
             {
                 health.TakeDamage(damage);
             }
+
             Destroy(gameObject);
-
-
         }
     }
 }

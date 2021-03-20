@@ -1,7 +1,5 @@
-using Game.Core;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -10,7 +8,6 @@ namespace Game.Dialogues
     [CreateAssetMenu(fileName = "New Dialogue", menuName = "Game/Dialogue", order = 0)]
     public class Dialogue : ScriptableObject, ISerializationCallbackReceiver
     {
-
         [SerializeField] private List<DialogueNode> nodes = new List<DialogueNode>();
 #if UNITY_EDITOR
         [SerializeField] private Vector2 newNodeOffset = new Vector2(450, 0);
@@ -19,7 +16,7 @@ namespace Game.Dialogues
         private void OnValidate()
         {
             nodeLookup.Clear();
-            foreach(DialogueNode node in GetAllNodes())
+            foreach (DialogueNode node in GetAllNodes())
             {
                 nodeLookup[node.name] = node; //Fills Node Lookup
             }
@@ -32,14 +29,15 @@ namespace Game.Dialogues
 
         public IEnumerable<DialogueNode> GetPlayerChildren(DialogueNode currentNode)
         {
-            foreach(DialogueNode node in GetNodeChildren(currentNode))
+            foreach (DialogueNode node in GetNodeChildren(currentNode))
             {
-                if(node.IsPlayerSpeaking())
+                if (node.IsPlayerSpeaking())
                 {
                     yield return node;
                 }
             }
         }
+
         public IEnumerable<DialogueNode> GetAiChildren(DialogueNode currentNode)
         {
             foreach (DialogueNode node in GetNodeChildren(currentNode))
@@ -50,14 +48,15 @@ namespace Game.Dialogues
                 }
             }
         }
-        
+
         public DialogueNode GetRootNode()
         {
             return nodes[0];
         }
+
         public IEnumerable<DialogueNode> GetNodeChildren(DialogueNode parentNode)
         {
-            foreach(string nodeId in parentNode.GetChildren())
+            foreach (string nodeId in parentNode.GetChildren())
             {
                 if (nodeLookup.TryGetValue(nodeId, out var node))
                 {
@@ -91,6 +90,7 @@ namespace Game.Dialogues
                 newNode.SetPlayerSpeaking(!parent.IsPlayerSpeaking());
                 newNode.SetPosition(parent.GetRect().position + newNodeOffset);
             }
+
             return newNode;
         }
 
@@ -119,25 +119,23 @@ namespace Game.Dialogues
             {
                 AddNode(MakeNode(null));
             }
-            if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this)))  
+
+            if (!string.IsNullOrEmpty(AssetDatabase.GetAssetPath(this)))
             {
-                foreach(DialogueNode node in GetAllNodes())
+                foreach (DialogueNode node in GetAllNodes())
                 {
-                    if(string.IsNullOrEmpty(AssetDatabase.GetAssetPath(node)))
+                    if (string.IsNullOrEmpty(AssetDatabase.GetAssetPath(node)))
                     {
                         AssetDatabase.AddObjectToAsset(node, this);
                         AssetDatabase.SaveAssets();
                     }
-
                 }
             }
 #endif
         }
+
         public void OnAfterDeserialize()
         {
-
         }
-
-        
     }
 }

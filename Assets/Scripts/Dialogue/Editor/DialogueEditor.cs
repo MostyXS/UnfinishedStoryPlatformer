@@ -1,8 +1,9 @@
-using Game.Core;
 using Game.Utils.Editor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Game.Core.Predication;
+using Game.Utils.Editor.Extensions;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEditor.Callbacks;

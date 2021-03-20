@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,16 +10,10 @@ namespace Game.Dialogues
 
         public void Trigger(string actionToTrigger)
         {
-            if(actionToTrigger == action)
+            if (actionToTrigger == action)
             {
                 onTrigger.Invoke();
             }
         }
-
-
-
-
-
-
     }
 }

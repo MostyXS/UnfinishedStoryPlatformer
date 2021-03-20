@@ -1,24 +1,27 @@
-using Game.Saving;
+using Game.Core.Saving;
 using System.Collections;
 using System.Collections.Generic;
 using Game.Collectioning;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour
+namespace Game.Core
 {
-    public static GameManager Instance { get; private set; }
-    public SaveManager Saver { get; private set; }
-    [SerializeField] private Atlas atlas;
-
-    public Atlas Atlas => atlas;
-
-    private void Start()
+    public class GameManager : MonoBehaviour
     {
-        if (Instance == null)
+        public static GameManager Instance { get; private set; }
+        public SaveManager Saver { get; private set; }
+        [SerializeField] private Atlas atlas;
+
+        public Atlas Atlas => atlas;
+
+        private void Start()
         {
-            Instance = this;
-            Saver = GetComponent<SaveManager>();
+            if (Instance == null)
+            {
+                Instance = this;
+                Saver = GetComponent<SaveManager>();
+            }
         }
     }
 }

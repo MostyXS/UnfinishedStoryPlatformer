@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Game.PreferencesControl;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace MostyProUI.PreferencesControl
+namespace Game.Audio
 {
     public class VolumeController : MonoBehaviour
     {

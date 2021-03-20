@@ -1,14 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using Game.Collectioning;
+using Game.Core;
 using UnityEngine;
 
-public class AtlasObjectOpener : MonoBehaviour
-{
-    [SerializeField] private AtlasObject atlasObjectToOpen;
 
-    public void OpenAtlasObject()
+namespace Game.Collectioning
+{
+    public class AtlasObjectOpener : MonoBehaviour
     {
-        GameManager.Instance.Atlas.OpenObject(atlasObjectToOpen);
+        [SerializeField] private AtlasObject atlasObjectToOpen;
+
+        public void OpenAtlasObject()
+        {
+            GameManager.Instance.Atlas.OpenObject(atlasObjectToOpen);
+        }
     }
 }

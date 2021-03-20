@@ -1,25 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 
-
-namespace MostyProUI
+namespace Game.UI
 {
     //Add to default scene Canvas(Defines menu and dead menu)
     public class MainCanvas : MonoBehaviour
     {
-        public static Transform Instance
-        {
-            get; private set;
-        }
+        public static Transform Instance { get; private set; }
+
         private void Awake()
         {
             Instance = transform;
         }
-        
-        
-
-
     }
 }

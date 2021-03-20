@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PredicateType
+namespace Game.Core.Predication
 {
-    HasDecision,
-    HasKill,
-    KilledMoreThan
-
+    public enum PredicateType
+    {
+        HasDecision,
+        HasKill,
+        KilledMoreThan
+    }
 }

@@ -8,9 +8,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Archive" t="Include">
-          <e p="LazyValue.cs" t="Include" />
-        </e>
         <e p="Game" t="Include">
           <e p="Controls" t="Include">
             <e p="BasePlayerControls.cs" t="Include" />
@@ -28,27 +25,36 @@
               <e p="AtlasEditor.cs" t="Include" />
             </e>
           </e>
+          <e p="Attributes" t="Include">
+            <e p="Health.cs" t="Include" />
+          </e>
           <e p="Audio" t="Include">
             <e p="MainAudioSource.cs" t="Include" />
             <e p="MusicPlayer.cs" t="Include" />
             <e p="VolumeController.cs" t="Include" />
           </e>
           <e p="Combat" t="Include">
+            <e p="MeleeWeapon.cs" t="Include" />
+            <e p="Projectile.cs" t="Include" />
+          </e>
+          <e p="Control" t="Include">
             <e p="AI" t="Include">
               <e p="Enemy.cs" t="Include" />
               <e p="Turret.cs" t="Include" />
             </e>
-            <e p="Health.cs" t="Include" />
-            <e p="MeleeWeapon.cs" t="Include" />
-            <e p="Projectile.cs" t="Include" />
+            <e p="Player" t="Include">
+              <e p="PlayerController.cs" t="Include" />
+              <e p="Zoomer.cs" t="Include" />
+            </e>
           </e>
           <e p="Core" t="Include">
-            <e p="Fader.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="PersistentObjectSpawner.cs" t="Include" />
             <e p="Predication" t="Include">
               <e p="Condition.cs" t="Include" />
+              <e p="DecisionList.cs" t="Include" />
               <e p="IPredicateEvaluator.cs" t="Include" />
+              <e p="KillList.cs" t="Include" />
               <e p="PredicateType.cs" t="Include" />
             </e>
             <e p="Saving" t="Include">
@@ -57,8 +63,8 @@
               <e p="SaveableEntity.cs" t="Include" />
               <e p="SaveManager.cs" t="Include" />
               <e p="SavingSystem.cs" t="Include" />
+              <e p="SerializableVector2.cs" t="Include" />
             </e>
-            <e p="SerializableVector2.cs" t="Include" />
             <e p="UnityActionTrigger.cs" t="Include" />
           </e>
           <e p="Dialogue" t="Include">
@@ -69,36 +75,34 @@
             <e p="Editor" t="Include">
               <e p="DialogueEditor.cs" t="Include" />
               <e p="EditorZoomArea.cs" t="Include" />
-              <e p="RectExtensions.cs" t="Include" />
             </e>
             <e p="PlayerConversant.cs" t="Include" />
           </e>
-          <e p="Player" t="Include">
-            <e p="DecisionList.cs" t="Include" />
-            <e p="KillList.cs" t="Include" />
-            <e p="Player.cs" t="Include" />
-            <e p="PlayerHealthDisplay.cs" t="Include" />
-            <e p="Zoomer.cs" t="Include" />
+          <e p="Preferences Control" t="Include">
+            <e p="DefaultsController.cs" t="Include" />
+            <e p="PreferencesSlider.cs" t="Include" />
+            <e p="PrefKeys.cs" t="Include" />
+            <e p="PrefsController.cs" t="Include" />
+            <e p="VolumeDefaultsController.cs" t="Include" />
+          </e>
+          <e p="SceneManagement" t="Include">
+            <e p="Fader.cs" t="Include" />
           </e>
           <e p="User Interface" t="Include">
             <e p="Atlas" t="Include">
               <e p="AtlasObjectUI.cs" t="Include" />
-              <e p="AtlasSaveDependentButton.cs" t="Include" />
               <e p="AtlasUI.cs" t="Include" />
             </e>
-            <e p="CancelButton.cs" t="Include" />
-            <e p="Main Menu" t="Include">
-              <e p="Game Loading" t="Include">
-                <e p="ContinueSlotButton.cs" t="Include" />
-                <e p="NewGameSlotButton.cs" t="Include" />
-                <e p="SlotButton.cs" t="Include" />
-              </e>
-              <e p="Preferences Control" t="Include">
-                <e p="DefaultsController.cs" t="Include" />
-                <e p="PreferencesSlider.cs" t="Include" />
-                <e p="PrefKeys.cs" t="Include" />
-                <e p="PrefsController.cs" t="Include" />
-                <e p="VolumeDefaultsController.cs" t="Include" />
+            <e p="MainCanvas.cs" t="Include" />
+            <e p="Menu" t="Include">
+              <e p="CancelButton.cs" t="Include" />
+              <e p="Main" t="Include">
+                <e p="Dependent Buttons" t="Include">
+                  <e p="AtlasOpenButton.cs" t="Include" />
+                  <e p="ContinueSlotButton.cs" t="Include" />
+                  <e p="NewGameSlotButton.cs" t="Include" />
+                  <e p="SlotButton.cs" t="Include" />
+                </e>
               </e>
               <e p="Settings" t="Include">
                 <e p="GamepadControlsButton.cs" t="Include" />
@@ -106,9 +110,11 @@
                 <e p="RebindActionUIEditor.cs" t="Include" />
                 <e p="RebindContent.cs" t="Include" />
               </e>
+              <e p="TransformSelectButton.cs" t="Include" />
             </e>
-            <e p="MainCanvas.cs" t="Include" />
-            <e p="TransformSelectButton.cs" t="Include" />
+            <e p="Player HUD" t="Include">
+              <e p="PlayerHealthBar.cs" t="Include" />
+            </e>
             <e p="UIManager.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">
@@ -117,12 +123,15 @@
             </e>
             <e p="Editor" t="Include">
               <e p="PanelSelector.cs" t="Include" />
-              <e p="RectExtensions.cs" t="Include" />
             </e>
             <e p="Extensions" t="Include">
+              <e p="Editor" t="Include">
+                <e p="RectExtensions.cs" t="Include" />
+              </e>
               <e p="TransformExtensions.cs" t="Include" />
               <e p="UtilityExtensions.cs" t="Include" />
             </e>
+            <e p="LazyValue.cs" t="Include" />
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

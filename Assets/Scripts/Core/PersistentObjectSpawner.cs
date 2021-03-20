@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 
-namespace MostyProUI
+namespace Game.Core
 {
     public class PersistentObjectSpawner : MonoBehaviour
     {
-        
-        [SerializeField] GameObject persistentObjectsPrefab = null;
-        static bool hasSpawned = false;
+        [SerializeField] GameObject persistentObjectsPrefab;
+        private static bool _hasSpawned;
+
         private void Awake()
         {
-            if (hasSpawned) return;
+            if (_hasSpawned) return;
             GameObject persistentObjects = Instantiate(persistentObjectsPrefab);
             DontDestroyOnLoad(persistentObjects);
-            hasSpawned = true;
+            _hasSpawned = true;
         }
     }
 }

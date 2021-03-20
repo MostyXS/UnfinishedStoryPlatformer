@@ -1,40 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-namespace MostyProUI
+﻿using UnityEngine;
+
+namespace Game.Audio
 {
     public class MusicPlayer : MonoBehaviour
     {
         [SerializeField] AudioClip[] music;
-        AudioSource myAudioSource;
-        int currentPlaying = 0;
+        private AudioSource _audioSource;
+
+        private int _currentPlaying = 0;
 
         private void Awake()
         {
-            myAudioSource = GetComponent<AudioSource>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Update()
         {
             PlayMusic();
         }
+
         private void PlayMusic()
         {
-            if (myAudioSource.isPlaying) return;
+            if (_audioSource.isPlaying) return;
 
-            if (!(currentPlaying == music.Length - 1))
+            if (_currentPlaying != music.Length - 1)
             {
-                myAudioSource.clip = music[currentPlaying + 1];
-                myAudioSource.Play();
-                currentPlaying++;
+                _audioSource.clip = music[_currentPlaying + 1];
+                _audioSource.Play();
+                _currentPlaying++;
             }
             else
             {
-                myAudioSource.clip = music[0];
-                myAudioSource.Play();
-                currentPlaying = 0;
+                _audioSource.clip = music[0];
+                _audioSource.Play();
+                _currentPlaying = 0;
             }
-
         }
     }
 }

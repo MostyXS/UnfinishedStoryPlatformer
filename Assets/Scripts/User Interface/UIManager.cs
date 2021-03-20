@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace MostyProUI
+namespace Game.UI
 {
     public class UIManager : MonoBehaviour
     {
