@@ -9,114 +9,121 @@ namespace Game.Dialogues
 {
     public class PlayerConversant : MonoBehaviour
     {
+        [SerializeField] private Sprite playerImage;
         [SerializeField] string playerName;
 
-        private Dialogue currentDialogue;
-        private DialogueNode currentNode = null;
-        private AIConversant currentConversant = null;
-        private bool isChoosing = false;
+        private Dialogue _currentDialogue;
+        private DialogueNode _currentNode;
+        private AIConversant _currentConversant;
+        private bool _isChoosing;
 
-        public event Action onConversationUpdated;
+        public event Action OnConversationUpdated;
 
 
         public void StartDialgoue(AIConversant newConversant, Dialogue newDialogue)
         {
-            currentConversant = newConversant;
-            currentDialogue = newDialogue;
-            currentNode = currentDialogue.GetRootNode();
-            isChoosing = false;
+            _currentConversant = newConversant;
+            _currentDialogue = newDialogue;
+            _currentNode = _currentDialogue.GetRootNode();
+            _isChoosing = false;
             TriggerEnterAction();
-            onConversationUpdated();
+            OnConversationUpdated?.Invoke();
         }
+
+
         public void Quit()
         {
-            currentDialogue = null;
+            _currentDialogue = null;
             TriggerExitAction();
-            currentNode = null;
-            currentConversant = null;
-            isChoosing = false;
-            onConversationUpdated();
+            _currentNode = null;
+            _currentConversant = null;
+            _isChoosing = false;
+            OnConversationUpdated?.Invoke();
         }
 
         public bool IsActive()
         {
-            return currentDialogue != null; 
+            return _currentDialogue != null;
         }
 
         public bool IsChoosing()
         {
-            return isChoosing;
+            return _isChoosing;
         }
+
         public string GetText()
         {
-            if (currentDialogue == null) return "";
+            if (_currentDialogue == null) return "";
 
-            return currentNode.GetText();
+            return _currentNode.GetText();
         }
 
+        //TO CORRECT
         public string GetCurrentConversantName()
         {
-            if (currentNode.GetNameOverride() != "")
+            if (_currentNode.GetNameOverride() != "")
             {
-                return currentNode.GetNameOverride();
+                return _currentNode.GetNameOverride();
             }
             else
             {
-                if(isChoosing)
+                if (_isChoosing)
                 {
                     return playerName;
                 }
                 else
                 {
-                    return currentConversant.GetName();
+                    return _currentConversant.GetName();
                 }
             }
         }
 
         public IEnumerable<DialogueNode> GetChoices()
         {
-            return FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode));
+            return FilterOnCondition(_currentDialogue.GetPlayerChildren(_currentNode));
         }
+
         public void SelectChoice(DialogueNode chosenNode)
         {
-            currentNode = chosenNode;
+            _currentNode = chosenNode;
             TriggerEnterAction();
-            isChoosing = false;
+            _isChoosing = false;
             Next();
         }
+
         public void Next()
         {
-            var playerResponses = FilterOnCondition(currentDialogue.GetPlayerChildren(currentNode));
-            if(playerResponses.Count() > 0)
+            var playerResponses = FilterOnCondition(_currentDialogue.GetPlayerChildren(_currentNode));
+            if (playerResponses.Any())
             {
-                isChoosing = true;
+                _isChoosing = true;
                 TriggerExitAction();
-                onConversationUpdated();
+                OnConversationUpdated?.Invoke();
                 return;
             }
-            
-            
 
-            DialogueNode[] children = currentDialogue.GetAIChildren(currentNode).ToArray();
+
+            DialogueNode[] children = _currentDialogue.GetAiChildren(_currentNode).ToArray();
             var randomIndex = UnityEngine.Random.Range(0, children.Length);
             TriggerExitAction();
-            currentNode = children[randomIndex];
-            onConversationUpdated();
+            _currentNode = children[randomIndex];
+            OnConversationUpdated?.Invoke();
         }
+
         public bool HasNext()
         {
-            return currentDialogue.GetNodeChildren(currentNode).Count() != 0;
+            return _currentDialogue.GetNodeChildren(_currentNode).Count() != 0;
         }
+
         private IEnumerable<DialogueNode> FilterOnCondition(IEnumerable<DialogueNode> inputNode)
         {
-            foreach(DialogueNode node in inputNode)
+            foreach (DialogueNode node in inputNode)
             {
-                if(node.CheckCondition(GetEvaluators()))
+                if (node.CheckCondition(GetEvaluators()))
                 {
                     yield return node;
                 }
             }
-             
         }
 
         private IEnumerable<IPredicateEvaluator> GetEvaluators()
@@ -126,25 +133,24 @@ namespace Game.Dialogues
 
         private void TriggerEnterAction()
         {
-            if(currentNode != null)
+            if (_currentNode != null)
             {
-                TriggerAction(currentNode.GetOnEnterAction());
+                TriggerAction(_currentNode.GetOnEnterAction());
             }
-
         }
+
         private void TriggerExitAction()
         {
-            if (currentNode != null)
+            if (_currentNode != null)
             {
-                TriggerAction(currentNode.GetOnExitAction());
+                TriggerAction(_currentNode.GetOnExitAction());
             }
         }
+
         private void TriggerAction(string action)
         {
             if (action == "") return;
-            currentConversant.TriggerAllActions(action);
-
+            _currentConversant.TriggerAllActions(action);
         }
-
     }
 }

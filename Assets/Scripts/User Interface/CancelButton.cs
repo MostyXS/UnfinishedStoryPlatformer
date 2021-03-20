@@ -9,38 +9,36 @@ using UnityEngine.UI;
 
 public class CancelButton : MonoBehaviour
 {
-    private Button button;
-    private bool canUse = true;
+    private Button _button;
+
     private void Awake()
     {
-        button = GetComponent<Button>();
+        _button = GetComponent<Button>();
     }
+
     private void ActivateButton(InputAction.CallbackContext ctx)
     {
-        if(!canUse) return;
-        button.onClick.Invoke();
+        _button.onClick.Invoke();
     }
 
-    
+
     private void OnEnable()
     {
-        canUse = false;
-        EventSystem.current.GetComponent<InputSystemUIInputModule>().cancel.ToInputAction().performed += ActivateButton;
-        StartCoroutine(UseDelay());
+        if (EventSystem.current == null) return;
 
+        StartCoroutine(UseDelay());
     }
 
     private IEnumerator UseDelay()
     {
         yield return new WaitForSeconds(.2f);
-        canUse = true;
+        EventSystem.current.GetComponent<InputSystemUIInputModule>().cancel.ToInputAction().started += ActivateButton;
     }
 
     private void OnDisable()
     {
         if (EventSystem.current == null) return;
 
-        EventSystem.current.GetComponent<InputSystemUIInputModule>().cancel.ToInputAction().performed -= ActivateButton;
+        EventSystem.current.GetComponent<InputSystemUIInputModule>().cancel.ToInputAction().started -= ActivateButton;
     }
-    
 }

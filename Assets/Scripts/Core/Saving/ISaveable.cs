@@ -5,5 +5,7 @@ namespace Game.Saving
     {
         object CaptureState();
         void RestoreState(object state);
+
+        bool ShouldBeSaved();
     }
 }

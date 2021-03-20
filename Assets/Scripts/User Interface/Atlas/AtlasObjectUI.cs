@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-namespace Game.Atlas.UI
+namespace Game.Collectioning.UI
 {
     public class AtlasObjectUI : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace Game.Atlas.UI
 
         public void InsertAtlasObject(AtlasObject objectToInsert)
         {
-            nameField.text = objectToInsert.GetName();
+            nameField.text = objectToInsert.GetTitle();
             descField.text = objectToInsert.GetDescription();
         }
     }

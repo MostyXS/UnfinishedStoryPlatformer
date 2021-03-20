@@ -40,7 +40,7 @@ namespace Game.Dialogues
                 }
             }
         }
-        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
+        public IEnumerable<DialogueNode> GetAiChildren(DialogueNode currentNode)
         {
             foreach (DialogueNode node in GetNodeChildren(currentNode))
             {
@@ -59,8 +59,7 @@ namespace Game.Dialogues
         {
             foreach(string nodeId in parentNode.GetChildren())
             {
-                DialogueNode node;
-                if (nodeLookup.TryGetValue(nodeId, out node))
+                if (nodeLookup.TryGetValue(nodeId, out var node))
                 {
                     yield return node;
                 }
@@ -127,6 +126,7 @@ namespace Game.Dialogues
                     if(string.IsNullOrEmpty(AssetDatabase.GetAssetPath(node)))
                     {
                         AssetDatabase.AddObjectToAsset(node, this);
+                        AssetDatabase.SaveAssets();
                     }
 
                 }

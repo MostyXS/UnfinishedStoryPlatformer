@@ -1,35 +1,29 @@
-using Game.Atlas.Data;
 using Game.Extensions;
-using MostyProUI;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-namespace Game.Atlas.UI
+namespace Game.Collectioning.UI
 {
     public class AtlasUI : MonoBehaviour
     {
-        [SerializeField] GameObject atlasContainers;
+        [SerializeField] private Atlas atlas;
 
-        [Header("Objects List")]
-        [Tooltip("Requires Button")] [SerializeField] GameObject atlasListButtonPrefab;
-        [SerializeField] Transform objectsList;
+        [Header("Objects List")] [Tooltip("Requires Button")] [SerializeField]
+        GameObject atlasObjectButtonPrefab;
+
+        [SerializeField] Transform objectsSelector;
         [SerializeField] AtlasObjectUI objectUI;
 
-        [Header("UI")]
-        [SerializeField] GameObject categories;
+        [Header("UI")] [SerializeField] GameObject categories;
         [SerializeField] GameObject objects;
 
-        private Dictionary<AtlasCategory, List<AtlasObject>> atlasObjects = new Dictionary<AtlasCategory, List<AtlasObject>>();
+
         private AtlasObject lastOpenedObject;
 
 
         #region Unity Methods
+
         private void OnEnable()
         {
             ReloadAtlas();
@@ -38,6 +32,7 @@ namespace Game.Atlas.UI
         private void ReloadAtlas()
         {
         }
+
         #endregion
 
         #region UI Methods
@@ -52,19 +47,19 @@ namespace Game.Atlas.UI
         /// <param name="c">category</param>
         public void OpenCategory(int c)
         {
-            var category = (AtlasCategory)c;
+            var category = (AtlasCategoryType) c;
 
             categories.SetActive(false);
             objects.SetActive(true);
-            objectsList.Clear();
-            foreach (var o in atlasObjects[category])
+            objectsSelector.Clear();
+            foreach (var o in atlas.GetCategoryByType(category).GetAllObjects())
             {
-                var tempListObj = Instantiate(atlasListButtonPrefab, objectsList);
-                var t = o != null ? o.GetName() : "?";
+                var tempListObj = Instantiate(atlasObjectButtonPrefab, objectsSelector);
+                var t = o != null ? o.GetTitle() : "?";
                 tempListObj.GetComponentInChildren<Text>().text = t;
                 if (o != null)
                 {
-                    tempListObj.GetComponent<Button>().onClick.AddListener(delegate
+                    tempListObj.GetComponent<Button>().onClick.AddListener(() =>
                     {
                         objectUI.InsertAtlasObject(o);
                         lastOpenedObject = o;
@@ -74,6 +69,5 @@ namespace Game.Atlas.UI
         }
 
         #endregion
-
     }
 }

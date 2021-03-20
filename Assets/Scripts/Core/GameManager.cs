@@ -1,20 +1,24 @@
 using Game.Saving;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Collectioning;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GameManager : MonoBehaviour, ISaveable
+public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    public SaveManager Saver { get; private set; }
+    [SerializeField] private Atlas atlas;
 
+    public Atlas Atlas => atlas;
 
-    public object CaptureState()
+    private void Start()
     {
-        return null;
-    }
-
-    public void RestoreState(object state)
-    {
+        if (Instance == null)
+        {
+            Instance = this;
+            Saver = GetComponent<SaveManager>();
+        }
     }
 }
