@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a5f8566e-d3a6-42a9-ba58-55fb706f65fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +90,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" root0="FORCE_HIGHLIGHTING" />
@@ -173,8 +168,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" />
       </list>
     </option>
   </component>
@@ -241,7 +236,7 @@
       <workItem from="1616421007227" duration="2238000" />
       <workItem from="1616447651731" duration="3925000" />
       <workItem from="1616503151993" duration="2388000" />
-      <workItem from="1616505827686" duration="3783000" />
+      <workItem from="1616505827686" duration="4647000" />
     </task>
     <task id="LOCAL-00001" summary="March Pre-Release Commit, overall system fix, added atlas editor(Debug)">
       <created>1616240581007</created>
