@@ -9,9 +9,9 @@ namespace Game.UI.Dialogue
 {
     public class DialogueUI : MonoBehaviour
     {
-        [Header("Character")] [SerializeField] private Sprite unknownImage;
-        [SerializeField] private Image image;
+        [Header("Character")] [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI conversantName;
+
 
         [Header("Dialogue")] [SerializeField] private GameObject soloResponse;
         [SerializeField] private TextMeshProUGUI soloText;
@@ -54,7 +54,8 @@ namespace Game.UI.Dialogue
             conversantName.text = _playerConversant.GetCurrentConversantName();
             soloResponse.SetActive(!isChoosing);
             var conversantImage = _playerConversant.GetImage();
-            image.sprite = conversantImage ? conversantImage : unknownImage;
+            if (conversantImage != null)
+                image.sprite = conversantImage;
             if (isChoosing)
             {
                 BuildChoiceList();

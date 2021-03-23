@@ -161,6 +161,8 @@ namespace Game.Dialogues
 
         public Sprite GetImage()
         {
+            if (_currentNode.GetImageOverride() != null) return _currentNode.GetImageOverride();
+            
             if (_isChoosing || _currentNode.IsPlayerSpeaking())
                 return playerImage;
             else
