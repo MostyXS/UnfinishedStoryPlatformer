@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5764422827273505080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
+  m_Name: c719f5ab-b279-4bbc-9ccf-7f478253cf8e
+  m_EditorClassIdentifier: 
+  nameOverride: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439
+    \u0430\u0431\u043E\u043D\u0435\u043D\u0442"
+  isPlayerSpeaking: 0
+  shortDescription: 
+  text: "\u0422\u0430\u043A, \u0443 \u043C\u0435\u043D\u044F \u0435\u0441\u0442\u044C
+    \u0434\u043E\u0441\u0442\u0443\u043F \u043A \u043D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u043C
+    \u0434\u0432\u0435\u0440\u044F\u043C, \u0441\u0435\u0439\u0447\u0430\u0441 \u043E\u0442\u043A\u0440\u043E\u044E."
+  children: []
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+    negate: 0
+  rect:
+    serializedVersion: 2
+    x: 451.20483
+    y: 0
+    width: 300
+    height: 400
+--- !u!114 &-951698620843149259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
+  m_Name: 057e5e80-1ff5-43fd-a3c2-cd46c5b323b9
+  m_EditorClassIdentifier: 
+  nameOverride: "\u0421\u043E\u043B\u0434\u0430\u0442 \u041F\u0420\u041E\u0422\u0415\u041A\u0422"
+  isPlayerSpeaking: 0
+  shortDescription: 
+  text: "\u041E\u043D\u0430 \u0437\u0434\u0435\u0441\u044C! \u0421\u044E\u0434\u0430,
+    \u0440\u0435\u0431\u044F\u0442\u0430!"
+  children:
+  - c719f5ab-b279-4bbc-9ccf-7f478253cf8e
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+    negate: 0
+  rect:
+    serializedVersion: 2
+    x: -77.10851
+    y: -0.000008821487
+    width: 300
+    height: 400
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84a9ff90f4adba47b9d612f51ecb1d8, type: 3}
+  m_Name: 2. First soldier encounter
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -951698620843149259}
+  - {fileID: -5764422827273505080}
+  newNodeOffset: {x: 450, y: 0}
