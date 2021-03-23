@@ -9,8 +9,9 @@ namespace Game.Dialogues
     [Serializable]
     public class DialogueNode : ScriptableObject
     {
+        [SerializeField] private Sprite imageOverride;
         [SerializeField] private string nameOverride = "";
-        [SerializeField] private bool isPlayerSpeaking = false; //Can be enum
+        [SerializeField] private bool isPlayerSpeaking; //Can be enum
         [SerializeField] private string shortDescription;
         [SerializeField] [TextArea(3, 50)] private string text;
         [SerializeField] private List<string> children = new List<string>();
@@ -22,6 +23,7 @@ namespace Game.Dialogues
 #endif
 
 
+        
         public string GetText()
         {
             return text;
@@ -61,7 +63,16 @@ namespace Game.Dialogues
         {
             return nameOverride;
         }
+        public Sprite GetImageOverride()
+        {
+            return imageOverride;
+        }
+        public string GetShortResponse()
+        {
+            return shortDescription;
+        }
 #if UNITY_EDITOR
+        
         public Condition GetCondition()
         {
             if (condition == null)
@@ -144,17 +155,22 @@ namespace Game.Dialogues
             EditorUtility.SetDirty(this);
         }
 
-        public void SetShortDescription(string newShortDescription)
+        public void SetShortResponse(string newShortDescription)
         {
             Undo.RecordObject(this, "Update Node Short Description");
             shortDescription = newShortDescription;
             EditorUtility.SetDirty(this);
         }
 
-        public string GetShortResponse()
+        public void SetImageOverride(Sprite newImageOverride)
         {
-            return shortDescription;
+            Undo.RecordObject(this, "Updated Image Override");
+            this.imageOverride = newImageOverride;
+            EditorUtility.SetDirty(this);
         }
+        
+
+        
 
 #endif
     }

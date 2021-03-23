@@ -71,7 +71,6 @@ namespace Game.Dialogues.Editor
         private static void ShowEditorWindow()
         {
             GetWindow(typeof(DialogueEditor), false, "Dialogue Editor").Focus();
-            
         }
 
         [OnOpenAsset(1)]
@@ -83,8 +82,8 @@ namespace Game.Dialogues.Editor
             {
                 if (newDialogue != _selectedDialogue)
                     _selectedDialogue = newDialogue;
-                
-                
+
+
                 ShowEditorWindow();
                 return true;
             }
@@ -211,6 +210,7 @@ namespace Game.Dialogues.Editor
             var nodeRect = node.GetRect();
             nodeRect.position -= _zoomCoordsOrigin;
             GUILayout.BeginArea(nodeRect, nodeStyle);
+            DrawImageOverride(node);
             DrawNameOverride(node);
             DrawNodeText(node);
             DrawShortDescription(node);
@@ -222,6 +222,62 @@ namespace Game.Dialogues.Editor
             DrawNodeType(node);
 
             GUILayout.EndArea();
+        }
+
+        private void DrawImageOverride(DialogueNode node)
+        {
+            int currentPickerWindow = GUIUtility.GetControlID(FocusType.Passive) + 228;
+            var evt = Event.current;
+            var dropArea = new Rect((node.GetRect().width + 128) / 5, 10, 128, 128);
+            //Debug.Log();
+            if (node.GetImageOverride() != null)
+            {
+                GUI.Box(dropArea, node.GetImageOverride().texture);
+            }
+            else
+            {
+                GUI.Box(dropArea, "Drop your image here");
+            }
+
+            GUILayout.Space(128);
+
+            switch (evt.type)
+            {
+                case EventType.DragUpdated:
+                case EventType.DragPerform:
+                {
+                    if (!dropArea.Contains(evt.mousePosition)) break;
+
+                    DragAndDrop.visualMode = DragAndDropVisualMode.Copy;
+                    if (evt.type == EventType.DragPerform)
+                    {
+                        DragAndDrop.AcceptDrag();
+                        var draggedImage = DragAndDrop.objectReferences[0] as Sprite;
+                        if (!draggedImage) return;
+
+
+                        node.SetImageOverride(draggedImage);
+                    }
+                }
+                    break;
+                case EventType.MouseDown:
+                {
+                    if (!dropArea.Contains(evt.mousePosition)) break;
+                    EditorGUIUtility.ShowObjectPicker<Sprite>(node.GetImageOverride(), false, "",
+                        currentPickerWindow);
+                }
+
+                    break;
+            }
+
+            if (Event.current.commandName == "ObjectSelectorUpdated")
+            {
+                var selectedNode = Selection.activeObject as DialogueNode;
+                if(node != selectedNode) return;
+                var image = EditorGUIUtility.GetObjectPickerObject() as Sprite;
+                node.SetImageOverride(image);
+                Repaint();
+            }
         }
 
         private void DrawNameOverride(DialogueNode node)
@@ -263,7 +319,7 @@ namespace Game.Dialogues.Editor
             string newDesc = GUILayout.TextField(node.GetShortResponse(), _textFieldStyle);
             if (EditorGUI.EndChangeCheck())
             {
-                node.SetShortDescription(newDesc);
+                node.SetShortResponse(newDesc);
             }
         }
 

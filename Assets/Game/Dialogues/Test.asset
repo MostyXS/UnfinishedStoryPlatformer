@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: 917a5da2-e54e-4677-91f9-f3839a0578db
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
-  text: Zalupa konya mocha
+  text: Poka
   children:
   - cd5c6af1-f59b-49e8-a9d8-55ae49116f75
   onEnterAction: 
@@ -25,8 +26,8 @@ MonoBehaviour:
     negate: 0
   rect:
     serializedVersion: 2
-    x: -1.4705882
-    y: 1.4705882
+    x: 341.1758
+    y: 176.47041
     width: 300
     height: 600
 --- !u!114 &11400000
@@ -57,10 +58,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: cd5c6af1-f59b-49e8-a9d8-55ae49116f75
   m_EditorClassIdentifier: 
-  nameOverride: Zalupa konya mocha
+  imageOverride: {fileID: 21300000, guid: 45f095d3364125749985cb8d768f883f, type: 3}
+  nameOverride: Brain Override XD
   isPlayerSpeaking: 0
   shortDescription: 
-  text: 
+  text: Privet
   children: []
   onEnterAction: 
   onExitAction: 
@@ -69,7 +71,7 @@ MonoBehaviour:
     negate: 0
   rect:
     serializedVersion: 2
-    x: 744.9581
-    y: 83.61341
+    x: 1002.3087
+    y: 179.20088
     width: 300
     height: 600
