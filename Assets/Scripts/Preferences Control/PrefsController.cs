@@ -23,6 +23,7 @@ namespace Game.PreferencesControl
         /// <returns></returns>
         public static float GetClampedFloatByKey(PrefKey key)
         {
+            if(!HasKey(key)) PlayerPrefs.SetFloat(key.ToString(), .5f);
             return Mathf.Clamp(PlayerPrefs.GetFloat(key.ToString()), 0, 1);
         }
 

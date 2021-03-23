@@ -18,7 +18,7 @@ namespace Game.Dialogues
         [SerializeField] private string onExitAction;
         [SerializeField] private Condition condition;
 #if UNITY_EDITOR
-        [SerializeField] private Rect rect = new Rect(0, 0, 300, 400);
+        [SerializeField] private Rect rect = new Rect(0, 0, 300, 600);
 #endif
 
 
@@ -64,6 +64,9 @@ namespace Game.Dialogues
 #if UNITY_EDITOR
         public Condition GetCondition()
         {
+            if (condition == null)
+                condition = new Condition();
+
             Undo.RecordObject(this, "Condition Update");
             EditorUtility.SetDirty(this);
             return condition;

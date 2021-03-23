@@ -68,7 +68,7 @@ namespace Game.Dialogues
         //TO CORRECT
         public string GetCurrentConversantName()
         {
-            if (string.IsNullOrEmpty(_currentNode.GetNameOverride())) return _currentNode.GetNameOverride();
+            if (!string.IsNullOrEmpty(_currentNode.GetNameOverride())) return _currentNode.GetNameOverride();
 
             if (_isChoosing || _currentNode.IsPlayerSpeaking())
                 return playerName;

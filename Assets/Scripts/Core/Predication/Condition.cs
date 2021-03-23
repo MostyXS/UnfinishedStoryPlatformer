@@ -14,6 +14,10 @@ namespace Game.Core.Predication
         [SerializeField] private List<Disjunction> and = new List<Disjunction>();
         [SerializeField] private bool negate = false;
 
+        public Condition()
+        {
+            
+        }
         public Condition(Condition otherCondition)
         {
             foreach (Disjunction d in otherCondition.and)

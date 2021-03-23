@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 3151118398699811068}
   - component: {fileID: 6170322372039681236}
   m_Layer: 5
-  m_Name: Atlas
+  m_Name: Atlas UI Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   objectsSelector: {fileID: 2985111573413563760}
   objectUI: {fileID: 908717945059116909}
   categories: {fileID: 4346392626029201991}
-  objects: {fileID: 8676230387818311566}
+  objects: {fileID: 8757447754455791643}
 --- !u!1 &8676230387818311566
 GameObject:
   m_ObjectHideFlags: 0

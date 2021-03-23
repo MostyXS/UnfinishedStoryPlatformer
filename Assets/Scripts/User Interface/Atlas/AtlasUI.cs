@@ -1,4 +1,5 @@
 using Game.Utils.Extensions;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -45,6 +46,7 @@ namespace Game.Collectioning.UI
         /// 4 - Location
         /// </summary>
         /// <param name="c">category</param>
+        [UsedImplicitly]
         public void OpenCategory(int c)
         {
             var category = (AtlasCategoryType) c;

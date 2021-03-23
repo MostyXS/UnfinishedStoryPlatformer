@@ -2101,7 +2101,7 @@ PrefabInstance:
     - target: {fileID: 2985111574423598566, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783262225}
+      objectReference: {fileID: 0}
     - target: {fileID: 2985111574423598566, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCategory
@@ -2129,7 +2129,7 @@ PrefabInstance:
     - target: {fileID: 2985111574509992374, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783262225}
+      objectReference: {fileID: 0}
     - target: {fileID: 2985111574509992374, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCategory
@@ -2173,7 +2173,7 @@ PrefabInstance:
     - target: {fileID: 2985111574611958919, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783262225}
+      objectReference: {fileID: 0}
     - target: {fileID: 2985111574611958919, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCategory
@@ -2197,7 +2197,7 @@ PrefabInstance:
     - target: {fileID: 2985111574950011169, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783262225}
+      objectReference: {fileID: 0}
     - target: {fileID: 2985111574950011169, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCategory
@@ -2241,7 +2241,7 @@ PrefabInstance:
     - target: {fileID: 2985111574951624723, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 783262225}
+      objectReference: {fileID: 0}
     - target: {fileID: 2985111574951624723, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenCategory
@@ -2436,34 +2436,6 @@ RectTransform:
 --- !u!1 &783262224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8456064304964233898, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
-  m_PrefabInstance: {fileID: 783262221}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &783262225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783262224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bc7a6e2697ad9146995349931939523, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  atlas: {fileID: 0}
-  atlasObjectButtonPrefab: {fileID: 0}
-  objectsSelector: {fileID: 0}
-  objectUI: {fileID: 0}
-  categories: {fileID: 783262227}
-  objects: {fileID: 783262226}
---- !u!1 &783262226 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8757447754455791643, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
-  m_PrefabInstance: {fileID: 783262221}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &783262227 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4346392626029201991, guid: f6455c09159e89d48a447bbfc51f7473, type: 3}
   m_PrefabInstance: {fileID: 783262221}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &826860752 stripped
@@ -5440,7 +5412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4019519089432114871, guid: f802f2694199c5648bb1f1db1f798629, type: 3}
       propertyPath: m_Name
-      value: 
+      value: Zoom Sensitivity
       objectReference: {fileID: 0}
     - target: {fileID: 4019519089950953238, guid: f802f2694199c5648bb1f1db1f798629, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5638,13 +5610,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7566542577797812452, guid: f802f2694199c5648bb1f1db1f798629, type: 3}
+      propertyPath: optionSliders.Array.data[0].name
+      value: Zoom Sensitivity
+      objectReference: {fileID: 0}
+    - target: {fileID: 7566542577797812452, guid: f802f2694199c5648bb1f1db1f798629, type: 3}
+      propertyPath: optionSliders.Array.data[0].prefKey
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7566542578079016967, guid: f802f2694199c5648bb1f1db1f798629, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7566542578695324988, guid: f802f2694199c5648bb1f1db1f798629, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f802f2694199c5648bb1f1db1f798629, type: 3}

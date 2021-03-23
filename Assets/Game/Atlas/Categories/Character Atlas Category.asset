@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Ren
   image: {fileID: 21300000, guid: 45f095d3364125749985cb8d768f883f, type: 3}
-  description: Description
+  description: Privet, ya ren, upala s krovati v 9 let
   categoryType: 0
 --- !u!114 &7768402269515933477
 MonoBehaviour:

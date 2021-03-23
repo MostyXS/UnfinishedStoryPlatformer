@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accelerationSpeed: 5
-  deccelerationSpeed: 2
+  decelerationSpeed: 2
   minSpeed: 0
   maxSpeed: 5
   attackDelay: 1
@@ -337,8 +337,8 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 3
-  m_Material: {fileID: 0}
-  m_Interpolate: 2
+  m_Material: {fileID: 6200000, guid: a3e07a38f92166a43b2e53c218a73599, type: 2}
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4

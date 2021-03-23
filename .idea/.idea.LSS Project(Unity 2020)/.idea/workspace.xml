@@ -20,45 +20,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f8566e-d3a6-42a9-ba58-55fb706f65fd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Controls/BasePlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Controls/BasePlayerControls.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Controls/Player Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Controls/Player Controls.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/Dialogue.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/Dialogue.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/Test Linear Dialogue.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/Test Linear Dialogue.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Physic Materials/Player.physicsMaterial2D" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Physic Materials/Player.physicsMaterial2D" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Raw Button Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Raw Button Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Atlas/Atlas UI Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Atlas/Atlas UI Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings/Settings Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Settings/Settings Prefab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/00_Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00_Tutorial.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUIEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUIEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindContent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Preferences Control/PrefsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Preferences Control/PrefsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +121,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/GamepadControlsButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/42A5878C-E129-4030-83AC-CCF18E43363F/0f/bcf24dc5/02000225.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" root0="FORCE_HIGHLIGHTING" />
@@ -156,10 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Settings/RebindContent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Settings/RebindActionUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/Editor/RectExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/EditorZoomArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/TransformSelectButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Preferences Control/DefaultsController.cs" />
@@ -189,15 +165,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" />
         <option value="$PROJECT_DIR$/Assets/NextButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" />
         <option value="$PROJECT_DIR$/Assets/SubmitButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" />
@@ -207,6 +180,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasNotifierUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Preferences Control/PrefsController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" />
       </list>
     </option>
   </component>
@@ -272,6 +252,8 @@
       <workItem from="1616408205815" duration="10196000" />
       <workItem from="1616421007227" duration="2238000" />
       <workItem from="1616447651731" duration="3925000" />
+      <workItem from="1616503151993" duration="2388000" />
+      <workItem from="1616505827686" duration="677000" />
     </task>
     <task id="LOCAL-00001" summary="March Pre-Release Commit, overall system fix, added atlas editor(Debug)">
       <created>1616240581007</created>
