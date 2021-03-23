@@ -52,7 +52,7 @@ namespace Game.Dialogues.Editor
         [NonSerialized] private const float MaxZoom = 5f;
         [NonSerialized] private const float ConditionSize = 250f;
         [NonSerialized] private const float MaxConditionAreaHeight = 600f;
-        [NonSerialized] private const float YConditionOffset = -200;
+        [NonSerialized] private const float YConditionOffset = -300;
 
         #endregion
 
@@ -70,7 +70,8 @@ namespace Game.Dialogues.Editor
         [MenuItem("Game/Dialogue Editor")]
         private static void ShowEditorWindow()
         {
-            GetWindow(typeof(DialogueEditor), false, "Dialogue Editor");
+            GetWindow(typeof(DialogueEditor), false, "Dialogue Editor").Focus();
+            
         }
 
         [OnOpenAsset(1)]
@@ -78,9 +79,12 @@ namespace Game.Dialogues.Editor
         private static bool OnOpenAsset(int instanceId, int line)
         {
             var newDialogue = EditorUtility.InstanceIDToObject(instanceId) as Dialogue;
-            if (newDialogue != null && newDialogue != _selectedDialogue)
+            if (newDialogue != null)
             {
-                _selectedDialogue = newDialogue;
+                if (newDialogue != _selectedDialogue)
+                    _selectedDialogue = newDialogue;
+                
+                
                 ShowEditorWindow();
                 return true;
             }
@@ -239,11 +243,15 @@ namespace Game.Dialogues.Editor
             EditorGUILayout.LabelField("Node Text:", _textStyle);
             EditorGUI.BeginChangeCheck();
             SetTextAreaStyle();
-            string newText = EditorGUILayout.TextArea(node.GetText(), _textAreaStyle,
-                GUILayout.MinHeight(node.GetRect().width / 7));
+            var currentStyle = new GUIStyle(_textAreaStyle)
+                {fixedHeight = _textAreaStyle.CalcHeight(new GUIContent(node.GetText()), node.GetRect().width)};
+            string newText = EditorGUILayout.TextArea(node.GetText(), currentStyle);
+
+
             if (EditorGUI.EndChangeCheck())
             {
                 node.SetText(newText);
+                Repaint();
             }
         }
 

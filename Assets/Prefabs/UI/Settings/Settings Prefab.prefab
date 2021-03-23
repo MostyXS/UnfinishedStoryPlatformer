@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72058e14579aff9468a95bc90755e073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gamepadTransformUI: {fileID: 3176526473579824909}
+  gamepadSettingsUI: {fileID: 3176526473579824909}
 --- !u!1 &7566542577348724576
 GameObject:
   m_ObjectHideFlags: 0
