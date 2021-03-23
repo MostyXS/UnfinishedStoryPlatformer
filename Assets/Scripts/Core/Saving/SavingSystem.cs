@@ -1,5 +1,3 @@
-using MostyProUI;
-using MostyProUI.LevelController;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,21 +5,31 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Game.Saving
+namespace Game.Core.Saving
 {
     public class SavingSystem : MonoBehaviour
     {
+        //We should not have dynamic data the instantiates, for example if we wan't to have
+        //dynamic enemies we should instantiate it from spawners or have it on scene already
+        private SaveableEntity[] _saveableEntities;
+
+        private void Start()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            UpdateSaveableList();
+        }
+
         public IEnumerator LoadLastScene(string saveFile)
         {
             Dictionary<string, object> state = LoadFile(saveFile);
             int buildIndex = SceneManager.GetActiveScene().buildIndex;
             if (state.ContainsKey("lastSceneBuildIndex"))
             {
-                buildIndex = (int)state["lastSceneBuildIndex"];
+                buildIndex = (int) state["lastSceneBuildIndex"];
             }
+
             yield return SceneManager.LoadSceneAsync(buildIndex);
             RestoreState(state);
-            UIMenu.Instance.Resume();
         }
 
         public void Save(string saveFile)
@@ -30,10 +38,12 @@ namespace Game.Saving
             CaptureState(state);
             SaveFile(saveFile, state);
         }
+
         public static bool FileExists(string saveFile)
         {
             return File.Exists(GetPathFromSaveFile(saveFile));
         }
+
         public void Load(string saveFile)
         {
             RestoreState(LoadFile(saveFile));
@@ -41,7 +51,6 @@ namespace Game.Saving
 
         public static void Delete(string saveFile)
         {
-            LastLevelKeeper.ResetPlayedChapters();
             File.Delete(GetPathFromSaveFile(saveFile));
         }
 
@@ -52,17 +61,17 @@ namespace Game.Saving
             {
                 return new Dictionary<string, object>();
             }
+
             using (FileStream stream = File.Open(path, FileMode.Open))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
-                return (Dictionary<string, object>)formatter.Deserialize(stream);
+                return (Dictionary<string, object>) formatter.Deserialize(stream);
             }
         }
 
         private void SaveFile(string saveFile, object state)
         {
             string path = GetPathFromSaveFile(saveFile);
-            print("Saving to " + path);
             using (FileStream stream = File.Open(path, FileMode.Create))
             {
                 BinaryFormatter formatter = new BinaryFormatter();
@@ -70,32 +79,40 @@ namespace Game.Saving
             }
         }
 
+        private void OnSceneLoaded(Scene loadedScene, LoadSceneMode mode)
+        {
+            UpdateSaveableList();
+        }
+
+        private /*public*/ void UpdateSaveableList()
+        {
+            _saveableEntities = FindObjectsOfType<SaveableEntity>(true);
+        }
+
         private void CaptureState(Dictionary<string, object> state)
         {
-            foreach (SaveableEntity saveable in Resources.FindObjectsOfTypeAll(typeof(SaveableEntity)))
+            foreach (SaveableEntity saveable in _saveableEntities)
             {
-                if (IsSceneObject(saveable))
-                    state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
+                state[saveable.GetUniqueIdentifier()] = saveable.CaptureState();
             }
 
             state["lastSceneBuildIndex"] = SceneManager.GetActiveScene().buildIndex;
         }
 
-        private static bool IsSceneObject(SaveableEntity saveable)
+        /*private static bool IsSceneObject(SaveableEntity saveable)
         {
             return !(saveable.hideFlags == HideFlags.NotEditable || saveable.hideFlags == HideFlags.HideAndDontSave
 #if UNITY_EDITOR
-                || UnityEditor.EditorUtility.IsPersistent(saveable.transform.root.gameObject)
+                                                                 || UnityEditor.EditorUtility.IsPersistent(
+                                                                     saveable.transform.root.gameObject)
 #endif
                 );
-        }
+        }*/
 
         private void RestoreState(Dictionary<string, object> state)
         {
-            foreach (SaveableEntity saveable in Resources.FindObjectsOfTypeAll(typeof(SaveableEntity)))
+            foreach (var saveable in _saveableEntities)
             {
-                if (!IsSceneObject(saveable)) continue;
-
                 string id = saveable.GetUniqueIdentifier();
                 if (state.ContainsKey(id))
                 {

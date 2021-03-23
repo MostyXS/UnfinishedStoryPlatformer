@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Game.Saving
+namespace Game.Core.Saving
 {
     [System.Serializable]
     public class SerializableVector2

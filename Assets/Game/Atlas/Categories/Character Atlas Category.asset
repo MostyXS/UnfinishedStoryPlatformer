@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bf796abcc8fc498b866fb27207311, type: 3}
+  m_Name: Character Atlas Category
+  m_EditorClassIdentifier: 
+  categoryType: 0
+  atlasObjects:
+  - {fileID: 6839494151978730350}
+  - {fileID: 7768402269515933477}
+--- !u!114 &3498597429143114933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: 311dbf6b-677f-45d4-b056-a6aa7eb46510
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 0}
+  description: Description
+  categoryType: 0
+--- !u!114 &4476790589828418333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: c6740535-f7e7-42fb-a990-33721c66ae33
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 0}
+  description: Description
+  categoryType: 0
+--- !u!114 &6839494151978730350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: bd031eba-36cf-46cc-8c9c-188c6c65e877
+  m_EditorClassIdentifier: 
+  title: Ren
+  image: {fileID: 21300000, guid: 45f095d3364125749985cb8d768f883f, type: 3}
+  description: Description
+  categoryType: 0
+--- !u!114 &7768402269515933477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e553728180fd9eb4da8487081e3d8a88, type: 3}
+  m_Name: 8415a0d1-4b86-48fd-85c9-6dc187fd3e05
+  m_EditorClassIdentifier: 
+  title: Title
+  image: {fileID: 0}
+  description: Description
+  categoryType: 0
