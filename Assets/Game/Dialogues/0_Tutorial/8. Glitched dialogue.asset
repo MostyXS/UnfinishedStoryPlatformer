@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f84a9ff90f4adba47b9d612f51ecb1d8, type: 3}
+  m_Name: 8. Glitched dialogue
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 7423390217924174474}
+  - {fileID: 6975074945721455133}
+  - {fileID: 8515492828138258835}
+  newNodeOffset: {x: 450, y: 0}
+--- !u!114 &6975074945721455133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
+  m_Name: cf5da1e6-940b-4e4a-b16f-dd20ad5344a6
+  m_EditorClassIdentifier: 
+  nameOverride: 
+  isPlayerSpeaking: 0
+  shortDescription: 
+  text: "*\u043F\u043E\u043C\u0435\u0445\u0438*"
+  children:
+  - 165b5b79-ac40-4ffd-800a-afd6b2469678
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+    negate: 0
+  rect:
+    serializedVersion: 2
+    x: 450
+    y: 0
+    width: 300
+    height: 400
+--- !u!114 &7423390217924174474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
+  m_Name: 6e77f97a-ef16-4599-92fa-1228a84a6254
+  m_EditorClassIdentifier: 
+  nameOverride: 
+  isPlayerSpeaking: 0
+  shortDescription: 
+  text: "*\u0425\u0448\u0448\u0448\u0448\u0448* \u041A\u0430\u0436\u0435\u0442\u0441\u044F
+    *\u0422\u0420\u0415\u0421\u041A* \u041E\u043D\u0438 \u043D\u0430\u0448\u043B\u0438
+    *\u0448\u0448\u0448\u0448\u0448\u0448* \u043C\u2026 *\u0433\u0442\u0445\u0433\u0442\u0445*
+    \u043E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u044C\u2026"
+  children:
+  - cf5da1e6-940b-4e4a-b16f-dd20ad5344a6
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+    negate: 0
+  rect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 300
+    height: 400
+--- !u!114 &8515492828138258835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
+  m_Name: 165b5b79-ac40-4ffd-800a-afd6b2469678
+  m_EditorClassIdentifier: 
+  nameOverride: 
+  isPlayerSpeaking: 1
+  shortDescription: 
+  text: "\u0427\u0435\u0440\u0442."
+  children: []
+  onEnterAction: 
+  onExitAction: 
+  condition:
+    and: []
+    negate: 0
+  rect:
+    serializedVersion: 2
+    x: 900
+    y: 0
+    width: 300
+    height: 400
