@@ -9,10 +9,10 @@ using UnityEngine.InputSystem;
 namespace Game.UI.Menu
 {
     /// <summary>
-    /// A custom inspector for <see cref="RebindActionUi"/> which provides a more convenient way for
+    /// A custom inspector for <see cref="RebindActionUI"/> which provides a more convenient way for
     /// picking the binding which to rebind.
     /// </summary>
-    [CustomEditor(typeof(RebindActionUi))]
+    [CustomEditor(typeof(RebindActionUI))]
     public class RebindActionUIEditor : UnityEditor.Editor
     {
         protected void OnEnable()

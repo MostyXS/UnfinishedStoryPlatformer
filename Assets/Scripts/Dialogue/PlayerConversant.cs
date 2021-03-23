@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Game.Core.Predication;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Game.Dialogues
 {
@@ -16,8 +17,13 @@ namespace Game.Dialogues
         private AIConversant _currentConversant;
         private bool _isChoosing;
 
+        private PlayerInput _playerInput;
         public event Action OnConversationUpdated;
 
+        private void Awake()
+        {
+            _playerInput = GetComponent<PlayerInput>();
+        }
 
         public void StartDialgoue(AIConversant newConversant, Dialogue newDialogue)
         {
@@ -27,6 +33,7 @@ namespace Game.Dialogues
             _isChoosing = false;
             TriggerEnterAction();
             OnConversationUpdated?.Invoke();
+            _playerInput.SwitchCurrentActionMap("UI");
         }
 
 
@@ -38,6 +45,7 @@ namespace Game.Dialogues
             _currentConversant = null;
             _isChoosing = false;
             OnConversationUpdated?.Invoke();
+            _playerInput.SwitchCurrentActionMap("Player");
         }
 
         public bool IsActive()
@@ -60,21 +68,12 @@ namespace Game.Dialogues
         //TO CORRECT
         public string GetCurrentConversantName()
         {
-            if (_currentNode.GetNameOverride() != "")
-            {
-                return _currentNode.GetNameOverride();
-            }
+            if (string.IsNullOrEmpty(_currentNode.GetNameOverride())) return _currentNode.GetNameOverride();
+
+            if (_isChoosing || _currentNode.IsPlayerSpeaking())
+                return playerName;
             else
-            {
-                if (_isChoosing)
-                {
-                    return playerName;
-                }
-                else
-                {
-                    return _currentConversant.GetName();
-                }
-            }
+                return _currentConversant.GetName();
         }
 
         public IEnumerable<DialogueNode> GetChoices()
@@ -87,13 +86,21 @@ namespace Game.Dialogues
             _currentNode = chosenNode;
             TriggerEnterAction();
             _isChoosing = false;
-            Next();
+            OnConversationUpdated?.Invoke();
         }
 
         public void Next()
         {
-            var playerResponses = FilterOnCondition(_currentDialogue.GetPlayerChildren(_currentNode));
-            if (playerResponses.Any())
+            var playerResponses = FilterOnCondition(_currentDialogue.GetPlayerChildren(_currentNode)).ToArray();
+            if (playerResponses.Length == 1)
+            {
+                TriggerExitAction();
+                _currentNode = playerResponses[0];
+                OnConversationUpdated?.Invoke();
+                return;
+            }
+
+            if (playerResponses.Length > 1)
             {
                 _isChoosing = true;
                 TriggerExitAction();
@@ -102,7 +109,7 @@ namespace Game.Dialogues
             }
 
 
-            DialogueNode[] children = _currentDialogue.GetAiChildren(_currentNode).ToArray();
+            DialogueNode[] children = _currentDialogue.GetAIChildren(_currentNode).ToArray();
             var randomIndex = UnityEngine.Random.Range(0, children.Length);
             TriggerExitAction();
             _currentNode = children[randomIndex];
@@ -150,6 +157,14 @@ namespace Game.Dialogues
         {
             if (action == "") return;
             _currentConversant.TriggerAllActions(action);
+        }
+
+        public Sprite GetImage()
+        {
+            if (_isChoosing || _currentNode.IsPlayerSpeaking())
+                return playerImage;
+            else
+                return _currentConversant.GetImage();
         }
     }
 }

@@ -20,7 +20,20 @@ namespace Game.Collectioning
             return atlasObjects;
         }
 
-
+        public void LoadFromOther(AtlasCategory other)
+        {
+            foreach (var atlasObject in GetAllObjects())
+            {
+                foreach (var otherAtlasObject in other.GetAllObjects())
+                {
+                    if(atlasObject.name == otherAtlasObject.name && otherAtlasObject.IsOpened())
+                        atlasObject.Open();
+                    
+                }
+                
+            }
+        }
+        
 #if UNITY_EDITOR
         public AtlasObject AddObject()
         {

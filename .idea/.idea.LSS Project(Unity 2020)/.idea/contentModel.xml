@@ -43,7 +43,7 @@
               <e p="Turret.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
-              <e p="PlayerController.cs" t="Include" />
+              <e p="Player.cs" t="Include" />
               <e p="Zoomer.cs" t="Include" />
             </e>
           </e>
@@ -90,12 +90,16 @@
           </e>
           <e p="User Interface" t="Include">
             <e p="Atlas" t="Include">
+              <e p="AtlasNotifierUI.cs" t="Include" />
               <e p="AtlasObjectUI.cs" t="Include" />
               <e p="AtlasUI.cs" t="Include" />
             </e>
+            <e p="CancelButton.cs" t="Include" />
+            <e p="Dialogue" t="Include">
+              <e p="DialogueUI.cs" t="Include" />
+            </e>
             <e p="MainCanvas.cs" t="Include" />
             <e p="Menu" t="Include">
-              <e p="CancelButton.cs" t="Include" />
               <e p="Main" t="Include">
                 <e p="Dependent Buttons" t="Include">
                   <e p="AtlasOpenButton.cs" t="Include" />
@@ -115,6 +119,7 @@
             <e p="Player HUD" t="Include">
               <e p="PlayerHealthBar.cs" t="Include" />
             </e>
+            <e p="SubmitButton.cs" t="Include" />
             <e p="UIManager.cs" t="Include" />
           </e>
           <e p="Utilities" t="Include">

@@ -1,3 +1,4 @@
+using System;
 using Game.Core.Saving;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -7,35 +8,25 @@ namespace Game.Core
 {
     public class UnityActionTrigger : MonoBehaviour, ISaveable
     {
-        private bool _isUsed;
-
         [SerializeField] private UnityEvent triggerEnterActions;
 
+        private Collider2D _collider2D;
 
-        [SerializeField] private UnityEvent triggerExitActions;
+        private void Awake()
+        {
+            _collider2D = GetComponent<Collider2D>();
+        }
+
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
                 triggerEnterActions?.Invoke();
+                _collider2D.enabled = false;
             }
         }
 
-
-        private void OnTriggerExit2D(Collider2D other)
-        {
-            if (other.CompareTag("Player"))
-            {
-                triggerExitActions?.Invoke();
-            }
-        }
-
-        [UsedImplicitly]
-        public void SetUsed()
-        {
-            _isUsed = true;
-        }
 
         public object CaptureState()
         {
@@ -49,7 +40,7 @@ namespace Game.Core
 
         public bool ShouldBeSaved()
         {
-            return !_isUsed;
+            return !_collider2D.enabled;
         }
     }
 }

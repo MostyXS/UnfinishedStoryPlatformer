@@ -34,7 +34,7 @@ namespace Game.Control.AI
         private void Start()
         {
             _myHealth.onDeath += PerformDeath;
-            _target = FindObjectOfType<PlayerController>().transform;
+            _target = FindObjectOfType<Player>().transform;
         }
 
         public void PerformDeath()

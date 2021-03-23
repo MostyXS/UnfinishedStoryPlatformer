@@ -10,7 +10,7 @@ namespace Game.UI.Menu
         {
             foreach (Transform child in this.transform)
             {
-                var rebindUi = child.GetComponent<RebindActionUi>();
+                var rebindUi = child.GetComponent<RebindActionUI>();
                 if (rebindUi != null)
                 {
                     rebindUi.ResetToDefault();

@@ -5,15 +5,20 @@ using Game.Utils;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Game.Control
 {
-    public class PlayerController : MonoBehaviour, ISaveable
+    public class Player : MonoBehaviour, ISaveable
     {
+        public static GameObject Instance { get; private set; }
+
         [Header("Speed settings")] [SerializeField]
         private float accelerationSpeed;
 
-        [SerializeField] private float deccelerationSpeed;
+        [FormerlySerializedAs("deccelerationSpeed")] [SerializeField]
+        private float decelerationSpeed;
+
         [SerializeField] float minSpeed, maxSpeed = 5;
 
         [Header("Attack Settings")] [SerializeField]
@@ -83,6 +88,7 @@ namespace Game.Control
             _rb = GetComponent<Rigidbody2D>();
             _anim = GetComponent<Animator>();
             _defaultXScale = transform.localScale.x;
+            Instance = this.gameObject;
         }
 
         private void Start()
@@ -102,7 +108,7 @@ namespace Game.Control
         {
             if (IsBraking())
             {
-                _currentVelMultiplier = Mathf.Clamp(_currentVelMultiplier - deccelerationSpeed * Time.deltaTime, 0, 1);
+                _currentVelMultiplier = Mathf.Clamp(_currentVelMultiplier - decelerationSpeed * Time.deltaTime, 0, 1);
 
                 _rb.velocity = new Vector2(Mathf.Lerp(minSpeed, maxSpeed, _currentVelMultiplier) * _dir,
                     _rb.velocity.y);

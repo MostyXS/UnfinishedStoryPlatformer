@@ -11,9 +11,8 @@ namespace Game.Core
     {
         public static GameManager Instance { get; private set; }
         public SaveManager Saver { get; private set; }
-        [SerializeField] private Atlas atlas;
+        public AtlasSaver AtlasSaver { get; private set; }
 
-        public Atlas Atlas => atlas;
 
         private void Start()
         {
@@ -21,6 +20,7 @@ namespace Game.Core
             {
                 Instance = this;
                 Saver = GetComponent<SaveManager>();
+                AtlasSaver = GetComponent<AtlasSaver>();
             }
         }
     }

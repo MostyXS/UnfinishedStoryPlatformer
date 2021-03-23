@@ -10,10 +10,15 @@ namespace Game.Collectioning
         [SerializeField] protected Sprite image;//Don't use name cause SO already have this field
         [TextArea(3, 10)] [SerializeField] protected string description;
         [SerializeField] protected AtlasCategoryType categoryType;
-        protected bool isOpened = false;
+        protected bool isOpened;
         public void Open()
         {
             isOpened = true;
+        }
+
+        public void Close()
+        {
+            isOpened = false;
         }
         public bool IsOpened()
         {

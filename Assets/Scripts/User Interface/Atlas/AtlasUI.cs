@@ -1,4 +1,5 @@
 using Game.Utils.Extensions;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,16 +10,16 @@ namespace Game.Collectioning.UI
         [SerializeField] private Atlas atlas;
 
         [Header("Objects List")] [Tooltip("Requires Button")] [SerializeField]
-        GameObject atlasObjectButtonPrefab;
+        private GameObject atlasObjectButtonPrefab;
 
-        [SerializeField] Transform objectsSelector;
-        [SerializeField] AtlasObjectUI objectUI;
+        [SerializeField] private Transform objectsSelector;
+        [SerializeField] private AtlasObjectUI objectUI;
 
-        [Header("UI")] [SerializeField] GameObject categories;
-        [SerializeField] GameObject objects;
+        [Header("UI")] [SerializeField] private GameObject categories;
+        [SerializeField] private GameObject objects;
 
 
-        private AtlasObject lastOpenedObject;
+        private AtlasObject _lastOpenedObject;
 
 
         #region Unity Methods
@@ -33,7 +34,7 @@ namespace Game.Collectioning.UI
         }
 
         #endregion
-
+        
         #region UI Methods
 
         /// <summary>
@@ -51,17 +52,25 @@ namespace Game.Collectioning.UI
             categories.SetActive(false);
             objects.SetActive(true);
             objectsSelector.Clear();
-            foreach (var o in atlas.GetCategoryByType(category).GetAllObjects())
+
+            FillObjectSelectionList(category);
+            if (_lastOpenedObject != null)
+                objectUI.InsertAtlasObject(_lastOpenedObject);
+        }
+
+        private void FillObjectSelectionList(AtlasCategoryType category)
+        {
+            foreach (var aObj in atlas.GetCategoryByType(category).GetAllObjects())
             {
                 var tempListObj = Instantiate(atlasObjectButtonPrefab, objectsSelector);
-                var t = o != null ? o.GetTitle() : "?";
-                tempListObj.GetComponentInChildren<Text>().text = t;
-                if (o != null)
+                var title = aObj.IsOpened() ? aObj.GetTitle() : "Hidden";
+                tempListObj.GetComponentInChildren<TextMeshProUGUI>().text = title;
+                if (aObj != null)
                 {
                     tempListObj.GetComponent<Button>().onClick.AddListener(() =>
                     {
-                        objectUI.InsertAtlasObject(o);
-                        lastOpenedObject = o;
+                        objectUI.InsertAtlasObject(aObj);
+                        _lastOpenedObject = aObj;
                     });
                 }
             }

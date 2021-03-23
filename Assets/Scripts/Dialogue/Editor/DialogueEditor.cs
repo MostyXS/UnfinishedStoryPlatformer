@@ -252,7 +252,7 @@ namespace Game.Dialogues.Editor
             if (!node.IsPlayerSpeaking()) return;
             GUILayout.Label("Short description:", _textStyle);
             EditorGUI.BeginChangeCheck();
-            string newDesc = GUILayout.TextField(node.GetShortDescription(), _textFieldStyle);
+            string newDesc = GUILayout.TextField(node.GetShortResponse(), _textFieldStyle);
             if (EditorGUI.EndChangeCheck())
             {
                 node.SetShortDescription(newDesc);
@@ -362,7 +362,7 @@ namespace Game.Dialogues.Editor
                 }
             }
 
-            if (GUILayout.Button("Add New AND"))
+            if (GUILayout.Button("Add New AND", _buttonStyle))
             {
                 node.GetCondition().GetDisjunctions().Add(new Condition.Disjunction());
             }
@@ -452,12 +452,12 @@ namespace Game.Dialogues.Editor
         {
             GUILayout.Label("AND", new GUIStyle(_textStyle) {alignment = TextAnchor.UpperCenter, fontSize = 20});
 
-            if (GUILayout.Button("Remove"))
+            if (GUILayout.Button("Remove", _buttonStyle))
             {
                 _disjunctionToRemove = disjunction;
             }
 
-            if (GUILayout.Button("Add New OR"))
+            if (GUILayout.Button("Add New OR", _buttonStyle))
             {
                 disjunction.GetConjunctions().Add(new Condition.Predicate());
             }
@@ -492,7 +492,7 @@ namespace Game.Dialogues.Editor
             }
 
             EditorGUILayout.EndHorizontal();
-            if (GUILayout.Button("Remove"))
+            if (GUILayout.Button("Remove", _buttonStyle))
             {
                 _conjToRemove = conjunction;
             }
@@ -514,7 +514,7 @@ namespace Game.Dialogues.Editor
                 }
             }
 
-            var popupStyle = new GUIStyle(EditorStyles.popup) {fontSize = 12, alignment = TextAnchor.MiddleCenter};
+            var popupStyle = new GUIStyle(EditorStyles.popup) {fontSize = 17, alignment = TextAnchor.MiddleCenter};
             popupStyle.normal.textColor = Color.black;
             EditorGUI.BeginChangeCheck();
             var newPredicate = EditorGUILayout.EnumPopup(currentPredicate, popupStyle);
@@ -575,7 +575,7 @@ namespace Game.Dialogues.Editor
                 conjunction.RemoveParametr(paramToRemove);
             }
 
-            if (GUILayout.Button("Add Parametr", new GUIStyle(GUI.skin.button) {fontSize = DefaultFontSize}))
+            if (GUILayout.Button("Add Parametr", _buttonStyle))
             {
                 conjunction.AddNewParametr();
             }
@@ -787,7 +787,7 @@ namespace Game.Dialogues.Editor
 
         private void SetButtonStyle()
         {
-            _buttonStyle = GUI.skin.button;
+            _buttonStyle = new GUIStyle(GUI.skin.button);
             _buttonStyle.fontSize = DefaultFontSize;
             _buttonStyle.normal.textColor = Color.black;
             _buttonStyle.alignment = TextAnchor.MiddleCenter;

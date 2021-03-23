@@ -148,7 +148,7 @@ namespace Game.Dialogues
             EditorUtility.SetDirty(this);
         }
 
-        public string GetShortDescription()
+        public string GetShortResponse()
         {
             return shortDescription;
         }

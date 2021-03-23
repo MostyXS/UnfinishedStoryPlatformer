@@ -277,7 +277,7 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
             ]
         },
         {
-            ""name"": ""User Interface"",
+            ""name"": ""UI"",
             ""id"": ""951d560a-d087-4453-907e-8451072f6c19"",
             ""actions"": [
                 {
@@ -616,15 +616,15 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
         m_Player_ToggleZoom = m_Player.FindAction("Toggle Zoom", throwIfNotFound: true);
         m_Player_UseInteract = m_Player.FindAction("Use/Interact", throwIfNotFound: true);
         m_Player_TogglePause = m_Player.FindAction("Toggle Pause", throwIfNotFound: true);
-        // User Interface
-        m_UserInterface = asset.FindActionMap("User Interface", throwIfNotFound: true);
-        m_UserInterface_Navigate = m_UserInterface.FindAction("Navigate", throwIfNotFound: true);
-        m_UserInterface_Submit = m_UserInterface.FindAction("Submit", throwIfNotFound: true);
-        m_UserInterface_Cancel = m_UserInterface.FindAction("Cancel", throwIfNotFound: true);
-        m_UserInterface_Point = m_UserInterface.FindAction("Point", throwIfNotFound: true);
-        m_UserInterface_Click = m_UserInterface.FindAction("Click", throwIfNotFound: true);
-        m_UserInterface_ScrollWheel = m_UserInterface.FindAction("ScrollWheel", throwIfNotFound: true);
-        m_UserInterface_RightClick = m_UserInterface.FindAction("RightClick", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
+        m_UI_Submit = m_UI.FindAction("Submit", throwIfNotFound: true);
+        m_UI_Cancel = m_UI.FindAction("Cancel", throwIfNotFound: true);
+        m_UI_Point = m_UI.FindAction("Point", throwIfNotFound: true);
+        m_UI_Click = m_UI.FindAction("Click", throwIfNotFound: true);
+        m_UI_ScrollWheel = m_UI.FindAction("ScrollWheel", throwIfNotFound: true);
+        m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -752,59 +752,59 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
     }
     public PlayerActions @Player => new PlayerActions(this);
 
-    // User Interface
-    private readonly InputActionMap m_UserInterface;
-    private IUserInterfaceActions m_UserInterfaceActionsCallbackInterface;
-    private readonly InputAction m_UserInterface_Navigate;
-    private readonly InputAction m_UserInterface_Submit;
-    private readonly InputAction m_UserInterface_Cancel;
-    private readonly InputAction m_UserInterface_Point;
-    private readonly InputAction m_UserInterface_Click;
-    private readonly InputAction m_UserInterface_ScrollWheel;
-    private readonly InputAction m_UserInterface_RightClick;
-    public struct UserInterfaceActions
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_Navigate;
+    private readonly InputAction m_UI_Submit;
+    private readonly InputAction m_UI_Cancel;
+    private readonly InputAction m_UI_Point;
+    private readonly InputAction m_UI_Click;
+    private readonly InputAction m_UI_ScrollWheel;
+    private readonly InputAction m_UI_RightClick;
+    public struct UIActions
     {
         private @BasePlayerControls m_Wrapper;
-        public UserInterfaceActions(@BasePlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Navigate => m_Wrapper.m_UserInterface_Navigate;
-        public InputAction @Submit => m_Wrapper.m_UserInterface_Submit;
-        public InputAction @Cancel => m_Wrapper.m_UserInterface_Cancel;
-        public InputAction @Point => m_Wrapper.m_UserInterface_Point;
-        public InputAction @Click => m_Wrapper.m_UserInterface_Click;
-        public InputAction @ScrollWheel => m_Wrapper.m_UserInterface_ScrollWheel;
-        public InputAction @RightClick => m_Wrapper.m_UserInterface_RightClick;
-        public InputActionMap Get() { return m_Wrapper.m_UserInterface; }
+        public UIActions(@BasePlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
+        public InputAction @Submit => m_Wrapper.m_UI_Submit;
+        public InputAction @Cancel => m_Wrapper.m_UI_Cancel;
+        public InputAction @Point => m_Wrapper.m_UI_Point;
+        public InputAction @Click => m_Wrapper.m_UI_Click;
+        public InputAction @ScrollWheel => m_Wrapper.m_UI_ScrollWheel;
+        public InputAction @RightClick => m_Wrapper.m_UI_RightClick;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(UserInterfaceActions set) { return set.Get(); }
-        public void SetCallbacks(IUserInterfaceActions instance)
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
         {
-            if (m_Wrapper.m_UserInterfaceActionsCallbackInterface != null)
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                @Navigate.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnNavigate;
-                @Navigate.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnNavigate;
-                @Navigate.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnNavigate;
-                @Submit.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnSubmit;
-                @Submit.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnSubmit;
-                @Submit.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnSubmit;
-                @Cancel.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnCancel;
-                @Cancel.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnCancel;
-                @Cancel.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnCancel;
-                @Point.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnPoint;
-                @Point.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnPoint;
-                @Point.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnPoint;
-                @Click.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnClick;
-                @Click.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnClick;
-                @Click.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnClick;
-                @ScrollWheel.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScrollWheel;
-                @ScrollWheel.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScrollWheel;
-                @ScrollWheel.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnScrollWheel;
-                @RightClick.started -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnRightClick;
-                @RightClick.performed -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnRightClick;
-                @RightClick.canceled -= m_Wrapper.m_UserInterfaceActionsCallbackInterface.OnRightClick;
+                @Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Submit.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Submit.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Submit.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSubmit;
+                @Cancel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Cancel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Cancel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnCancel;
+                @Point.started -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Point.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnPoint;
+                @Click.started -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnClick;
+                @ScrollWheel.started -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @ScrollWheel.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnScrollWheel;
+                @RightClick.started -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @RightClick.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
+                @RightClick.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnRightClick;
             }
-            m_Wrapper.m_UserInterfaceActionsCallbackInterface = instance;
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Navigate.started += instance.OnNavigate;
@@ -831,7 +831,7 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
             }
         }
     }
-    public UserInterfaceActions @UserInterface => new UserInterfaceActions(this);
+    public UIActions @UI => new UIActions(this);
     public interface IPlayerActions
     {
         void OnMove(InputAction.CallbackContext context);
@@ -842,7 +842,7 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
         void OnUseInteract(InputAction.CallbackContext context);
         void OnTogglePause(InputAction.CallbackContext context);
     }
-    public interface IUserInterfaceActions
+    public interface IUIActions
     {
         void OnNavigate(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);

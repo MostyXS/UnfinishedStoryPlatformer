@@ -12,28 +12,20 @@ namespace Game.Collectioning
     public class Atlas : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField] private List<AtlasCategory> categories = new List<AtlasCategory>();
-#if UNITY_EDITOR
-        [SerializeField] private AtlasObjectOpener atlasOpenerPrefab;
-#endif
-        
-        [UsedImplicitly]
-        public void OpenObject(AtlasObject objectToOpen)
-        {
-            var category = GetCategoryByType(objectToOpen.GetCategoryType());
-            if (category == null) return;
 
-            foreach (var aObj in category.GetAllObjects())
-            {
-                if (aObj == objectToOpen)
-                {
-                    aObj.Open();
-                }
-            }
-        }
 
         public void LoadCategories(List<AtlasCategory> otherCategories)
         {
-            this.categories = otherCategories;
+            foreach (var atlasCategory in GetAllCategories())
+            {
+                foreach (var otherAtlasCategory in otherCategories)
+                {
+                    if (atlasCategory.GetCategoryType() == otherAtlasCategory.GetCategoryType())
+                    {
+                        atlasCategory.LoadFromOther(otherAtlasCategory);
+                    }
+                }
+            }
         }
 
         public List<AtlasCategory> GetAllCategories()
@@ -46,7 +38,14 @@ namespace Game.Collectioning
         {
             return categories.FirstOrDefault(c => c.GetCategoryType() == type);
         }
+#if UNITY_EDITOR
+        [SerializeField] AtlasObjectOpener atlasOpenerPrefab;
 
+        public AtlasObjectOpener GetOpenerPrefab()
+        {
+            return atlasOpenerPrefab;
+        }
+#endif
 
         public void OnBeforeSerialize()
         {
@@ -56,7 +55,7 @@ namespace Game.Collectioning
             if (string.IsNullOrEmpty(this.GetFolderPath())) return;
 
             var categoryTypes = Enum.GetValues(typeof(AtlasCategoryType));
-            if(categoryTypes.Length == categories.Count) return;
+            if (categoryTypes.Length == categories.Count) return;
             foreach (AtlasCategoryType categoryType in categoryTypes)
             {
                 if (GetCategoryByType(categoryType) != null) continue;
@@ -65,7 +64,7 @@ namespace Game.Collectioning
                 newAtlasCategory.name = categoryName;
                 newAtlasCategory.SetCategoryType(categoryType);
                 categories.Add(newAtlasCategory);
-                var categoriesPath = $"{this.GetFolderPath()}/Categories/{categoryName}.asset"; 
+                var categoriesPath = $"{this.GetFolderPath()}/Categories/{categoryName}.asset";
                 AssetDatabase.CreateAsset(newAtlasCategory, categoriesPath);
                 AssetDatabase.SaveAssets();
             }

@@ -14,7 +14,7 @@ namespace Game.UI.Menu
     /// <summary>
     /// A reusable component with a self-contained UI for rebinding a single action.
     /// </summary>
-    public class RebindActionUi : MonoBehaviour
+    public class RebindActionUI : MonoBehaviour
     {
         /// <summary>
         /// Reference to the action that is to be rebound.
@@ -324,7 +324,7 @@ namespace Game.UI.Menu
         protected void OnEnable()
         {
             if (s_RebindActionUIs == null)
-                s_RebindActionUIs = new List<RebindActionUi>();
+                s_RebindActionUIs = new List<RebindActionUI>();
             s_RebindActionUIs.Add(this);
             if (s_RebindActionUIs.Count == 1)
                 InputSystem.onActionChange += OnActionChange;
@@ -410,7 +410,7 @@ namespace Game.UI.Menu
 
         private InputActionRebindingExtensions.RebindingOperation m_RebindOperation;
 
-        private static List<RebindActionUi> s_RebindActionUIs;
+        private static List<RebindActionUI> s_RebindActionUIs;
 
         // We want the label for the action name to update in edit mode, too, so
         // we kick that off from here.
@@ -433,13 +433,13 @@ namespace Game.UI.Menu
         }
 
         [Serializable]
-        public class UpdateBindingUIEvent : UnityEvent<RebindActionUi, string, string, string>
+        public class UpdateBindingUIEvent : UnityEvent<RebindActionUI, string, string, string>
         {
         }
 
         [Serializable]
         public class
-            InteractiveRebindEvent : UnityEvent<RebindActionUi, InputActionRebindingExtensions.RebindingOperation>
+            InteractiveRebindEvent : UnityEvent<RebindActionUI, InputActionRebindingExtensions.RebindingOperation>
         {
         }
     }

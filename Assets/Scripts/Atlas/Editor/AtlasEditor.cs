@@ -23,7 +23,7 @@ namespace Game.Collectioning.Editor
         public static void ShowWindow()
         {
             var window = GetWindow<AtlasEditor>();
-            window.titleContent = new GUIContent("AtlasCategory");
+            window.titleContent = new GUIContent("Atlas Editor");
             window.Show();
         }
 
@@ -123,7 +123,7 @@ namespace Game.Collectioning.Editor
         {
             var evt = Event.current;
             var textArea = new Rect(position.width / 3 + Spacing, 0,
-                position.width - position.width / 3 - ObjectImageSize - Spacing    ,
+                position.width - position.width / 3 - ObjectImageSize - Spacing,
                 ObjectImageSize);
             var textAreaStyle = new GUIStyle(EditorStyles.textArea)
             {
@@ -204,6 +204,27 @@ namespace Game.Collectioning.Editor
 
         #region Toolbar Drawers
 
+        private void DrawCategorySelector()
+        {
+            var toolbarWidth = position.width / 3;
+
+            GUILayout.BeginVertical(GUILayout.Width(toolbarWidth));
+            EditorGUI.BeginChangeCheck();
+            if (_selectedCategory == null)
+            {
+                _selectedCategory = _selectedAtlas.GetCategoryByType(AtlasCategoryType.Character);
+            }
+
+            var newType = (AtlasCategoryType) EditorGUILayout.EnumPopup(_selectedCategory.GetCategoryType()
+                , new GUIStyle(EditorStyles.popup) {alignment = TextAnchor.MiddleCenter},
+                GUILayout.Width(toolbarWidth));
+            if (EditorGUI.EndChangeCheck())
+            {
+                _selectedCategory = _selectedAtlas.GetCategoryByType(newType);
+                _selectedAtlasObject = null;
+            }
+        }
+
         private void DrawSelectedCategory()
         {
             _scrollPosition = EditorGUILayout.BeginScrollView(_scrollPosition, GUILayout.ExpandHeight(false));
@@ -232,6 +253,8 @@ namespace Game.Collectioning.Editor
                     Selection.activeObject = aObj;
                 }
 
+                DrawExportButton(aObj, objectButtonStyle);
+
                 GUILayout.EndHorizontal();
                 index++;
             }
@@ -251,31 +274,32 @@ namespace Game.Collectioning.Editor
                 _selectedAtlasObject = nObj;
             }
 
-            if (_selectedAtlasObject != null &&  GUILayout.Button("Add Opener To Selected Object"))
-            {
-                
-            }
+
             GUILayout.EndVertical();
         }
 
-        private void DrawCategorySelector()
+        private void DrawExportButton(AtlasObject aObj, GUIStyle objectButtonStyle)
         {
-            var toolbarWidth = position.width / 3;
-
-            GUILayout.BeginVertical(GUILayout.Width(toolbarWidth));
-            EditorGUI.BeginChangeCheck();
-            if (_selectedCategory == null)
+            if (_selectedAtlasObject == aObj)
             {
-                _selectedCategory = _selectedAtlas.GetCategoryByType(AtlasCategoryType.Character);
-            }
+                var selectedGameObjects = Selection.GetFiltered<GameObject>(SelectionMode.ExcludePrefab);
+                if (selectedGameObjects.Length > 0 &&
+                    GUILayout.Button("Export To Selected", objectButtonStyle))
+                {
+                    foreach (var go in selectedGameObjects)
+                    {
+                        var opener = go.GetComponent<AtlasObjectOpener>();
+                        if (opener == null)
+                        {
+                            opener = go.AddComponent<AtlasObjectOpener>();
+                            Undo.RegisterCreatedObjectUndo(opener, "Added Atlas Opener To Object");
+                        }
 
-            var newType = (AtlasCategoryType) EditorGUILayout.EnumPopup(_selectedCategory.GetCategoryType()
-                , new GUIStyle(EditorStyles.popup) {alignment = TextAnchor.MiddleCenter},
-                GUILayout.Width(toolbarWidth));
-            if (EditorGUI.EndChangeCheck())
-            {
-                _selectedCategory = _selectedAtlas.GetCategoryByType(newType);
-                _selectedAtlasObject = null;
+                        opener.SetObjectToOpen(_selectedAtlasObject);
+                    }
+                }
+
+                Repaint();
             }
         }
 

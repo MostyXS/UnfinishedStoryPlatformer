@@ -11,15 +11,16 @@ namespace Game.Dialogues
         [SerializeField] private List<DialogueNode> nodes = new List<DialogueNode>();
 #if UNITY_EDITOR
         [SerializeField] private Vector2 newNodeOffset = new Vector2(450, 0);
-        private Dictionary<string, DialogueNode> nodeLookup = new Dictionary<string, DialogueNode>();
+        private Dictionary<string, DialogueNode> _nodeLookup = new Dictionary<string, DialogueNode>();
 
         private void OnValidate()
         {
-            nodeLookup.Clear();
+            _nodeLookup.Clear();
             foreach (DialogueNode node in GetAllNodes())
             {
-                nodeLookup[node.name] = node; //Fills Node Lookup
+                _nodeLookup[node.name] = node; //Fills Node Lookup
             }
+
         }
 #endif
         public IEnumerable<DialogueNode> GetAllNodes()
@@ -38,8 +39,9 @@ namespace Game.Dialogues
             }
         }
 
-        public IEnumerable<DialogueNode> GetAiChildren(DialogueNode currentNode)
+        public IEnumerable<DialogueNode> GetAIChildren(DialogueNode currentNode)
         {
+            
             foreach (DialogueNode node in GetNodeChildren(currentNode))
             {
                 if (!node.IsPlayerSpeaking())
@@ -58,7 +60,7 @@ namespace Game.Dialogues
         {
             foreach (string nodeId in parentNode.GetChildren())
             {
-                if (nodeLookup.TryGetValue(nodeId, out var node))
+                if (_nodeLookup.TryGetValue(nodeId, out var node))
                 {
                     yield return node;
                 }
@@ -102,6 +104,8 @@ namespace Game.Dialogues
             CleanDanglingChildren(nodeToRemove);
             OnValidate();
             Undo.DestroyObjectImmediate(nodeToRemove);
+            AssetDatabase.SaveAssets();
+
         }
 
         private void CleanDanglingChildren(DialogueNode nodeToRemove)
@@ -109,6 +113,7 @@ namespace Game.Dialogues
             foreach (DialogueNode node in GetAllNodes())
             {
                 node.RemoveChild(nodeToRemove.name);
+
             }
         }
 #endif
@@ -128,6 +133,7 @@ namespace Game.Dialogues
                     {
                         AssetDatabase.AddObjectToAsset(node, this);
                         AssetDatabase.SaveAssets();
+                      
                     }
                 }
             }

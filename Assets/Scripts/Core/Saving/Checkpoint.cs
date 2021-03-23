@@ -6,6 +6,8 @@ namespace Game.Core.Saving
 {
     public class Checkpoint : MonoBehaviour
     {
+        
+        
         [UsedImplicitly]
         public void Save()
         {

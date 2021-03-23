@@ -20,7 +20,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f8566e-d3a6-42a9-ba58-55fb706f65fd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Controls/BasePlayerControls.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Controls/BasePlayerControls.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Controls/Player Controls.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Controls/Player Controls.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/Dialogue.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/Dialogue.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Raw Button Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Raw Button Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00_Tutorial.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00_Tutorial.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUIEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUIEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindContent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindContent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +70,20 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/AtlasOpenButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/28/0d6bc7fd/CreateAssetMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/SerializableVector2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/ContinueSlotButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/NewGameSlotButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/a3/a1a8cd12/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/SlotButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/EditorZoomArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Preferences Control/PrefKeys.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/Editor/RectExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Preferences Control/PrefsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Preferences Control/DefaultsController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -40,18 +91,47 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Preferences Control/VolumeDefaultsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Preferences Control/PreferencesSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C44E24CB-7B9D-4E50-96E6-5A3281E887F5/7c/9e8f7ff9/GUIStyle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/a9/a85791b3/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PersistentObjectSpawner.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/LazyValue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/d8/8d950adc/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/AI.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/VolumeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/MainAudioSource.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasNotifierUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/DecisionList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/KillList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategoryTypes.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Player HUD/PlayerHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/58/66ce6db9/ResourcesAPI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/UtilityExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/86/00bed194/Resources.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/PredicateType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/ConstantData/AnimNames.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/IPredicateEvaluator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/ISaveable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/SaveableEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/00_tutorial.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/SavingSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/96/18526c7e/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Attributes/Health.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,84 +140,27 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/GamepadControlsButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/42A5878C-E129-4030-83AC-CCF18E43363F/0f/bcf24dc5/02000225.il" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUIEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.collab-proxy@1.3.9/Editor/Assets/UiConstants.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/Aida.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindContent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/AtlasOpenButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/28/0d6bc7fd/CreateAssetMenuAttribute.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Saving/SerializableVector2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/ContinueSlotButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/NewGameSlotButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/SlotButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/EditorZoomArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SceneManagement/Fader.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///UtilityExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/a9/a85791b3/ScriptableObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/PersistentObjectSpawner.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/LazyValue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/d8/8d950adc/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/VolumeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/MainAudioSource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/DecisionList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/KillList.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategoryTypes.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Player HUD/PlayerHealthBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/TransformExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/58/66ce6db9/ResourcesAPI.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///00_Tutorial.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/UtilityExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/86/00bed194/Resources.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/PredicateType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/ConstantData/AnimNames.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/IPredicateEvaluator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scenes/00_tutorial.unity" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2020.3.0f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/Button.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sprites/Aida.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/MeleeWeapon.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Game Loading/ContinueSlotButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/RectExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/RectExtensions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Attributes/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/AI/Turret.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Saving/ISaveable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/CancelButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Settings/GamepadControlsButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Settings/RebindActionUIEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Settings/RebindContent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Settings/RebindActionUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Extensions/Editor/RectExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/EditorZoomArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/TransformSelectButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Preferences Control/DefaultsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Preferences Control/PrefKeys.cs" />
@@ -147,23 +170,43 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Loading Buttons/SlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Player HUD/PlayerHealthBar.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/ConstantData/AnimNames.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasSaveDependentButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Dependent Buttons/AtlasOpenButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Preferences Control/VolumeDefaultsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/AtlasOpenButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/ContinueSlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/NewGameSlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/SlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/GamepadControlsButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUIEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindContent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/TransformSelectButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Archive/LazyValue.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/LazyValue.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/MainAudioSource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/AtlasOpenButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/NextButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" />
+        <option value="$PROJECT_DIR$/Assets/SubmitButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Dialogue.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/AIConversant.cs" />
+        <option value="$PROJECT_DIR$/Assets/AtlasNotifierUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasNotifierUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" />
       </list>
     </option>
   </component>
@@ -223,7 +266,12 @@
       <workItem from="1616107229031" duration="239000" />
       <workItem from="1616174410276" duration="5182000" />
       <workItem from="1616200052316" duration="3397000" />
-      <workItem from="1616237611920" duration="9425000" />
+      <workItem from="1616237611920" duration="10074000" />
+      <workItem from="1616321997661" duration="3183000" />
+      <workItem from="1616337112461" duration="2009000" />
+      <workItem from="1616408205815" duration="10196000" />
+      <workItem from="1616421007227" duration="2238000" />
+      <workItem from="1616447651731" duration="3925000" />
     </task>
     <task id="LOCAL-00001" summary="March Pre-Release Commit, overall system fix, added atlas editor(Debug)">
       <created>1616240581007</created>
@@ -246,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616246217172</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Dependency change">
+      <created>1616252809988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616252809988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
@@ -268,7 +323,8 @@
     <MESSAGE value="March Pre-Release Commit, overall system fix, added atlas editor(Debug)" />
     <MESSAGE value="March Pre-Release Commit, overall system fix, added atlas editor(Debug), added menu" />
     <MESSAGE value="Overall script refactor and project sorting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Overall script refactor and project sorting" />
+    <MESSAGE value="Dependency change" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dependency change" />
   </component>
   <component name="WindowStateProjectService">
     <state x="824" y="383" key="#Notifications" timestamp="1615474476848">
@@ -279,82 +335,82 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="427" height="479" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615569786717" />
-    <state width="1877" height="181" key="GridCell.Tab.0.bottom" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.0.bottom" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.0.center" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.0.center" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.0.left" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.0.left" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.0.right" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.0.right" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.1.bottom" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.1.bottom" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.1.center" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.1.center" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.1.left" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.1.left" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.1.right" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.1.right" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.2.bottom" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.2.bottom" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.2.center" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.2.center" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.2.left" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.2.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.2.left" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.2.right" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.2.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.2.right" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.3.bottom" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.2.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.3.bottom" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.3.center" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.3.center" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.3.left" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.3.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.3.left" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
-    <state width="1877" height="181" key="GridCell.Tab.3.right" timestamp="1615570911232">
+    <state width="1877" height="181" key="GridCell.Tab.3.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
+    <state width="1877" height="181" key="GridCell.Tab.3.right" timestamp="1616423265342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="181" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615570911232" />
+    <state width="1877" height="181" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
     <state x="794" y="221" key="RiderGenerateDialog" timestamp="1616179279786">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616179279786" />
-    <state x="204" y="209" width="1296" height="710" key="SettingsEditor" timestamp="1615564552648">
+    <state x="204" y="209" width="1296" height="710" key="SettingsEditor" timestamp="1616421847144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="204" y="209" width="1296" height="710" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615564552648" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1616245364671">
+    <state x="204" y="209" width="1296" height="710" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616421847144" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1616450726447">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616245364671" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616450726447" />
     <state x="807" y="434" key="VCS.ChangelistChooser" timestamp="1615550698406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -363,31 +419,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616243847482" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1616246220667">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1616252812302">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616246220667" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616252812302" />
     <state width="600" height="428" key="javadoc.popup" timestamp="1615549802098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1615549802098" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616252757015">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616422392894">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616252757015" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616422392894" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs</url>
-          <line>67</line>
+          <line>66</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" initialLine="62">
             <startOffsets>
-              <option value="2153" />
+              <option value="2187" />
             </startOffsets>
             <endOffsets>
-              <option value="2232" />
+              <option value="2266" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
