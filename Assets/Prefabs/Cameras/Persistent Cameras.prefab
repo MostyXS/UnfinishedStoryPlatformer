@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6127964787472868360}
   - component: {fileID: 6127964787472868367}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: CameraBorders
   m_TagString: CameraBorders
   m_Icon: {fileID: 0}

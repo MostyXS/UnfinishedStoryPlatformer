@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 173838602335417437}
   - component: {fileID: 2198050187098594977}
   - component: {fileID: 1626774966998509733}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Persistent Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}

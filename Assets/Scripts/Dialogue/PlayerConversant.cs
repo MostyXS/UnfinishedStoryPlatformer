@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Game.Control;
 using Game.Core.Predication;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,12 +18,13 @@ namespace Game.Dialogues
         private AIConversant _currentConversant;
         private bool _isChoosing;
 
-        private PlayerInput _playerInput;
+        private Player _player;
+        
         public event Action OnConversationUpdated;
 
         private void Awake()
         {
-            _playerInput = GetComponent<PlayerInput>();
+            _player = GetComponent<Player>();
         }
 
         public void StartDialgoue(AIConversant newConversant, Dialogue newDialogue)
@@ -33,7 +35,7 @@ namespace Game.Dialogues
             _isChoosing = false;
             TriggerEnterAction();
             OnConversationUpdated?.Invoke();
-            _playerInput.SwitchCurrentActionMap("UI");
+            _player.EnableInputs(false);
         }
 
 
@@ -45,7 +47,7 @@ namespace Game.Dialogues
             _currentConversant = null;
             _isChoosing = false;
             OnConversationUpdated?.Invoke();
-            _playerInput.SwitchCurrentActionMap("Player");
+            _player.EnableInputs(true);
         }
 
         public bool IsActive()

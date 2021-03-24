@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Checkpoint Trigger
       objectReference: {fileID: 0}
+    - target: {fileID: 8212845398564885912, guid: 6f074135e67cccb46b586af82c82d24c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 9118915330397709891, guid: 6f074135e67cccb46b586af82c82d24c, type: 3}
       propertyPath: m_RootOrder
       value: 0

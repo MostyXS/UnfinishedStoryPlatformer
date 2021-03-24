@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Game.Attributes;
 using Game.Core.Saving;
 using Game.Utils;
@@ -16,8 +17,7 @@ namespace Game.Control
         [Header("Speed settings")] [SerializeField]
         private float accelerationSpeed;
 
-        [FormerlySerializedAs("deccelerationSpeed")] [SerializeField]
-        private float decelerationSpeed;
+        [SerializeField] private float decelerationSpeed;
 
         [SerializeField] float minSpeed, maxSpeed = 5;
 
@@ -27,9 +27,9 @@ namespace Game.Control
         [Header("Jump Settings")] [SerializeField]
         private float jumpPower = 10f;
 
-        [SerializeField] private Transform foot1, foot2;
-        [SerializeField] private float distanceToGround;
-        [SerializeField] private LayerMask groundMask;
+        [SerializeField] private float jumpDelay = .5f;
+        [SerializeField] private BoxCollider2D feetCollider;
+        [SerializeField] private LayerMask jumpMask;
 
         private float _defaultXScale;
         private float _xAxis;
@@ -39,16 +39,32 @@ namespace Game.Control
         private Health _health;
         private Animator _anim;
         private Rigidbody2D _rb;
+        private Zoomer _zoomer;
+        private PlayerInput _playerInput;
 
-        private bool _canAttack;
+        private bool _canJump = true;
+        private bool _canAttack = true;
+
 
         #region Unity Callbacks
+
+        private void OnDisable()
+        {
+            EnableInputs(false);
+        }
+
+        private void OnEnable()
+        {
+            EnableInputs(true);
+        }
 
         private void Awake()
         {
             _health = GetComponent<Health>();
             _rb = GetComponent<Rigidbody2D>();
             _anim = GetComponent<Animator>();
+            _zoomer = GetComponent<Zoomer>();
+            _playerInput = GetComponent<PlayerInput>();
             _defaultXScale = transform.localScale.x;
             Instance = this.gameObject;
         }
@@ -58,13 +74,6 @@ namespace Game.Control
             _health.onDeath += PerformDeath;
         }
 
-        private void OnDrawGizmos()
-        {
-            if (foot1 != null)
-                Gizmos.DrawRay(foot1.position, Vector2.down * distanceToGround);
-            if (foot2 != null)
-                Gizmos.DrawRay(foot2.position, Vector2.down * distanceToGround);
-        }
 
         private void LateUpdate()
         {
@@ -88,7 +97,7 @@ namespace Game.Control
 
         #endregion
 
-        #region Input Callbacks
+        #region Input Methods
 
         [UsedImplicitly]
         public void OnMove(InputAction.CallbackContext ctx)
@@ -107,15 +116,55 @@ namespace Game.Control
         [UsedImplicitly]
         public void OnJump(InputAction.CallbackContext ctx)
         {
-            if (CanJump())
+            if (_canJump && IsOnGround())
             {
                 _rb.velocity += new Vector2(0, jumpPower);
+                StartCoroutine(JumpDelay());
+            }
+        }
+
+        [UsedImplicitly]
+        public void OnToggleZoom(InputAction.CallbackContext ctx)
+        {
+            if(!ctx.performed) return;
+            SwitchCurrentActionMap("Zoom");
+            _zoomer.ToggleZoom(true);
+        }
+
+        private void SwitchCurrentActionMap(string mapName)
+        {
+            _playerInput.currentActionMap.Disable();
+            _playerInput.SwitchCurrentActionMap(mapName);
+            _playerInput.currentActionMap.Enable();
+        }
+
+        public void ResetActionMap()
+        {
+            SwitchCurrentActionMap("Player");
+        }
+
+        public void EnableInputs(bool isEnable)
+        {
+            if (isEnable)
+            {
+                _playerInput.currentActionMap.Enable();
+            }
+            else
+            {
+                _playerInput.currentActionMap.Disable();
             }
         }
 
         #endregion
 
         #region Private Methods
+
+        private IEnumerator JumpDelay()
+        {
+            _canJump = false;
+            yield return new WaitForSeconds(jumpDelay);
+            _canJump = true;
+        }
 
         private IEnumerator AttackDelay()
         {
@@ -137,14 +186,13 @@ namespace Game.Control
 
         #region Bool Methods
 
-        private bool CanJump()
+        private bool IsOnGround()
         {
-            return IsOnGround(foot1) || IsOnGround(foot2);
-        }
-
-        private bool IsOnGround(Transform foot)
-        {
-            return Physics2D.Raycast(foot.position, Vector2.down, distanceToGround, groundMask).collider != null;
+            var hit = Physics2D.BoxCast(feetCollider.bounds.center, feetCollider.bounds.size, 0f,
+                Vector2.down,
+                .1f,
+                jumpMask);
+            return hit.collider != null;
         }
 
         private bool IsBraking()

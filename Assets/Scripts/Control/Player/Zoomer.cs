@@ -26,18 +26,23 @@ namespace Game.Control
         [UsedImplicitly]
         public void OnToggleZoom(InputAction.CallbackContext ctx)
         {
-            if (ctx.started)
-            {
-                _isZoomed = true;
-                Cursor.visible = false;
+            if(!ctx.performed) return;
+            ToggleZoom(false);
+            GetComponent<Player>().ResetActionMap();
+        }
 
+        public void ToggleZoom(bool enable)
+        {
+            _isZoomed = enable;
+            Cursor.visible = !enable;
+            if (enable)
+            {
                 Cursor.lockState = CursorLockMode.Locked;
                 pCam.Follow = followPoint;
             }
-            else if (ctx.canceled)
+            else
             {
-                _isZoomed = false;
-                Cursor.visible = true;
+                
                 Cursor.lockState = CursorLockMode.None;
                 pCam.Follow = transform;
                 followPoint.position = transform.position;
@@ -52,10 +57,10 @@ namespace Game.Control
 
         private void LateUpdate()
         {
-            if (_isZoomed)
-            {
-                ControlZoom();
-            }
+            if (!_isZoomed) return;
+
+            ControlZoom();
+
         }
 
 

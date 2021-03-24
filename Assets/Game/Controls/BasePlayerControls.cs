@@ -20,7 +20,7 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Move"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""97b2b08b-6e08-42d9-bab4-21243ffdc05f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -28,7 +28,7 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Jump"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""c6a122b3-132b-474a-ac8d-c6d772e5bb32"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -43,20 +43,12 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Control Zoom"",
-                    ""type"": ""Value"",
-                    ""id"": ""3c121555-d56a-492f-b446-bad8ffefcba9"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Toggle Zoom"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""fdf8d733-964b-403d-b230-3086ba1975bd"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Press""
                 },
                 {
                     ""name"": ""Use/Interact"",
@@ -68,7 +60,7 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": ""Toggle Pause"",
-                    ""type"": ""Button"",
+                    ""type"": ""Value"",
                     ""id"": ""ad54e16f-8217-4ae1-acc3-9fe4b1fcacb0"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -188,28 +180,6 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""0080d4aa-8e8d-4df1-8fb8-2d483edcde04"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Control Zoom"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8f1d145f-2b4b-4449-b762-419ec2462df7"",
-                    ""path"": ""<Gamepad>/rightStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Control Zoom"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""fc4f8aa8-638e-41e9-938e-10c5343de0ce"",
                     ""path"": ""<Keyboard>/leftCtrl"",
                     ""interactions"": """",
@@ -271,6 +241,74 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Toggle Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Zoom"",
+            ""id"": ""10a8e40a-b052-44dd-bdfb-078bb3b26f2e"",
+            ""actions"": [
+                {
+                    ""name"": ""Control Zoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""71169f0b-d804-4b13-9393-cb0c6d83de8f"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Toggle Zoom"",
+                    ""type"": ""Button"",
+                    ""id"": ""f872b097-f620-46ca-930b-be70cfa1b370"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""81a69bb0-9a81-40ca-ab0b-f5ebbea63a59"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Control Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a360bc12-dec3-4af6-a65c-af26c44c474c"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Control Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5428b32-0ff3-4381-83b9-103d31585f45"",
+                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Toggle Zoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d4e5a8b2-cdf8-4202-b85c-a232edbe214a"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Toggle Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -612,10 +650,13 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
-        m_Player_ControlZoom = m_Player.FindAction("Control Zoom", throwIfNotFound: true);
         m_Player_ToggleZoom = m_Player.FindAction("Toggle Zoom", throwIfNotFound: true);
         m_Player_UseInteract = m_Player.FindAction("Use/Interact", throwIfNotFound: true);
         m_Player_TogglePause = m_Player.FindAction("Toggle Pause", throwIfNotFound: true);
+        // Zoom
+        m_Zoom = asset.FindActionMap("Zoom", throwIfNotFound: true);
+        m_Zoom_ControlZoom = m_Zoom.FindAction("Control Zoom", throwIfNotFound: true);
+        m_Zoom_ToggleZoom = m_Zoom.FindAction("Toggle Zoom", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -677,7 +718,6 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Attack;
-    private readonly InputAction m_Player_ControlZoom;
     private readonly InputAction m_Player_ToggleZoom;
     private readonly InputAction m_Player_UseInteract;
     private readonly InputAction m_Player_TogglePause;
@@ -688,7 +728,6 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
-        public InputAction @ControlZoom => m_Wrapper.m_Player_ControlZoom;
         public InputAction @ToggleZoom => m_Wrapper.m_Player_ToggleZoom;
         public InputAction @UseInteract => m_Wrapper.m_Player_UseInteract;
         public InputAction @TogglePause => m_Wrapper.m_Player_TogglePause;
@@ -710,9 +749,6 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                 @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
                 @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @ControlZoom.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnControlZoom;
-                @ControlZoom.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnControlZoom;
-                @ControlZoom.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnControlZoom;
                 @ToggleZoom.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleZoom;
                 @ToggleZoom.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleZoom;
                 @ToggleZoom.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleZoom;
@@ -735,9 +771,6 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
                 @Attack.started += instance.OnAttack;
                 @Attack.performed += instance.OnAttack;
                 @Attack.canceled += instance.OnAttack;
-                @ControlZoom.started += instance.OnControlZoom;
-                @ControlZoom.performed += instance.OnControlZoom;
-                @ControlZoom.canceled += instance.OnControlZoom;
                 @ToggleZoom.started += instance.OnToggleZoom;
                 @ToggleZoom.performed += instance.OnToggleZoom;
                 @ToggleZoom.canceled += instance.OnToggleZoom;
@@ -751,6 +784,47 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
         }
     }
     public PlayerActions @Player => new PlayerActions(this);
+
+    // Zoom
+    private readonly InputActionMap m_Zoom;
+    private IZoomActions m_ZoomActionsCallbackInterface;
+    private readonly InputAction m_Zoom_ControlZoom;
+    private readonly InputAction m_Zoom_ToggleZoom;
+    public struct ZoomActions
+    {
+        private @BasePlayerControls m_Wrapper;
+        public ZoomActions(@BasePlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @ControlZoom => m_Wrapper.m_Zoom_ControlZoom;
+        public InputAction @ToggleZoom => m_Wrapper.m_Zoom_ToggleZoom;
+        public InputActionMap Get() { return m_Wrapper.m_Zoom; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ZoomActions set) { return set.Get(); }
+        public void SetCallbacks(IZoomActions instance)
+        {
+            if (m_Wrapper.m_ZoomActionsCallbackInterface != null)
+            {
+                @ControlZoom.started -= m_Wrapper.m_ZoomActionsCallbackInterface.OnControlZoom;
+                @ControlZoom.performed -= m_Wrapper.m_ZoomActionsCallbackInterface.OnControlZoom;
+                @ControlZoom.canceled -= m_Wrapper.m_ZoomActionsCallbackInterface.OnControlZoom;
+                @ToggleZoom.started -= m_Wrapper.m_ZoomActionsCallbackInterface.OnToggleZoom;
+                @ToggleZoom.performed -= m_Wrapper.m_ZoomActionsCallbackInterface.OnToggleZoom;
+                @ToggleZoom.canceled -= m_Wrapper.m_ZoomActionsCallbackInterface.OnToggleZoom;
+            }
+            m_Wrapper.m_ZoomActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @ControlZoom.started += instance.OnControlZoom;
+                @ControlZoom.performed += instance.OnControlZoom;
+                @ControlZoom.canceled += instance.OnControlZoom;
+                @ToggleZoom.started += instance.OnToggleZoom;
+                @ToggleZoom.performed += instance.OnToggleZoom;
+                @ToggleZoom.canceled += instance.OnToggleZoom;
+            }
+        }
+    }
+    public ZoomActions @Zoom => new ZoomActions(this);
 
     // UI
     private readonly InputActionMap m_UI;
@@ -837,10 +911,14 @@ public class @BasePlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnAttack(InputAction.CallbackContext context);
-        void OnControlZoom(InputAction.CallbackContext context);
         void OnToggleZoom(InputAction.CallbackContext context);
         void OnUseInteract(InputAction.CallbackContext context);
         void OnTogglePause(InputAction.CallbackContext context);
+    }
+    public interface IZoomActions
+    {
+        void OnControlZoom(InputAction.CallbackContext context);
+        void OnToggleZoom(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
