@@ -111,6 +111,7 @@ GameObject:
   - component: {fileID: 114512909933038522}
   - component: {fileID: 196823456845580740}
   - component: {fileID: 2490816644005276760}
+  - component: {fileID: 6320515009045635801}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -415,6 +416,7 @@ MonoBehaviour:
   followPoint: {fileID: 380861731}
   zoomRadius: 15
   speed: 15
+  maxDistanceFromFollowPointToCamera: 0.3
 --- !u!114 &1321115026239416327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,6 +468,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 89bf472b-1bf1-4659-b8d0-53b8d5cfab84
+--- !u!114 &6320515009045635801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819598546214940863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.62267494, y: -1.3982618, z: 0}
+  - {x: 0.6188183, y: -1.4031479, z: 0}
+  - {x: 0.62280846, y: 0.6340103, z: 0}
+  - {x: 1.3083973, y: 2.0773053, z: 0}
+  - {x: 0.9524288, y: 2.2441864, z: 0}
+  - {x: 0.6100006, y: 1.5134861, z: 0}
+  - {x: 0.5571308, y: 1.400115, z: 0}
+  - {x: -0.6215172, y: 1.4011054, z: 0}
+  m_ShapePathHash: -223290187
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 63112
 --- !u!1 &8819598546317715393
 GameObject:
   m_ObjectHideFlags: 0

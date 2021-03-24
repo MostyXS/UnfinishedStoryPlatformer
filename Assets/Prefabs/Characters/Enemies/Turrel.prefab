@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 7686416320656819818}
   - component: {fileID: 7686416320656819817}
   - component: {fileID: 903378820469969031}
+  - component: {fileID: 6033477607502391120}
   m_Layer: 6
   m_Name: Turrel
   m_TagString: Untagged
@@ -472,18 +473,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.48524475, y: 0.61983705}
-      - {x: 0.4898758, y: 1.1242619}
-      - {x: 0.01678276, y: 1.1258733}
-      - {x: -0.49791056, y: 1.122998}
-      - {x: -0.50118065, y: 0.64061713}
-      - {x: -0.09770203, y: 0.6355963}
+    - - {x: 0.49968147, y: 0.61983705}
+      - {x: 0.49999046, y: 0.7874019}
+      - {x: 0.5003395, y: 0.98972106}
+      - {x: 0.50003433, y: 1.1198753}
+      - {x: 0.01701355, y: 1.1205631}
+      - {x: -0.50022036, y: 1.1199967}
+      - {x: -0.4994049, y: 0.6197324}
+      - {x: -0.10552025, y: 0.619709}
       - {x: -0.10221863, y: -0.12732053}
       - {x: -0.51306343, y: -0.827194}
       - {x: -0.31319237, y: -0.8315923}
       - {x: 0.47030222, y: -0.8174083}
       - {x: 0.06688881, y: -0.11636543}
-      - {x: 0.07833576, y: 0.61111325}
+      - {x: 0.082118034, y: 0.6196875}
 --- !u!114 &7686416320656819817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +522,48 @@ MonoBehaviour:
   bulletForce: 5
   burstQuantity: 3
   burstDelay: 0.2
+--- !u!114 &6033477607502391120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540559064845263025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.10585976, y: -0.13643432, z: 0}
+  - {x: -0.5962601, y: -0.9848943, z: 0}
+  - {x: -0.46422005, y: -1.061065, z: 0}
+  - {x: -0.07673645, y: -0.38850212, z: 0}
+  - {x: -0.07613373, y: -1.1201286, z: 0}
+  - {x: 0.076028824, y: -1.1199222, z: 0}
+  - {x: 0.075634, y: -0.45491385, z: 0}
+  - {x: 0.41651154, y: -1.0391991, z: 0}
+  - {x: 0.5458927, y: -0.9639125, z: 0}
+  - {x: 0.08151436, y: -0.16005683, z: 0}
+  - {x: 0.081718445, y: 0.6199918, z: 0}
+  - {x: 0.5000782, y: 0.61990523, z: 0}
+  - {x: 0.4999466, y: 0.78994703, z: 0}
+  - {x: 1.1500111, y: 0.7899513, z: 0}
+  - {x: 1.1499748, y: 0.9899713, z: 0}
+  - {x: 0.4999962, y: 0.9899118, z: 0}
+  - {x: 0.50008774, y: 1.1201344, z: 0}
+  - {x: -0.49998856, y: 1.1200669, z: 0}
+  - {x: -0.500082, y: 0.6199107, z: 0}
+  - {x: -0.10586548, y: 0.6198411, z: 0}
+  m_ShapePathHash: 1335101253
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -208168
 --- !u!1 &6711133081332293959
 GameObject:
   m_ObjectHideFlags: 0
