@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Game.Core
 {
-    public class UnityActionTrigger : MonoBehaviour, ISaveable
+    public class OneOffTrigger : MonoBehaviour, ISaveable
     {
         [SerializeField] private UnityEvent triggerEnterActions;
 
@@ -30,17 +30,17 @@ namespace Game.Core
 
         public object CaptureState()
         {
-            return GetComponent<Collider2D>().enabled;
+            return _collider2D.enabled;
         }
 
         public void RestoreState(object state)
         {
-            GetComponent<Collider2D>().enabled = (bool) state;
+            _collider2D.enabled = (bool) state;
         }
 
         public bool ShouldBeSaved()
         {
-            return !_collider2D.enabled;
+            return true;
         }
     }
 }

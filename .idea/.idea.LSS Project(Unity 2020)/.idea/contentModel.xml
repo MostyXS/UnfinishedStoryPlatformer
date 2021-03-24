@@ -29,9 +29,9 @@
             <e p="Health.cs" t="Include" />
           </e>
           <e p="Audio" t="Include">
+            <e p="LongVolumeController.cs" t="Include" />
             <e p="MainAudioSource.cs" t="Include" />
             <e p="MusicPlayer.cs" t="Include" />
-            <e p="VolumeController.cs" t="Include" />
           </e>
           <e p="Combat" t="Include">
             <e p="MeleeWeapon.cs" t="Include" />
@@ -49,7 +49,9 @@
           </e>
           <e p="Core" t="Include">
             <e p="GameManager.cs" t="Include" />
+            <e p="OneOffTrigger.cs" t="Include" />
             <e p="PersistentObjectSpawner.cs" t="Include" />
+            <e p="PersistentTrigger.cs" t="Include" />
             <e p="Predication" t="Include">
               <e p="Condition.cs" t="Include" />
               <e p="DecisionList.cs" t="Include" />
@@ -65,7 +67,6 @@
               <e p="SavingSystem.cs" t="Include" />
               <e p="SerializableVector2.cs" t="Include" />
             </e>
-            <e p="UnityActionTrigger.cs" t="Include" />
           </e>
           <e p="Dialogue" t="Include">
             <e p="AIConversant.cs" t="Include" />

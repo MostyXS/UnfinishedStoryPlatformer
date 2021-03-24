@@ -20,12 +20,81 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5f8566e-d3a6-42a9-ba58-55fb706f65fd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LSS Project(Unity 2020)/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Atlas/Categories/Character Atlas Category.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Atlas/Categories/Character Atlas Category.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/1. First dialogue with Yuri.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/1. First dialogue with Yuri.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/2. First soldier encounter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/2. First soldier encounter.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/3. Get down.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/3. Get down.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/4. Melee fight tutorial.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/4. Melee fight tutorial.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/5. Second soldier ancounter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/5. Second soldier ancounter.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/6. Soldiers fleeing.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/6. Soldiers fleeing.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/7. Paper finding.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/7. Paper finding.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/8. Glitched dialogue.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game/Dialogues/0_Tutorial/8. Glitched dialogue.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Core.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Checkpoint Trigger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Checkpoint Trigger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Checkpoint Trigger.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Checkpoint Trigger.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Dialogue Trigger.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Dialogue Trigger.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Dialogue Trigger.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Triggers/Dialogue Trigger.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Any Button Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Any Button Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Atlas/Atlas Object Button Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Atlas/Atlas Object Button Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Atlas/Atlas UI Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Atlas/Atlas UI Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Cancel(Back) Button Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Cancel(Back) Button Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD/PlayerHealthDisplayPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/HUD/PlayerHealthDisplayPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainCanvas Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainCanvas Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/AreYouSureImage.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/AreYouSureImage.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Back To Menu.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Back To Menu.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Continue Slot Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Continue Slot Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Controls Settings Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Controls Settings Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/New Game Slot Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/New Game Slot Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Rebind UI Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/MainMenu/Rebind UI Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/NewEventSystem.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/NewEventSystem.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Submit(Next) Button Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Submit(Next) Button Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tutorial blackout.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tutorial blackout.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/MusicPlayer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/VolumeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/LongVolumeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/VolumeController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/LongVolumeController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/OneOffTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/OneOffTrigger.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Preferences Control/VolumeDefaultsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Preferences Control/VolumeDefaultsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/protect logo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/protect logo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tchmo-001-1 (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/tchmo-001-1 (1).jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/Floor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/Floor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/Wall_celling.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/Wall_celling.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/ground platform.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/ground platform.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/image1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/image1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/ladder.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/ladder.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/s5QZsk8GtaQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/lvldesign/s5QZsk8GtaQ.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +134,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/LazyValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/d8/8d950adc/PlayerPrefs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/AI.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/VolumeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/LongVolumeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/MusicPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Audio/MainAudioSource.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,8 +165,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/AI/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionAsset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/UnityActionTrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/OneOffTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasSaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/42A5878C-E129-4030-83AC-CCF18E43363F/96/18526c7e/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/User Interface/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -124,11 +194,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/TransformSelectButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Preferences Control/DefaultsController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Main Menu/Preferences Control/PrefKeys.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Saving/SaveManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Loading Buttons/ContinueSlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Loading Buttons/NewGameSlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Loading Buttons/SlotButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Player HUD/PlayerHealthBar.cs" />
@@ -148,11 +213,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Audio/MainAudioSource.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Main/Dependent Buttons/AtlasOpenButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasCategory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities/Editor/PanelSelector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/Editor/AtlasEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/Settings/RebindActionUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Saving/Checkpoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Menu/CancelButton.cs" />
         <option value="$PROJECT_DIR$/Assets/NextButton.cs" />
@@ -167,14 +230,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasNotifierUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/AtlasObjectOpener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Predication/Condition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Preferences Control/PrefsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueNode.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Dialogue/DialogueUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/PlayerConversant.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/MusicPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Audio/LongVolumeController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/OneOffTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialogue/Editor/DialogueEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/PersistentTrigger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/Player/Zoomer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/User Interface/Atlas/AtlasObjectUI.cs" />
       </list>
     </option>
   </component>
@@ -241,7 +311,8 @@
       <workItem from="1616421007227" duration="2238000" />
       <workItem from="1616447651731" duration="3925000" />
       <workItem from="1616503151993" duration="2388000" />
-      <workItem from="1616505827686" duration="3783000" />
+      <workItem from="1616505827686" duration="4647000" />
+      <workItem from="1616579541320" duration="6535000" />
     </task>
     <task id="LOCAL-00001" summary="March Pre-Release Commit, overall system fix, added atlas editor(Debug)">
       <created>1616240581007</created>
@@ -369,10 +440,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="181" key="GridCell.Tab.3.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616423265342" />
-    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1616179279786">
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1616583174907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616179279786" />
+    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1616583174907" />
     <state x="204" y="209" width="1296" height="710" key="SettingsEditor" timestamp="1616421847144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -407,13 +478,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs</url>
-          <line>66</line>
+          <line>43</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Atlas/Atlas.cs" initialLine="62">
             <startOffsets>
-              <option value="2187" />
+              <option value="1488" />
             </startOffsets>
             <endOffsets>
-              <option value="2266" />
+              <option value="1567" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: c719f5ab-b279-4bbc-9ccf-7f478253cf8e
   m_EditorClassIdentifier: 
-  imageOverride: {fileID: 21300000, guid: 931023851ef128046a1dc6fd07d71899, type: 3}
+  imageOverride: {fileID: 0}
   nameOverride: "\u041D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0439
     \u0430\u0431\u043E\u043D\u0435\u043D\u0442"
   isPlayerSpeaking: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
     x: 451.20483
     y: 0
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &-951698620843149259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: 057e5e80-1ff5-43fd-a3c2-cd46c5b323b9
   m_EditorClassIdentifier: 
-  imageOverride: {fileID: 21300000, guid: 19edd29b4e6304c448ad5176a7c5fafd, type: 3}
+  imageOverride: {fileID: 0}
   nameOverride: "\u0421\u043E\u043B\u0434\u0430\u0442 \u041F\u0420\u041E\u0422\u0415\u041A\u0422"
   isPlayerSpeaking: 0
   shortDescription: 
@@ -62,7 +62,7 @@ MonoBehaviour:
     x: -157.99123
     y: -1.4705968
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

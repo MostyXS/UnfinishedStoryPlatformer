@@ -8,25 +8,10 @@ using UnityEngine;
 
 namespace Game.Collectioning
 {
-    [CreateAssetMenu(fileName = "Atlas", menuName = "Atlas/Atlas", order = 0)]
+    [CreateAssetMenu(fileName = "Atlas", menuName = "Game/Atlas", order = 0)]
     public class Atlas : ScriptableObject, ISerializationCallbackReceiver
     {
         [SerializeField] private List<AtlasCategory> categories = new List<AtlasCategory>();
-
-
-        public void LoadCategories(List<AtlasCategory> otherCategories)
-        {
-            foreach (var atlasCategory in GetAllCategories())
-            {
-                foreach (var otherAtlasCategory in otherCategories)
-                {
-                    if (atlasCategory.GetCategoryType() == otherAtlasCategory.GetCategoryType())
-                    {
-                        atlasCategory.LoadFromOther(otherAtlasCategory);
-                    }
-                }
-            }
-        }
 
         public List<AtlasCategory> GetAllCategories()
         {
@@ -38,14 +23,6 @@ namespace Game.Collectioning
         {
             return categories.FirstOrDefault(c => c.GetCategoryType() == type);
         }
-#if UNITY_EDITOR
-        [SerializeField] AtlasObjectOpener atlasOpenerPrefab;
-
-        public AtlasObjectOpener GetOpenerPrefab()
-        {
-            return atlasOpenerPrefab;
-        }
-#endif
 
         public void OnBeforeSerialize()
         {
