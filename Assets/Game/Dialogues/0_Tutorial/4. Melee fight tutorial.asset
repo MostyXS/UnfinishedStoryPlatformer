@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: 5f47ae9e-3cee-410c-b466-16ce474534c9
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
@@ -27,10 +28,10 @@ MonoBehaviour:
     negate: 0
   rect:
     serializedVersion: 2
-    x: -9.459374
-    y: 27.027025
+    x: -11.072277
+    y: 28.639929
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

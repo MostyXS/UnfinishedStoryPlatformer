@@ -27,6 +27,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: 2f38a318-7621-4cc4-9cb4-c5495381faa6
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
@@ -49,4 +50,4 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 300
-    height: 400
+    height: 600

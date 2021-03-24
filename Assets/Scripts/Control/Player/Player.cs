@@ -44,44 +44,6 @@ namespace Game.Control
 
         #region Unity Callbacks
 
-        #region Input Callbacks
-
-        [UsedImplicitly]
-        public void OnMove(InputAction.CallbackContext ctx)
-        {
-            _xAxis = ctx.ReadValue<float>();
-        }
-
-        [UsedImplicitly]
-        public void OnAttack(InputAction.CallbackContext ctx)
-        {
-            if (!_canAttack) return;
-            _anim.SetTrigger(AnimNames.ATTACK);
-            StartCoroutine(AttackDelay());
-        }
-
-        [UsedImplicitly]
-        public void OnJump(InputAction.CallbackContext ctx)
-        {
-            if (CanJump())
-            {
-                _rb.velocity += new Vector2(0, jumpPower);
-            }
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private IEnumerator AttackDelay()
-        {
-            _canAttack = false;
-            yield return new WaitForSeconds(attackDelay);
-            _canAttack = true;
-        }
-
-        #endregion
-
         private void Awake()
         {
             _health = GetComponent<Health>();
@@ -122,6 +84,44 @@ namespace Game.Control
                     _rb.velocity.y);
                 transform.localScale = new Vector2(_defaultXScale * _dir, transform.localScale.y);
             }
+        }
+
+        #endregion
+
+        #region Input Callbacks
+
+        [UsedImplicitly]
+        public void OnMove(InputAction.CallbackContext ctx)
+        {
+            _xAxis = ctx.ReadValue<float>();
+        }
+
+        [UsedImplicitly]
+        public void OnAttack(InputAction.CallbackContext ctx)
+        {
+            if (!_canAttack) return;
+            _anim.SetTrigger(AnimNames.ATTACK);
+            StartCoroutine(AttackDelay());
+        }
+
+        [UsedImplicitly]
+        public void OnJump(InputAction.CallbackContext ctx)
+        {
+            if (CanJump())
+            {
+                _rb.velocity += new Vector2(0, jumpPower);
+            }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private IEnumerator AttackDelay()
+        {
+            _canAttack = false;
+            yield return new WaitForSeconds(attackDelay);
+            _canAttack = true;
         }
 
         #endregion

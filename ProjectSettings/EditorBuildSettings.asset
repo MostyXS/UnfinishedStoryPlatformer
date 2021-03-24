@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: bb295dc1b53336e43b8db72a6d3e6142
   - enabled: 1
-    path: Assets/Scenes/00_tutorial.unity
-    guid: 70555adc53b7e26408b8b22c3460e9c0
+    path: Assets/Scenes/Tutorial blackout.unity
+    guid: c903af96cfbf29e4aa418cc5b05e11ce
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c86b51b979f58424f850073aab05f28a, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: 4c009aecc9ac6714e90cce4398463881, type: 2}

@@ -12,6 +12,7 @@ namespace Game.Control
         [SerializeField] Transform followPoint;
         [SerializeField] float zoomRadius = 10f;
         [SerializeField] float speed = 5;
+        [SerializeField] private float maxDistanceFromFollowPointToCamera = .3f;
 
         private Transform _mainCameraTransform;
         private bool _isZoomed;
@@ -60,7 +61,6 @@ namespace Game.Control
 
         private void ControlZoom()
         {
-            Debug.Log(PrefsController.ZoomSensitivity);
             var movePosition = _axis * (Time.deltaTime * speed * PrefsController.ZoomSensitivity);
             var newLocation = followPoint.position + (Vector3) movePosition;
             float distanceBetweenCenterAndPoint = Vector2.Distance(followPoint.position, transform.position);
@@ -73,7 +73,7 @@ namespace Game.Control
 
             
             followPoint.position = newLocation;
-            if (Vector2.Distance(_mainCameraTransform.position, followPoint.position) > .1f)
+            if (Vector2.Distance(_mainCameraTransform.position, followPoint.position) > maxDistanceFromFollowPointToCamera)
             {
                 followPoint.position = new Vector2(_mainCameraTransform.position.x, _mainCameraTransform.position.y);
             }

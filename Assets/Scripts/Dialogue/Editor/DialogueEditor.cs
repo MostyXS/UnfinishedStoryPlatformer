@@ -273,7 +273,7 @@ namespace Game.Dialogues.Editor
             if (Event.current.commandName == "ObjectSelectorUpdated")
             {
                 var selectedNode = Selection.activeObject as DialogueNode;
-                if(node != selectedNode) return;
+                if (node != selectedNode) return;
                 var image = EditorGUIUtility.GetObjectPickerObject() as Sprite;
                 node.SetImageOverride(image);
                 Repaint();
@@ -300,7 +300,7 @@ namespace Game.Dialogues.Editor
             EditorGUI.BeginChangeCheck();
             SetTextAreaStyle();
             var currentStyle = new GUIStyle(_textAreaStyle)
-                {fixedHeight = _textAreaStyle.CalcHeight(new GUIContent(node.GetText()), node.GetRect().width)};
+                {fixedHeight = _textAreaStyle.CalcHeight(new GUIContent(node.GetText()), node.GetRect().width-node.GetRect().width/10)};
             string newText = EditorGUILayout.TextArea(node.GetText(), currentStyle);
 
 

@@ -11,7 +11,7 @@ public class VolumeDefaultsController : DefaultsController
 
     private void CheckForVolumeChangers()
     {
-        var volumeControllers = FindObjectsOfType<VolumeController>();
+        var volumeControllers = FindObjectsOfType<LongVolumeController>();
         foreach (var prefSlider in optionSliders)
         {
             foreach (var volumeController in volumeControllers)

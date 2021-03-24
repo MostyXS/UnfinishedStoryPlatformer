@@ -29,6 +29,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: cf5da1e6-940b-4e4a-b16f-dd20ad5344a6
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
@@ -45,7 +46,7 @@ MonoBehaviour:
     x: 450
     y: 0
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &7423390217924174474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: 6e77f97a-ef16-4599-92fa-1228a84a6254
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
@@ -77,7 +79,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &8515492828138258835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +92,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: 165b5b79-ac40-4ffd-800a-afd6b2469678
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 1
   shortDescription: 
@@ -105,4 +108,4 @@ MonoBehaviour:
     x: 900
     y: 0
     width: 300
-    height: 400
+    height: 600

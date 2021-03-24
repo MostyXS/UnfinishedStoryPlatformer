@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Game.Audio
 {
-    public class VolumeController : MonoBehaviour
+    public class LongVolumeController : MonoBehaviour
     {
         //TO DO
-        public static AudioSource MusicSource { get; private set; }
-
-        [Header("All relevant audio sources, except one shot audious")] [SerializeField]
+        //public static AudioSource MusicSource { get; private set; }
+        
+        [Header("All relevant audio sources, except one shot audios")] [SerializeField]
         PrefKey volumeKey;
 
         private AudioSource[] _audioSources;
@@ -21,8 +21,8 @@ namespace Game.Audio
         private void Start()
         {
             UpdateVolume();
-            if (volumeKey == PrefKey.MusicVolume)
-                MusicSource = GetComponent<AudioSource>();
+            //if (volumeKey == PrefKey.MusicVolume)
+            //    MusicSource = GetComponent<AudioSource>();
         }
 
         public void Stop()

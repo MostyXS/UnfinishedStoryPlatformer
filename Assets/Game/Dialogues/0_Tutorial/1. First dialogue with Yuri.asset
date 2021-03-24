@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: bb965171-0ded-486c-9927-59cb3ceef3cd
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
@@ -23,7 +24,7 @@ MonoBehaviour:
     \u043F\u043E \u0444\u0443\u043D\u043A\u0446\u0438\u043E\u043D\u0430\u043B\u0443."
   children: []
   onEnterAction: 
-  onExitAction: 
+  onExitAction: ActivateMoveHint
   condition:
     and: []
     negate: 0
@@ -32,7 +33,7 @@ MonoBehaviour:
     x: 911.2987
     y: 19.529247
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &-5502153038486922855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: ce8733dc-6148-44d8-aa1d-538282fdcf97
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 1
   shortDescription: 
@@ -61,7 +63,7 @@ MonoBehaviour:
     x: 469.091
     y: 14.659195
     width: 300
-    height: 400
+    height: 600
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d4e11ba581faf469e510276e6177a9, type: 3}
   m_Name: d2b5b23b-813c-40b3-88b0-98e9b1f6c823
   m_EditorClassIdentifier: 
+  imageOverride: {fileID: 0}
   nameOverride: 
   isPlayerSpeaking: 0
   shortDescription: 
@@ -111,4 +114,4 @@ MonoBehaviour:
     x: 10.000003
     y: 16.931843
     width: 300
-    height: 400
+    height: 600
